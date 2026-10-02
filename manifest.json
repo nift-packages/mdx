@@ -1,0 +1,6 @@
+{
+  "name": "mdx",
+  "version": "0.1.0",
+  "entry": "src/mdx.f",
+  "description": "Bounded preservation parser and dependency discovery for MDX-like documents"
+}
