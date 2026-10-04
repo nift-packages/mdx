@@ -1,0 +1,26 @@
+[
+  {
+    "path": "apps/docs/src/content/docs/docs/plugins/intent-launcher/index.mdx",
+    "processWallMilliseconds": 557.3642130475491,
+    "timing": {
+      "compileMs": 169.75122699999997,
+      "evaluateMs": 1.834114999999997,
+      "renderMs": 29.258981000000006,
+      "totalMs": 201.82982200000004
+    },
+    "htmlBytes": 51933,
+    "ok": true
+  },
+  {
+    "path": "apps/docs/src/content/docs/docs/plugins/inappbrowser/getting-started.mdx",
+    "processWallMilliseconds": 440.7636870164424,
+    "timing": {
+      "compileMs": 79.01324699999998,
+      "evaluateMs": 0.6431499999999915,
+      "renderMs": 12.755525000000034,
+      "totalMs": 93.382228
+    },
+    "htmlBytes": 49737,
+    "ok": true
+  }
+]

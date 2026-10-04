@@ -1,0 +1,2694 @@
+{
+  "failures": 149,
+  "categoryCounts": {
+    "Starlight component import": 128,
+    "HTML style string / JSX style object mismatch": 7,
+    "Capgo custom Astro component import": 11,
+    "PackageManagers import": 3
+  },
+  "scope": "first reported failure per page; imported assets/custom components can be masked by the first missing Starlight mapping",
+  "records": [
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/android.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/builder/android.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/ci-ota-or-native.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/builder/ci-ota-or-native.mdx",
+          "line": 9,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/ci-ui-trigger.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/builder/ci-ui-trigger.mdx",
+          "line": 9,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/configuration.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/builder/configuration.mdx",
+          "line": 9,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/credentials.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/builder/credentials.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/builder/getting-started.mdx",
+          "line": 9,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/github-actions.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/builder/github-actions.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/builder/index.mdx",
+          "line": 9,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/ios.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/builder/ios.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/prescan.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/builder/prescan.mdx",
+          "line": 9,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/troubleshooting.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/builder/troubleshooting.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/webhooks.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/builder/webhooks.mdx",
+          "line": 9,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/commands.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/cli/commands.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/cli/index.mdx",
+          "line": 11,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/contributing/adding-plugins.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/contributing/adding-plugins.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-help.mdx",
+      "diagnostics": [
+        {
+          "stage": "render",
+          "code": "mdx_render_failed",
+          "message": "The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.",
+          "path": "apps/docs/src/content/docs/docs/getting-help.mdx",
+          "line": null,
+          "column": null,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "HTML style string / JSX style object mismatch",
+      "fixOwner": "Capgo content transformation or element adapter",
+      "specifier": null
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/add-an-app.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @/components/YouTubeEmbed.astro",
+          "path": "apps/docs/src/content/docs/docs/getting-started/add-an-app.mdx",
+          "line": 10,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Capgo custom Astro component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@/components/YouTubeEmbed.astro"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/after-onboarding-setup-checklist.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/getting-started/after-onboarding-setup-checklist.mdx",
+          "line": 10,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/cicd-integration.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/getting-started/cicd-integration.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/deploy.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/getting-started/deploy.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/onboarding.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/getting-started/onboarding.mdx",
+          "line": 10,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/quickstart.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/getting-started/quickstart.mdx",
+          "line": 10,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/troubleshooting.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/getting-started/troubleshooting.mdx",
+          "line": 10,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/wrapping-up.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/getting-started/wrapping-up.mdx",
+          "line": 11,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/how-to.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/how-to.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/index.mdx",
+          "line": 19,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/channels.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/channels.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/china-configuration.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/china-configuration.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/compatibility.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/compatibility.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/compliance.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/compliance.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/custom-storage.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/custom-storage.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/data-location.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/data-location.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/differentials.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/differentials.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/encryption.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/encryption.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/features.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/features.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/hipaa-compliance.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/hipaa-compliance.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/index.mdx",
+          "line": 10,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/azure-devops.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/integrations/azure-devops.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/bitbucket-pipeline.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/integrations/bitbucket-pipeline.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/github-actions.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/integrations/github-actions.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/gitlab-ci.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/integrations/gitlab-ci.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/integrations/index.mdx",
+          "line": 9,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/native-ota-channel-workflow.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/native-ota-channel-workflow.mdx",
+          "line": 9,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/progressive-rollouts.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/progressive-rollouts.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/rollbacks.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/rollbacks.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/testing-native-builds-without-live-updates.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/testing-native-builds-without-live-updates.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/update-behavior.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/update-behavior.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/update-types.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/update-types.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/version-targeting.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/live-updates/version-targeting.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/app-attest/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: starlight-package-managers",
+          "path": "apps/docs/src/content/docs/docs/plugins/app-attest/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "PackageManagers import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "starlight-package-managers"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/asset-cache/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/asset-cache/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/asset-cache/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/asset-cache/index.mdx",
+          "line": 23,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/auto/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/auto/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/auto/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/auto/index.mdx",
+          "line": 23,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/capacitor-patch/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/capacitor-patch/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/capacitor-patch/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/capacitor-patch/index.mdx",
+          "line": 23,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/capacitor-plus/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/capacitor-plus/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/capacitor-plus/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/capacitor-plus/index.mdx",
+          "line": 25,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/contentsquare/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @/components/doc/PluginSetupSteps.astro",
+          "path": "apps/docs/src/content/docs/docs/plugins/contentsquare/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Capgo custom Astro component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@/components/doc/PluginSetupSteps.astro"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/cordova-updater/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/cordova-updater/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/cordova-updater/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/cordova-updater/index.mdx",
+          "line": 23,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/electron-updater/api.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/electron-updater/api.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/electron-updater/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/electron-updater/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/electron-updater/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/electron-updater/index.mdx",
+          "line": 23,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/incoming-call-kit/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: starlight-package-managers",
+          "path": "apps/docs/src/content/docs/docs/plugins/incoming-call-kit/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "PackageManagers import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "starlight-package-managers"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/index.mdx",
+          "line": 9,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intune/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/intune/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-loader/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-loader/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-loader/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-loader/index.mdx",
+          "line": 23,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-navigation/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-navigation/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-navigation/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-navigation/index.mdx",
+          "line": 23,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-create-subscription.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-create-subscription.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-introductory-offer.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-introductory-offer.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-play-store-review.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-play-store-review.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-sandbox-testing.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-sandbox-testing.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-app-store-review.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-app-store-review.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-create-subscription.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-create-subscription.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-introductory-offer.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-introductory-offer.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-sandbox-testing.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-sandbox-testing.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-subscription-group.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-subscription-group.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/revenue-playbook.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/revenue-playbook.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/passkey/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/passkey/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/passkey/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/passkey/index.mdx",
+          "line": 23,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/privacy-screen/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/privacy-screen/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/proximity/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/proximity/index.mdx",
+          "line": 25,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/sheets/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/sheets/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/sheets/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/sheets/index.mdx",
+          "line": 23,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/android.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @/components/MermaidGraph.astro",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/android.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Capgo custom Astro component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@/components/MermaidGraph.astro"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/ios.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/ios.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/web.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/web.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/better-auth.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/better-auth.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/facebook.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/facebook.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/android.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/android.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/general.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/general.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/ios.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/ios.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/android.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/android.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/general.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/general.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/ios.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/ios.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/web.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/web.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @/components/YouTubeEmbed.astro",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/index.mdx",
+          "line": 23,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Capgo custom Astro component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@/components/YouTubeEmbed.astro"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/index.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/apple.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/apple.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/facebook.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/facebook.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/google.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/google.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/ionic-auth-connect.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/ionic-auth-connect.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/v7.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/v7.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/oauth2.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/oauth2.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/Apple/android.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/Apple/android.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/Apple/general.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/Apple/general.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/google/general.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/google/general.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/transitions/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/transitions/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/transitions/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/transitions/index.mdx",
+          "line": 23,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/debugging.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/updater/debugging.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/events.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/updater/events.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/updater/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/updater/index.mdx",
+          "line": 23,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/known-issues.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/updater/known-issues.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/notify-app-ready.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/updater/notify-app-ready.mdx",
+          "line": 12,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/auto-update.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/auto-update.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/encrypted-bundles.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/encrypted-bundles.mdx",
+          "line": 7,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/handling-stats.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/handling-stats.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/settings.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/updater/settings.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/uwb/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/uwb/index.mdx",
+          "line": 25,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/watch/examples.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/watch/examples.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/watch/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/watch/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/watch/watch-app-setup.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/watch/watch-app-setup.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-version-checker/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: starlight-package-managers",
+          "path": "apps/docs/src/content/docs/docs/plugins/webview-version-checker/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "PackageManagers import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "starlight-package-managers"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/zebra-datawedge/getting-started.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/plugins/zebra-datawedge/getting-started.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/api-keys.mdx",
+      "diagnostics": [
+        {
+          "stage": "render",
+          "code": "mdx_render_failed",
+          "message": "The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.",
+          "path": "apps/docs/src/content/docs/docs/public-api/api-keys.mdx",
+          "line": null,
+          "column": null,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "HTML style string / JSX style object mismatch",
+      "fixOwner": "Capgo content transformation or element adapter",
+      "specifier": null
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/index.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/public-api/index.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/versioning.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/versioning.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/2fa-enforcement.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/webapp/2fa-enforcement.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/bundles.mdx",
+      "diagnostics": [
+        {
+          "stage": "render",
+          "code": "mdx_render_failed",
+          "message": "The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.",
+          "path": "apps/docs/src/content/docs/docs/webapp/bundles.mdx",
+          "line": null,
+          "column": null,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "HTML style string / JSX style object mismatch",
+      "fixOwner": "Capgo content transformation or element adapter",
+      "specifier": null
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/channels.mdx",
+      "diagnostics": [
+        {
+          "stage": "render",
+          "code": "mdx_render_failed",
+          "message": "The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.",
+          "path": "apps/docs/src/content/docs/docs/webapp/channels.mdx",
+          "line": null,
+          "column": null,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "HTML style string / JSX style object mismatch",
+      "fixOwner": "Capgo content transformation or element adapter",
+      "specifier": null
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/devices.mdx",
+      "diagnostics": [
+        {
+          "stage": "render",
+          "code": "mdx_render_failed",
+          "message": "The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.",
+          "path": "apps/docs/src/content/docs/docs/webapp/devices.mdx",
+          "line": null,
+          "column": null,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "HTML style string / JSX style object mismatch",
+      "fixOwner": "Capgo content transformation or element adapter",
+      "specifier": null
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/enterprise-sso.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/webapp/enterprise-sso.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/logs.mdx",
+      "diagnostics": [
+        {
+          "stage": "render",
+          "code": "mdx_render_failed",
+          "message": "The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.",
+          "path": "apps/docs/src/content/docs/docs/webapp/logs.mdx",
+          "line": null,
+          "column": null,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "HTML style string / JSX style object mismatch",
+      "fixOwner": "Capgo content transformation or element adapter",
+      "specifier": null
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/mfa.mdx",
+      "diagnostics": [
+        {
+          "stage": "render",
+          "code": "mdx_render_failed",
+          "message": "The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + 'em'}} when using JSX.",
+          "path": "apps/docs/src/content/docs/docs/webapp/mfa.mdx",
+          "line": null,
+          "column": null,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "HTML style string / JSX style object mismatch",
+      "fixOwner": "Capgo content transformation or element adapter",
+      "specifier": null
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/organization-security.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @astrojs/starlight/components",
+          "path": "apps/docs/src/content/docs/docs/webapp/organization-security.mdx",
+          "line": 8,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Starlight component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@astrojs/starlight/components"
+    },
+    {
+      "path": "apps/web/src/content/blog/en/checklist-for-cybersecurity-compliance-in-china.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @/components/BlogMidArticleCta.astro",
+          "path": "apps/web/src/content/blog/en/checklist-for-cybersecurity-compliance-in-china.mdx",
+          "line": 20,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Capgo custom Astro component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@/components/BlogMidArticleCta.astro"
+    },
+    {
+      "path": "apps/web/src/content/blog/en/chinas-cybersecurity-law-impact-on-app-updates.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @/components/BlogMidArticleCta.astro",
+          "path": "apps/web/src/content/blog/en/chinas-cybersecurity-law-impact-on-app-updates.mdx",
+          "line": 20,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Capgo custom Astro component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@/components/BlogMidArticleCta.astro"
+    },
+    {
+      "path": "apps/web/src/content/blog/en/chinas-data-privacy-laws-impact-on-mobile-apps.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @/components/BlogMidArticleCta.astro",
+          "path": "apps/web/src/content/blog/en/chinas-data-privacy-laws-impact-on-mobile-apps.mdx",
+          "line": 20,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Capgo custom Astro component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@/components/BlogMidArticleCta.astro"
+    },
+    {
+      "path": "apps/web/src/content/blog/en/how-chinas-cybersecurity-law-impacts-app-developers.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @/components/BlogMidArticleCta.astro",
+          "path": "apps/web/src/content/blog/en/how-chinas-cybersecurity-law-impacts-app-developers.mdx",
+          "line": 20,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Capgo custom Astro component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@/components/BlogMidArticleCta.astro"
+    },
+    {
+      "path": "apps/web/src/content/blog/en/how-chinas-data-laws-impact-app-store-submissions.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @/components/BlogMidArticleCta.astro",
+          "path": "apps/web/src/content/blog/en/how-chinas-data-laws-impact-app-store-submissions.mdx",
+          "line": 20,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Capgo custom Astro component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@/components/BlogMidArticleCta.astro"
+    },
+    {
+      "path": "apps/web/src/content/blog/en/icp-filing-for-mobile-apps-in-china-step-by-step-guide.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @/components/BlogMidArticleCta.astro",
+          "path": "apps/web/src/content/blog/en/icp-filing-for-mobile-apps-in-china-step-by-step-guide.mdx",
+          "line": 20,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Capgo custom Astro component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@/components/BlogMidArticleCta.astro"
+    },
+    {
+      "path": "apps/web/src/content/blog/en/key-management-under-chinas-encryption-rules.mdx",
+      "diagnostics": [
+        {
+          "stage": "compile",
+          "code": "mdx_compile_failed",
+          "message": "Only registered relative MD/MDX imports are supported: @/components/BlogMidArticleCta.astro",
+          "path": "apps/web/src/content/blog/en/key-management-under-chinas-encryption-rules.mdx",
+          "line": 20,
+          "column": 1,
+          "component": null,
+          "adapterPath": null
+        }
+      ],
+      "primaryCategory": "Capgo custom Astro component import",
+      "fixOwner": "Capgo adapter set",
+      "specifier": "@/components/BlogMidArticleCta.astro"
+    }
+  ]
+}

@@ -135,3 +135,7 @@ Capgo audit renders377/519 canonical docs MDX plus10 MD;142 docs MDX and7 blog
 MDX fail. This is not Starlight/Astro or interactive/visual equivalence. Pure
 trusted preservation accepts518/519 in204.836s; raising capacity did not resolve
 interpreter throughput or the1024-object outlier. Both Capgo sites stay unstarted.
+
+## 4 October 2026 follow-up investigation
+
+[Windows/performance/rendering report](followup/REPORT.md) and [Capgo adapter plan](followup/CAPGO-ADAPTER-PLAN.md) supersede any interpretation that the CP22 gate failure permanently rejects Capgo. All 526 authored MDX files compile in isolation; a distinct compiler-based render-preparation path is proposed, not implemented. Windows no-process input remains excluded after six-platform path/API probes. No core, capacity-policy, production parser or Capgo site changes. CP22 remains open for semantic/visual and incremental certification.

@@ -1,0 +1,30 @@
+{
+  "scope": "isolated 2048-object candidate, not production policy",
+  "exactObjects": 2048,
+  "overObjects": 2049,
+  "peakRssKiB": 32256,
+  "records": [
+    {
+      "path": "exact.mdx",
+      "ok": true,
+      "ms": 2801,
+      "diagnostics": []
+    },
+    {
+      "path": "over.mdx",
+      "ok": false,
+      "ms": 2522,
+      "diagnostics": [
+        {
+          "code": "too_many_syntax_objects",
+          "message": "document exceeds 2048 syntax objects",
+          "severity": "error",
+          "path": null,
+          "line": 1,
+          "column": 4097,
+          "offset": 4096
+        }
+      ]
+    }
+  ]
+}

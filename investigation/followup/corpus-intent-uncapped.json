@@ -1,0 +1,71 @@
+{
+  "upstreamCommit": "7d5b69d6ba8a6630384dffc7d012431ee3ed22ec",
+  "variant": "intent-uncapped",
+  "scannerSha256": "42536d0c59edc9c1a5bc8368c3a7f36435a40c1571c694e08c1fff211b492401",
+  "scope": "pure trusted parse, one Nift invocation, timer excludes reads and result serialization",
+  "wallSeconds": 4.493275753920898,
+  "pages": 1,
+  "accepted": 1,
+  "totalMilliseconds": 4470,
+  "medianMilliseconds": 4470,
+  "p90Milliseconds": 4470,
+  "p95Milliseconds": 4470,
+  "p99Milliseconds": 4470,
+  "worstShares": {
+    "1": {
+      "pages": 1,
+      "milliseconds": 4470,
+      "percentOfTotal": 100.0
+    },
+    "5": {
+      "pages": 1,
+      "milliseconds": 4470,
+      "percentOfTotal": 100.0
+    },
+    "10": {
+      "pages": 1,
+      "milliseconds": 4470,
+      "percentOfTotal": 100.0
+    },
+    "20": {
+      "pages": 1,
+      "milliseconds": 4470,
+      "percentOfTotal": 100.0
+    }
+  },
+  "records": [
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intent-launcher/index.mdx",
+      "milliseconds": 4470,
+      "bytes": 35991,
+      "lines": 364,
+      "syntaxObjects": 1221,
+      "jsxElements": 0,
+      "expressions": 0,
+      "imports": 0,
+      "counts": {
+        "markdown": 611,
+        "attributes": 0,
+        "attributeExpressions": 0,
+        "inline_code": 610
+      },
+      "importRecords": [],
+      "frontmatter": {
+        "present": true,
+        "start": {
+          "offset": 0,
+          "line": 1,
+          "column": 1
+        },
+        "end": {
+          "offset": 656,
+          "line": 22,
+          "column": 1
+        }
+      },
+      "ok": true,
+      "diagnostics": [],
+      "sourceSha256": "88531fcfe7d9d5ba032dae5267c5465b6f3d7392cbfa506f5c6e2110c2af8707"
+    }
+  ]
+}

@@ -51,3 +51,7 @@ corpus. No project-specific adapter/interactive/visual parity is claimed. See
 throughput and project parity work remain open; neither Capgo website begins.
 
 No production changes above are approved by this document alone. Each decision that changes parser defaults, executable-content policy or public API must be recorded before its implementation checkpoint.
+
+## 4 October 2026 follow-up investigation
+
+[Windows/performance/rendering report](followup/REPORT.md) and [Capgo adapter plan](followup/CAPGO-ADAPTER-PLAN.md) supersede any interpretation that the CP22 gate failure permanently rejects Capgo. All 526 authored MDX files compile in isolation; a distinct compiler-based render-preparation path is proposed, not implemented. Windows no-process input remains excluded after six-platform path/API probes. No core, capacity-policy, production parser or Capgo site changes. CP22 remains open for semantic/visual and incremental certification.

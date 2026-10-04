@@ -3,7 +3,7 @@
 Current state: optional trusted production renderer, batch orchestration, profiles,
 dependency closure, cache and source-aware diagnostics are implemented. CP01–21
 pass their recorded acceptance checks, with CP19 explicitly excluding Windows
-Nift file input. CP22 real-corpus gate assessment remains blocked. Capgo remains blocked; no Nift core
+Nift file input. CP22 real-corpus gate assessment remains blocked. Capgo implementation remains gated pending the follow-up route; no Nift core
 or Capgo website changes. The public API is parse/input/with_profile/prepare/html.
 
 ## Historical feasibility handoff (before production authorization)
@@ -114,3 +114,7 @@ blog MDX fail. Starlight/Astro/asset/interactive semantic/visual parity remains
 unimplemented and unverified. Parser518/519 acceptance and204.836s corpus cost
 remain release blockers; core stays untouched. Capgo and capgo-agent remain
 planning-only. Do not treat the helper-only audit as production corpus acceptance.
+
+## 4 October 2026 follow-up investigation
+
+[Windows/performance/rendering report](followup/REPORT.md) and [Capgo adapter plan](followup/CAPGO-ADAPTER-PLAN.md) supersede any interpretation that the CP22 gate failure permanently rejects Capgo. All 526 authored MDX files compile in isolation; a distinct compiler-based render-preparation path is proposed, not implemented. Windows no-process input remains excluded after six-platform path/API probes. No core, capacity-policy, production parser or Capgo site changes. CP22 remains open for semantic/visual and incremental certification.

@@ -1,0 +1,4841 @@
+{
+  "compared": 518,
+  "sourceHashesMatch": true,
+  "mismatches": [],
+  "records": [
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/build.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/commands.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/ios.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-assets/app-store-connect-home.png",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-assets/entity-type.png",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-assets/start-enrollment.png",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-assets/web-enrollment.png",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-assets/app-store-connect-home.png",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-assets/entity-type.png",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-assets/start-enrollment.png",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-assets/web-enrollment.png",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/inappbrowser/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-authentication/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/bundle.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/configuration.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/MermaidGraph.astro",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/MermaidGraph.astro",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/debugging.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/android.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@/components/MermaidGraph.astro",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@/components/MermaidGraph.astro",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/github-actions.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/settings.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/logs.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/youtube-player/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/oauth2.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/credentials.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/camera-preview/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/onboarding.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/facebook.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/channels.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-loader/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/around.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/bars.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/chrome.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/dots.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/halo.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/image.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/lottie.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/orbit.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/pulse.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/ring.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/siri.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/siri-v2.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/wave.webp",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/around.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/bars.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/chrome.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/dots.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/halo.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/image.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/lottie.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/orbit.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/pulse.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/ring.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/siri.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/siri-v2.webp",
+          "dependency": false
+        },
+        {
+          "specifier": "./previews/wave.webp",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/android.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/channel.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/android.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/appsflyer/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/bluetooth-low-energy/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/live-activities/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/ci-ota-or-native.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/MermaidGraph.astro",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/MermaidGraph.astro",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/version-targeting.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/android.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/organization-roles.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-audio/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/zebra-datawedge/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/sheets/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/prescan.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/ios.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/watch/examples.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/is-root/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/channels.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/electron-updater/api.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/transitions/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/widget-kit/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/ios.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/video-player/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/streamcall/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/bundles.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/webhooks.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/MermaidGraph.astro",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/MermaidGraph.astro",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/inappbrowser/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intercom/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/commonProblems.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/data-storage-sqlite/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/wifi/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/speech-synthesis/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-firestore/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/contacts/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/events.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-app-store-review.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-app-store-review-assets/accepted-permissions.png",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-app-store-review-assets/paywall-links.png",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-app-store-review-assets/policy-links.png",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-app-store-review-assets/rejected-permissions.webp",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-app-store-review-assets/accepted-permissions.png",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-app-store-review-assets/paywall-links.png",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-app-store-review-assets/policy-links.png",
+          "dependency": false
+        },
+        {
+          "specifier": "./ios-app-store-review-assets/rejected-permissions.webp",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/speech-recognition/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/watch/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/watch/watch-app-setup.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/update-behavior.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/app.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/azure-devops.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/handling-channels.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/widget-kit/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/organization.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/progressive-rollouts.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-remote-config/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/general.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-storage/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/organization-system.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/troubleshooting.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/contributing/adding-plugins.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/after-onboarding-setup-checklist.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/mfa.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/compliance.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/compatibility.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/sheets/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-analytics/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-performance/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/ci-ui-trigger.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/github-actions.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-play-store-review.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-navigation/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/api-keys.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ivs-player/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/bitbucket-pipeline.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ibeacon/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/channels.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-authentication/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/health/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/MermaidGraph.astro",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/BuildCredentialsQuestionnaire.astro",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/MermaidGraph.astro",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/BuildCredentialsQuestionnaire.astro",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-messaging/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/cicd-integration.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/native-ota-channel-workflow.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/organisation.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persona/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/wechat/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/device-info/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/nfc/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/api-keys.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/audio-recorder/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/custom-storage.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/upgrade/from-capawesome-to-capgo.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/rudderstack/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-biometric/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-crashlytics/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/brightness/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/add-an-app.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@/components/YouTubeEmbed.astro",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@/components/YouTubeEmbed.astro",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/Apple/android.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file-picker/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/capacitor-plus/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-map/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/better-auth.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/web.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/jw-player/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/notifications/debugging.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/appsflyer/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-crash/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/encryption.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/update-types.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-loader/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/camera-preview/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ffmpeg/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/photo-library/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/asset-cache/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ricoh360-camera/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/china-configuration.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/passkey/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/gitlab-ci.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/devices.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/google/general.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/hipaa-compliance.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/printer/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/troubleshooting.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/youtube-player/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/asset-cache/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-version-checker/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/twilio-voice/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/background-geolocation/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/notifications/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pedometer/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/transitions/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/upgrade/from-appflow-to-capgo.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/ionic-auth-connect.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pay/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/quickstart.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/admob/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/incoming-call-kit/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intent-launcher/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/screen-orientation/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/fast-sql/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/capacitor-patch/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ivs-player/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/compass/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/app.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/faq.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/bluetooth-low-energy/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/differentials.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intune/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-biometric/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-navigation/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/organizations.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/barometer/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/date-picker/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/date-picker/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/is-root/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/electron-updater/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-map/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/accelerometer/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/general.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/launch-navigator/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/config/plugins",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/config/plugins",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/light-sensor/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/llm/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@/components/YouTubeEmbed.astro",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@/components/YouTubeEmbed.astro",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file-sharer/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/deploy.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/alarm/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/twilio-video/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/live-reload/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/crisp/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/uwb/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/features.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/electron-updater/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/facebook.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/handling-stats.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/organization-security.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/nativegeocoder/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/media-session/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-crash/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/versioning.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-app-check/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/proximity/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/app-attest/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/google.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/auto/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-functions/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-introductory-offer.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intercom/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-kiosk/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/permissions/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/twilio-voice/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-audio/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/zebra-datawedge/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-usagestatsmanager/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/known-issues.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-guardian/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/cordova-updater/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/notifications/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/audiosession/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/Apple/general.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/calendar/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-monthly-commitment.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/apple.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/live-activities/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/rollbacks.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/testing-native-builds-without-live-updates.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/revenue-playbook.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/streamcall/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/auto/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/wrapping-up.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/app-attest/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/cordova-updater/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/notify-app-ready.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/ConditionalQuestionnaire.astro",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/ConditionalQuestionnaire.astro",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/sim/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/network-diagnostics/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/capacitor-patch/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pretty-toast/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/speech-synthesis/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/encrypted-bundles.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/calendar/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/data-storage-sqlite/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/auto-update.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/zip/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/passkey/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/uploader/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/age-range/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/members.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/2fa-enforcement.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/how-to.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/privacy-screen/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "starlight-package-managers",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/background-task/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ibeacon/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mux-player/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-subscription-group.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/background-geolocation/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/background-task/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intune/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mqtt/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/downloader/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/statistics.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/document-scanner/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/jw-player/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/speech-recognition/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/proximity/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-create-subscription.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/navigation-bar/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/capacitor-plus/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file-compressor/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/twilio-video/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/enterprise-sso.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/contacts/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/recaptcha/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-firestore/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/share-target/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/data-location.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/permissions/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/uwb/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/mcp.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intune/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/app-attest/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/main-app-page.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/keep-awake/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/volume-buttons/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persona/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/troubleshooting.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/video-player/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/wifi/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intune/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pretty-toast/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/rich-notifications/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-analytics/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-messaging/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-market/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/rudderstack/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-remote-config/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/age-signals/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/settings.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pdf-generator/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/nfc/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/keycloak.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-help.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/facebook-analytics/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/web.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/audio-recorder/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-app/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/bundles.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/gtm/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/health/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/google/web.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ricoh360-camera/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/key.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/google/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/watch/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-performance/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/flash/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/admob/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/v7.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mock-location-detector/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/network-diagnostics/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/contentsquare/getting-started.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@/components/doc/PluginSetupSteps.astro",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@/components/doc/PluginSetupSteps.astro",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/get-qr.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/appinsights/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/local-dev/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/incoming-call-kit/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-version-checker/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/app-tracking-transparency/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/autofill-save-password/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-sms-retriever/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/realtimekit/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-version-checker/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/app-attest/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/video-thumbnails/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/brightness/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-map/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/ios.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/stripe-terminal/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/supabase/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-inline-install/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-sms-retriever/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file-picker/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/photo-library/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-crashlytics/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/live-reload/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ssl-pinning/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/compass/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-storage/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-sandbox-testing.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/crisp/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/home-indicator/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/handling-updates.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/light-sensor/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/llm/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/permissions/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/nativegeocoder/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/passkey/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/textinteraction/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/devices.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pedometer/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-map/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/barometer/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/downloader/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/age-signals/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-market/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/contentsquare/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/screen-orientation/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/facebook-analytics/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/recaptcha/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/web.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/wechat/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/verisoul/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/passkey/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/incoming-call-kit/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/install-referrer/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-sandbox-testing.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/uwb/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/uwb/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/fast-sql/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file-sharer/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/accelerometer/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/Apple/web.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mqtt/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/privacy-and-ios-handlers.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/alarm/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/index.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/doc/PluginsDirectory.astro",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        },
+        {
+          "specifier": "@/components/doc/PluginsDirectory.astro",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mute/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/network-diagnostics/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/shake/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-kiosk/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-create-subscription.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-introductory-offer.mdx",
+      "equal": true,
+      "preservation": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ],
+      "compiler": [
+        {
+          "specifier": "@astrojs/starlight/components",
+          "dependency": false
+        }
+      ]
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/stripe-pay/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persistent-account/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/screen-recorder/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/notifications.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/gtm/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/incoming-call-kit/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/launch-navigator/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ffmpeg/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/keep-awake/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/zebra-datawedge/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/navigation-bar/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/recaptcha/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-guardian/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-app-check/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/permissions/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/flash/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/supabase/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/init.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/google/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-usagestatsmanager/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/printer/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/media-session/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/appinsights/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pdf-viewer/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/verisoul/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/stripe-identity/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/introduction.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/device-info/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/install-referrer/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mux-player/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persistent-uuid/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/payment.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/azure.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mock-location-detector/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/auth0.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/login.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/privacy-screen/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/auto/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/auto/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/home-indicator/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/install-referrer/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/rich-notifications/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/sim/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-functions/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/introduction.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/in-app-review/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/recaptcha/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/stripe-pay/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/audiosession/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/background-task/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/contentsquare/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/rich-notifications/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/env/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/Apple/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pdf-viewer/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/volume-buttons/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pdf-generator/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/uploader/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/contentsquare/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/install-referrer/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/share-target/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/verisoul/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/okta.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/realtimekit/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/star-all.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mock-location-detector/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/network-diagnostics/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/screen-recorder/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/local-dev/capacitor-updater.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pay/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persistent-account/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/stripe-terminal/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/manual-update.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/zip/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/app-tracking-transparency/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mock-location-detector/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/autofill-save-password/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/upgrade/from-ionic-identity-vault.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/onelogin.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/cognito.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/stripe-identity/getting-started.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-app/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/shake/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/local-dev/cli.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/verisoul/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/passkey/backend.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/rich-notifications/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/ai-debug.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/doctor.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/probe.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/textinteraction/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mute/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/account.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/run.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-inline-install/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ssl-pinning/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/video-thumbnails/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/age-range/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/privacy-screen/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/in-app-review/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/env/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file-compressor/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/github.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/main-page.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/background-task/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/document-scanner/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pdf-viewer/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pdf-viewer/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/privacy-screen/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persistent-uuid/android.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persistent-uuid/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/upgrade/from-ionic-secure-storage.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/upgrade/from-ionic-auth-connect.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persistent-uuid/index.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/migrations/cli-from-0x-to-1x.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/star.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/capgo-availability.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/log-insights.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-version-checker/ios.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/observe.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/local-dev/contributing.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/general.mdx",
+      "equal": true,
+      "preservation": [],
+      "compiler": []
+    }
+  ]
+}

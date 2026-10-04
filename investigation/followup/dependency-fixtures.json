@@ -1,0 +1,4430 @@
+{
+  "fixtures": 312,
+  "jointlyAccepted": 278,
+  "importMismatches": [
+    {
+      "index": 242,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\{literal}\u00e9export const value = 1\n<A />```js\nimport hidden\n```\n\r\nimport X from \"./x.mdx\"\n\r\n\r{value} ~~~\ncode\n~~~\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": false,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\{literal}\u00e9export const value = 1\n<A />```js\nimport hidden\n```\n\r\nimport X from \"./x.mdx\"\n\r\n\r{value} ~~~\ncode\n~~~\n"
+    }
+  ],
+  "compilerRejects": 34,
+  "records": [
+    {
+      "index": 0,
+      "sourceTransportEqual": true,
+      "preservationSource": "",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": ""
+    },
+    {
+      "index": 1,
+      "sourceTransportEqual": true,
+      "preservationSource": "plain",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "plain"
+    },
+    {
+      "index": 2,
+      "sourceTransportEqual": true,
+      "preservationSource": "a\nb\r\nc\rd",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "a\nb\r\nc\rd"
+    },
+    {
+      "index": 3,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\<X /> \\{x}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\<X /> \\{x}"
+    },
+    {
+      "index": 4,
+      "sourceTransportEqual": true,
+      "preservationSource": "~~~js\nimport './no.mdx'\n~~~\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "~~~js\nimport './no.mdx'\n~~~\n"
+    },
+    {
+      "index": 5,
+      "sourceTransportEqual": true,
+      "preservationSource": "````\n```\n````",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "````\n```\n````"
+    },
+    {
+      "index": 6,
+      "sourceTransportEqual": true,
+      "preservationSource": "`a { <X> b`",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "`a { <X> b`"
+    },
+    {
+      "index": 7,
+      "sourceTransportEqual": true,
+      "preservationSource": "``a ` b``",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "``a ` b``"
+    },
+    {
+      "index": 8,
+      "sourceTransportEqual": true,
+      "preservationSource": "{ /* only */ }",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{ /* only */ }"
+    },
+    {
+      "index": 9,
+      "sourceTransportEqual": true,
+      "preservationSource": "{// x\n}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{// x\n}"
+    },
+    {
+      "index": 10,
+      "sourceTransportEqual": true,
+      "preservationSource": "{({a: `x ${value ? /[}]/g : /x\\//}`})}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{({a: `x ${value ? /[}]/g : /x\\//}`})}"
+    },
+    {
+      "index": 11,
+      "sourceTransportEqual": true,
+      "preservationSource": "<A><><B x y='>' z={/}/.test(x)} {...props} /></></A>",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<A><><B x y='>' z={/}/.test(x)} {...props} /></></A>"
+    },
+    {
+      "index": 12,
+      "sourceTransportEqual": true,
+      "preservationSource": "<ns:item data-id=\"{>}\">left{/* note */}right</ns:item>",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<ns:item data-id=\"{>}\">left{/* note */}right</ns:item>"
+    },
+    {
+      "index": 13,
+      "sourceTransportEqual": true,
+      "preservationSource": "import {\n x,\n y\n} from './many.mdx'\nexport function f() { return `{x}` }\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./many.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./many.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import {\n x,\n y\n} from './many.mdx'\nexport function f() { return `{x}` }\n"
+    },
+    {
+      "index": 14,
+      "sourceTransportEqual": true,
+      "preservationSource": "caf\u00e9 \ud83d\ude00 <X>\u03bb</X>",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "caf\u00e9 \ud83d\ude00 <X>\u03bb</X>"
+    },
+    {
+      "index": 15,
+      "sourceTransportEqual": true,
+      "preservationSource": "\u00e9lead",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\u00e9lead"
+    },
+    {
+      "index": 16,
+      "sourceTransportEqual": true,
+      "preservationSource": "\u20aclead",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\u20aclead"
+    },
+    {
+      "index": 17,
+      "sourceTransportEqual": true,
+      "preservationSource": "\ud83d\ude00lead",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\ud83d\ude00lead"
+    },
+    {
+      "index": 18,
+      "sourceTransportEqual": true,
+      "preservationSource": "\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00{x}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00\u00e9\u20ac\ud83d\ude00{x}"
+    },
+    {
+      "index": 19,
+      "sourceTransportEqual": true,
+      "preservationSource": "{typeof /}/.source}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{typeof /}/.source}"
+    },
+    {
+      "index": 20,
+      "sourceTransportEqual": true,
+      "preservationSource": "{a++ / b + ({c:1}).c}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{a++ / b + ({c:1}).c}"
+    },
+    {
+      "index": 21,
+      "sourceTransportEqual": true,
+      "preservationSource": "paragraph\nimport './not-esm.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "paragraph\nimport './not-esm.mdx'\n"
+    },
+    {
+      "index": 22,
+      "sourceTransportEqual": true,
+      "preservationSource": "paragraph\rimport './not-esm.mdx'\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "paragraph\rimport './not-esm.mdx'\r"
+    },
+    {
+      "index": 23,
+      "sourceTransportEqual": true,
+      "preservationSource": "paragraph\r\nimport './not-esm.mdx'\r\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "paragraph\r\nimport './not-esm.mdx'\r\n"
+    },
+    {
+      "index": 24,
+      "sourceTransportEqual": true,
+      "preservationSource": "> quote\nimport './lazy.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "> quote\nimport './lazy.mdx'\n"
+    },
+    {
+      "index": 25,
+      "sourceTransportEqual": true,
+      "preservationSource": "<A>\n```mdx\n<B>{inert}</B>\n```\n</A>",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<A>\n```mdx\n<B>{inert}</B>\n```\n</A>"
+    },
+    {
+      "index": 26,
+      "sourceTransportEqual": true,
+      "preservationSource": "import /* before */ x from /* after */ './commented.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./commented.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./commented.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import /* before */ x from /* after */ './commented.mdx'\n"
+    },
+    {
+      "index": 27,
+      "sourceTransportEqual": true,
+      "preservationSource": "import /* before */ './side.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./side.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./side.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import /* before */ './side.mdx'\n"
+    },
+    {
+      "index": 28,
+      "sourceTransportEqual": true,
+      "preservationSource": "import // before\n './line-side.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./line-side.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./line-side.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import // before\n './line-side.mdx'\n"
+    },
+    {
+      "index": 29,
+      "sourceTransportEqual": true,
+      "preservationSource": "import x from // before\n './line-from.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./line-from.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./line-from.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import x from // before\n './line-from.mdx'\n"
+    },
+    {
+      "index": 30,
+      "sourceTransportEqual": true,
+      "preservationSource": "export // before\n const x = 1\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "export // before\n const x = 1\n"
+    },
+    {
+      "index": 31,
+      "sourceTransportEqual": true,
+      "preservationSource": "export default // before\n 1\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "export default // before\n 1\n"
+    },
+    {
+      "index": 32,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const x = 1 // done\nparagraph\n",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Unexpected `ExpressionStatement` in code: only import/exports are supported",
+      "source": "export const x = 1 // done\nparagraph\n"
+    },
+    {
+      "index": 33,
+      "sourceTransportEqual": true,
+      "preservationSource": "export default 1 // done\nimport './after-number.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./after-number.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./after-number.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "export default 1 // done\nimport './after-number.mdx'\n"
+    },
+    {
+      "index": 34,
+      "sourceTransportEqual": true,
+      "preservationSource": "export default 'x' // done\nimport './after-string.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./after-string.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./after-string.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "export default 'x' // done\nimport './after-string.mdx'\n"
+    },
+    {
+      "index": 35,
+      "sourceTransportEqual": true,
+      "preservationSource": "export default `x` // done\nimport './after-template.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./after-template.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./after-template.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "export default `x` // done\nimport './after-template.mdx'\n"
+    },
+    {
+      "index": 36,
+      "sourceTransportEqual": true,
+      "preservationSource": "export default [1] // done\nimport './after-array.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./after-array.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./after-array.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "export default [1] // done\nimport './after-array.mdx'\n"
+    },
+    {
+      "index": 37,
+      "sourceTransportEqual": true,
+      "preservationSource": "{(() => { if (x) /}/.test(y) })()}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{(() => { if (x) /}/.test(y) })()}"
+    },
+    {
+      "index": 38,
+      "sourceTransportEqual": true,
+      "preservationSource": "{(() => { for (;x;) /[a}]+/g.test(y) })()}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{(() => { for (;x;) /[a}]+/g.test(y) })()}"
+    },
+    {
+      "index": 39,
+      "sourceTransportEqual": true,
+      "preservationSource": "{(() => { switch (x) { case 1: break } /q}/.test(y) })()}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{(() => { switch (x) { case 1: break } /q}/.test(y) })()}"
+    },
+    {
+      "index": 40,
+      "sourceTransportEqual": true,
+      "preservationSource": "{(() => { try {} catch (e) {} /r}/.test(y) })()}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{(() => { try {} catch (e) {} /r}/.test(y) })()}"
+    },
+    {
+      "index": 41,
+      "sourceTransportEqual": true,
+      "preservationSource": "{a}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{a}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 42,
+      "sourceTransportEqual": true,
+      "preservationSource": "m{a + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "m{a + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 43,
+      "sourceTransportEqual": true,
+      "preservationSource": "mm{a + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mm{a + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 44,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmm{a + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmm{a + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 45,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 46,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmm{a}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmm{a}`<Z />`\n"
+    },
+    {
+      "index": 47,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmmm{a + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmmm{a + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 48,
+      "sourceTransportEqual": true,
+      "preservationSource": "{a + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{a + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 49,
+      "sourceTransportEqual": true,
+      "preservationSource": "m{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "m{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 50,
+      "sourceTransportEqual": true,
+      "preservationSource": "mm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 51,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmm{a}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmm{a}`<Z />`\n"
+    },
+    {
+      "index": 52,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmm{a + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmm{a + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 53,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmm{a + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmm{a + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 54,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmmm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmmm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 55,
+      "sourceTransportEqual": true,
+      "preservationSource": "{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 56,
+      "sourceTransportEqual": true,
+      "preservationSource": "m{a}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "m{a}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 57,
+      "sourceTransportEqual": true,
+      "preservationSource": "mm{a + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mm{a + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 58,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmm{a + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmm{a + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 59,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmm{a + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmm{a + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 60,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 61,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmmm{a}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmmm{a}`<Z />`\n"
+    },
+    {
+      "index": 62,
+      "sourceTransportEqual": true,
+      "preservationSource": "{a + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{a + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 63,
+      "sourceTransportEqual": true,
+      "preservationSource": "m{a + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "m{a + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 64,
+      "sourceTransportEqual": true,
+      "preservationSource": "mm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 65,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 66,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmm{a}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmm{a}`<Z />`\n"
+    },
+    {
+      "index": 67,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmm{a + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmm{a + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 68,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmmm{a + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmmm{a + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 69,
+      "sourceTransportEqual": true,
+      "preservationSource": "{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 70,
+      "sourceTransportEqual": true,
+      "preservationSource": "m{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "m{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 71,
+      "sourceTransportEqual": true,
+      "preservationSource": "mm{a}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mm{a}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 72,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmm{a + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmm{a + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 73,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmm{a + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmm{a + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 74,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmm{a + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmm{a + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 75,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 76,
+      "sourceTransportEqual": true,
+      "preservationSource": "{a}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{a}`<Z />`\n"
+    },
+    {
+      "index": 77,
+      "sourceTransportEqual": true,
+      "preservationSource": "m{a + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "m{a + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 78,
+      "sourceTransportEqual": true,
+      "preservationSource": "mm{a + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mm{a + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 79,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 80,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 81,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmm{a}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmm{a}`<Z />`\n"
+    },
+    {
+      "index": 82,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmmm{a + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmmm{a + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 83,
+      "sourceTransportEqual": true,
+      "preservationSource": "{a + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{a + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 84,
+      "sourceTransportEqual": true,
+      "preservationSource": "m{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "m{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 85,
+      "sourceTransportEqual": true,
+      "preservationSource": "mm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 86,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmm{a}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmm{a}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 87,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmm{a + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmm{a + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 88,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmm{a + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmm{a + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 89,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmmm{a + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmmm{a + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 90,
+      "sourceTransportEqual": true,
+      "preservationSource": "{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 91,
+      "sourceTransportEqual": true,
+      "preservationSource": "m{a}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "m{a}`<Z />`\n"
+    },
+    {
+      "index": 92,
+      "sourceTransportEqual": true,
+      "preservationSource": "mm{a + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mm{a + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 93,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmm{a + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmm{a + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 94,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 95,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 96,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmmm{a}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmmm{a}`<Z />`\n"
+    },
+    {
+      "index": 97,
+      "sourceTransportEqual": true,
+      "preservationSource": "{a + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{a + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 98,
+      "sourceTransportEqual": true,
+      "preservationSource": "m{a + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "m{a + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 99,
+      "sourceTransportEqual": true,
+      "preservationSource": "mm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 100,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 101,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmm{a}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmm{a}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 102,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmm{a + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmm{a + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 103,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmmm{a + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmmm{a + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 104,
+      "sourceTransportEqual": true,
+      "preservationSource": "{a + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{a + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 105,
+      "sourceTransportEqual": true,
+      "preservationSource": "m{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "m{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 106,
+      "sourceTransportEqual": true,
+      "preservationSource": "mm{a}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mm{a}`<Z />`\n"
+    },
+    {
+      "index": 107,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmm{a + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmm{a + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 108,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmm{a + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmm{a + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 109,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 110,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 111,
+      "sourceTransportEqual": true,
+      "preservationSource": "{a}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{a}`<Z />`\n"
+    },
+    {
+      "index": 112,
+      "sourceTransportEqual": true,
+      "preservationSource": "m{a + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "m{a + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 113,
+      "sourceTransportEqual": true,
+      "preservationSource": "mm{a + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mm{a + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 114,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmm{a + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 115,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 116,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmm{a}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmm{a}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 117,
+      "sourceTransportEqual": true,
+      "preservationSource": "mmmmmm{a + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mmmmmm{a + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 118,
+      "sourceTransportEqual": true,
+      "preservationSource": "{a + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{a + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 119,
+      "sourceTransportEqual": true,
+      "preservationSource": "m{a + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "m{a + {b: 1} + {b: 1} + {b: 1}}<X a=\"}>\">y</X>\n"
+    },
+    {
+      "index": 120,
+      "sourceTransportEqual": true,
+      "preservationSource": "mm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "mm{a + {b: 1} + {b: 1} + {b: 1} + {b: 1}}`<Z />`\n"
+    },
+    {
+      "index": 121,
+      "sourceTransportEqual": true,
+      "preservationSource": "`code`\n\\{literal}`code`\u000b{value}export const value = 1\nimport X from \"./x.mdx\"\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "`code`\n\\{literal}`code`\u000b{value}export const value = 1\nimport X from \"./x.mdx\"\n"
+    },
+    {
+      "index": 122,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\{literal}<A />text",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\{literal}<A />text"
+    },
+    {
+      "index": 123,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const value = 1\n\ttext\t<A /><A />text\f\rimport X from \"./x.mdx\"\n\u00e9\u00e9",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "export const value = 1\n\ttext\t<A /><A />text\f\rimport X from \"./x.mdx\"\n\u00e9\u00e9"
+    },
+    {
+      "index": 124,
+      "sourceTransportEqual": true,
+      "preservationSource": "\u00e9~~~\ncode\n~~~\n\nexport const value = 1\n\r\nimport X from \"./x.mdx\"\nimport X from \"./x.mdx\"\nexport const value = 1\n ~~~\ncode\n~~~\ntext~~~\ncode\n~~~\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\u00e9~~~\ncode\n~~~\n\nexport const value = 1\n\r\nimport X from \"./x.mdx\"\nimport X from \"./x.mdx\"\nexport const value = 1\n ~~~\ncode\n~~~\ntext~~~\ncode\n~~~\n"
+    },
+    {
+      "index": 125,
+      "sourceTransportEqual": true,
+      "preservationSource": "\rtext\n\\{literal} \texport const value = 1\n\\{literal}{value}import X from \"./x.mdx\"\n<A />",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\rtext\n\\{literal} \texport const value = 1\n\\{literal}{value}import X from \"./x.mdx\"\n<A />"
+    },
+    {
+      "index": 126,
+      "sourceTransportEqual": true,
+      "preservationSource": "~~~\ncode\n~~~\n~~~\ncode\n~~~\n\rexport const value = 1\n\\<A>\\{literal}\\<A>",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "~~~\ncode\n~~~\n~~~\ncode\n~~~\n\rexport const value = 1\n\\<A>\\{literal}\\<A>"
+    },
+    {
+      "index": 127,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\{literal}\u000b",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\{literal}\u000b"
+    },
+    {
+      "index": 128,
+      "sourceTransportEqual": true,
+      "preservationSource": " \r\n<A />\u00e9textimport X from \"./x.mdx\"\n<A />`code`",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": " \r\n<A />\u00e9textimport X from \"./x.mdx\"\n<A />`code`"
+    },
+    {
+      "index": 129,
+      "sourceTransportEqual": true,
+      "preservationSource": "{value}\r\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{value}\r\r"
+    },
+    {
+      "index": 130,
+      "sourceTransportEqual": true,
+      "preservationSource": "\t`code`\t`code` \t\f\\{literal}\n<A />\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\t`code`\t`code` \t\f\\{literal}\n<A />\r"
+    },
+    {
+      "index": 131,
+      "sourceTransportEqual": true,
+      "preservationSource": "~~~\ncode\n~~~\n~~~\ncode\n~~~\n\f~~~\ncode\n~~~\n\r\n\r\n`code````js\nimport hidden\n```\n```js\nimport hidden\n```\n\\<A><A />",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "~~~\ncode\n~~~\n~~~\ncode\n~~~\n\f~~~\ncode\n~~~\n\r\n\r\n`code````js\nimport hidden\n```\n```js\nimport hidden\n```\n\\<A><A />"
+    },
+    {
+      "index": 132,
+      "sourceTransportEqual": true,
+      "preservationSource": "\rexport const value = 1\n\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\rexport const value = 1\n\r"
+    },
+    {
+      "index": 133,
+      "sourceTransportEqual": true,
+      "preservationSource": "```js\nimport hidden\n```\nimport X from \"./x.mdx\"\ntext\r\n\rtextimport X from \"./x.mdx\"\n",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Unexpected `ExpressionStatement` in code: only import/exports are supported",
+      "source": "```js\nimport hidden\n```\nimport X from \"./x.mdx\"\ntext\r\n\rtextimport X from \"./x.mdx\"\n"
+    },
+    {
+      "index": 134,
+      "sourceTransportEqual": true,
+      "preservationSource": "```js\nimport hidden\n```\n\texport const value = 1\n{value}\n\n\f`code`",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "```js\nimport hidden\n```\n\texport const value = 1\n{value}\n\n\f`code`"
+    },
+    {
+      "index": 135,
+      "sourceTransportEqual": true,
+      "preservationSource": "~~~\ncode\n~~~\n\u00e9```js\nimport hidden\n```\n\fexport const value = 1\ntext \r\u000b\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "~~~\ncode\n~~~\n\u00e9```js\nimport hidden\n```\n\fexport const value = 1\ntext \r\u000b\r"
+    },
+    {
+      "index": 136,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r\n\texport const value = 1\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\r\n\texport const value = 1\n"
+    },
+    {
+      "index": 137,
+      "sourceTransportEqual": true,
+      "preservationSource": " \\{literal}\\<A>\r\n`code`\n\r\n\u000b\u000b\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": " \\{literal}\\<A>\r\n`code`\n\r\n\u000b\u000b\r"
+    },
+    {
+      "index": 138,
+      "sourceTransportEqual": true,
+      "preservationSource": "\ftext```js\nimport hidden\n```\n```js\nimport hidden\n```\n\r\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\ftext```js\nimport hidden\n```\n```js\nimport hidden\n```\n\r\n"
+    },
+    {
+      "index": 139,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r\n\r\\{literal}~~~\ncode\n~~~\n`code`\r\n\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\r\n\r\\{literal}~~~\ncode\n~~~\n`code`\r\n\r"
+    },
+    {
+      "index": 140,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const value = 1\n \\<A>\fimport X from \"./x.mdx\"\n\ttext```js\nimport hidden\n```\ntext<A />",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "export const value = 1\n \\<A>\fimport X from \"./x.mdx\"\n\ttext```js\nimport hidden\n```\ntext<A />"
+    },
+    {
+      "index": 141,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const value = 1\nexport const value = 1\n{value}\\<A>\rimport X from \"./x.mdx\"\n{value}~~~\ncode\n~~~\n ",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "export const value = 1\nexport const value = 1\n{value}\\<A>\rimport X from \"./x.mdx\"\n{value}~~~\ncode\n~~~\n "
+    },
+    {
+      "index": 142,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const value = 1\n export const value = 1\n```js\nimport hidden\n```\ntextimport X from \"./x.mdx\"\n\\<A> \u000b\\{literal}\\<A>\r",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "export const value = 1\n export const value = 1\n```js\nimport hidden\n```\ntextimport X from \"./x.mdx\"\n\\<A> \u000b\\{literal}\\<A>\r"
+    },
+    {
+      "index": 143,
+      "sourceTransportEqual": true,
+      "preservationSource": "\t<A />\r \r\n```js\nimport hidden\n```\ntext\r\n\u000b<A />```js\nimport hidden\n```\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\t<A />\r \r\n```js\nimport hidden\n```\ntext\r\n\u000b<A />```js\nimport hidden\n```\n"
+    },
+    {
+      "index": 144,
+      "sourceTransportEqual": true,
+      "preservationSource": "\f\r\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\f\r\n"
+    },
+    {
+      "index": 145,
+      "sourceTransportEqual": true,
+      "preservationSource": " \r\n```js\nimport hidden\n```\nimport X from \"./x.mdx\"\nimport X from \"./x.mdx\"\ntext~~~\ncode\n~~~\n",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": " \r\n```js\nimport hidden\n```\nimport X from \"./x.mdx\"\nimport X from \"./x.mdx\"\ntext~~~\ncode\n~~~\n"
+    },
+    {
+      "index": 146,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r \t<A />{value}\t```js\nimport hidden\n```\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\r \t<A />{value}\t```js\nimport hidden\n```\n"
+    },
+    {
+      "index": 147,
+      "sourceTransportEqual": true,
+      "preservationSource": "```js\nimport hidden\n```\n\r\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "```js\nimport hidden\n```\n\r\n"
+    },
+    {
+      "index": 148,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r<A />text",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\r<A />text"
+    },
+    {
+      "index": 149,
+      "sourceTransportEqual": true,
+      "preservationSource": "{value}<A />\\{literal}import X from \"./x.mdx\"\n\r\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{value}<A />\\{literal}import X from \"./x.mdx\"\n\r\n"
+    },
+    {
+      "index": 150,
+      "sourceTransportEqual": true,
+      "preservationSource": "```js\nimport hidden\n```\n `code`textimport X from \"./x.mdx\"\n \\{literal}\f```js\nimport hidden\n```\nimport X from \"./x.mdx\"\n\u00e9\t",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "```js\nimport hidden\n```\n `code`textimport X from \"./x.mdx\"\n \\{literal}\f```js\nimport hidden\n```\nimport X from \"./x.mdx\"\n\u00e9\t"
+    },
+    {
+      "index": 151,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r<A />\r\r\n`code`\\<A>\u000b`code`",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\r<A />\r\r\n`code`\\<A>\u000b`code`"
+    },
+    {
+      "index": 152,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\<A>{value}export const value = 1\n\r\n\\<A>",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\<A>{value}export const value = 1\n\r\n\\<A>"
+    },
+    {
+      "index": 153,
+      "sourceTransportEqual": true,
+      "preservationSource": "\nexport const value = 1\n\u000b\\<A>\u000b\u000bimport X from \"./x.mdx\"\nimport X from \"./x.mdx\"\n<A />",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "\nexport const value = 1\n\u000b\\<A>\u000b\u000bimport X from \"./x.mdx\"\nimport X from \"./x.mdx\"\n<A />"
+    },
+    {
+      "index": 154,
+      "sourceTransportEqual": true,
+      "preservationSource": "`code````js\nimport hidden\n```\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "`code````js\nimport hidden\n```\n"
+    },
+    {
+      "index": 155,
+      "sourceTransportEqual": true,
+      "preservationSource": "~~~\ncode\n~~~\n{value}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "~~~\ncode\n~~~\n{value}"
+    },
+    {
+      "index": 156,
+      "sourceTransportEqual": true,
+      "preservationSource": "\u000b\\{literal}```js\nimport hidden\n```\n\u000b\f```js\nimport hidden\n```\nexport const value = 1\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\u000b\\{literal}```js\nimport hidden\n```\n\u000b\f```js\nimport hidden\n```\nexport const value = 1\n"
+    },
+    {
+      "index": 157,
+      "sourceTransportEqual": true,
+      "preservationSource": "<A /><A />",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<A /><A />"
+    },
+    {
+      "index": 158,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\<A><A />`code`~~~\ncode\n~~~\n\r\n`code`<A />\f~~~\ncode\n~~~\n\u000b",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\<A><A />`code`~~~\ncode\n~~~\n\r\n`code`<A />\f~~~\ncode\n~~~\n\u000b"
+    },
+    {
+      "index": 159,
+      "sourceTransportEqual": true,
+      "preservationSource": "text\r\n\f\r\n\\{literal}\n\u00e9\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "text\r\n\f\r\n\\{literal}\n\u00e9\n"
+    },
+    {
+      "index": 160,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const value = 1\n\u00e9{value}```js\nimport hidden\n```\nexport const value = 1\nimport X from \"./x.mdx\"\n\u000b",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "export const value = 1\n\u00e9{value}```js\nimport hidden\n```\nexport const value = 1\nimport X from \"./x.mdx\"\n\u000b"
+    },
+    {
+      "index": 161,
+      "sourceTransportEqual": true,
+      "preservationSource": "text\n{value}\nexport const value = 1\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "text\n{value}\nexport const value = 1\n"
+    },
+    {
+      "index": 162,
+      "sourceTransportEqual": true,
+      "preservationSource": "\rexport const value = 1\n\\{literal}{value}\r\n\t\t\r",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "\rexport const value = 1\n\\{literal}{value}\r\n\t\t\r"
+    },
+    {
+      "index": 163,
+      "sourceTransportEqual": true,
+      "preservationSource": "import X from \"./x.mdx\"\nimport X from \"./x.mdx\"\nexport const value = 1\n\u00e9\t",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "import X from \"./x.mdx\"\nimport X from \"./x.mdx\"\nexport const value = 1\n\u00e9\t"
+    },
+    {
+      "index": 164,
+      "sourceTransportEqual": true,
+      "preservationSource": "<A />\u00e9\\<A>export const value = 1\n\\{literal}import X from \"./x.mdx\"\n\u000bimport X from \"./x.mdx\"\ntext",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<A />\u00e9\\<A>export const value = 1\n\\{literal}import X from \"./x.mdx\"\n\u000bimport X from \"./x.mdx\"\ntext"
+    },
+    {
+      "index": 165,
+      "sourceTransportEqual": true,
+      "preservationSource": "\f\\<A>\r\n\\{literal}`code`\\<A>",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\f\\<A>\r\n\\{literal}`code`\\<A>"
+    },
+    {
+      "index": 166,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r\n\f\u00e9```js\nimport hidden\n```\n<A />\r\u000b\t~~~\ncode\n~~~\n\r\u00e9",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\r\n\f\u00e9```js\nimport hidden\n```\n<A />\r\u000b\t~~~\ncode\n~~~\n\r\u00e9"
+    },
+    {
+      "index": 167,
+      "sourceTransportEqual": true,
+      "preservationSource": "{value} textexport const value = 1\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{value} textexport const value = 1\n"
+    },
+    {
+      "index": 168,
+      "sourceTransportEqual": true,
+      "preservationSource": " \r\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": " \r\r"
+    },
+    {
+      "index": 169,
+      "sourceTransportEqual": true,
+      "preservationSource": "\f```js\nimport hidden\n```\n\\<A>\f```js\nimport hidden\n```\n\t<A />text~~~\ncode\n~~~\ntext",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\f```js\nimport hidden\n```\n\\<A>\f```js\nimport hidden\n```\n\t<A />text~~~\ncode\n~~~\ntext"
+    },
+    {
+      "index": 170,
+      "sourceTransportEqual": true,
+      "preservationSource": " \u000b~~~\ncode\n~~~\n\n~~~\ncode\n~~~\n\\{literal}\n \f\rimport X from \"./x.mdx\"\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": " \u000b~~~\ncode\n~~~\n\n~~~\ncode\n~~~\n\\{literal}\n \f\rimport X from \"./x.mdx\"\n"
+    },
+    {
+      "index": 171,
+      "sourceTransportEqual": true,
+      "preservationSource": "\n\ttext\rimport X from \"./x.mdx\"\n\r\n\f\ttext",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\n\ttext\rimport X from \"./x.mdx\"\n\r\n\f\ttext"
+    },
+    {
+      "index": 172,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r\n\r\n \nimport X from \"./x.mdx\"\ntext\u00e9{value}",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "\r\n\r\n \nimport X from \"./x.mdx\"\ntext\u00e9{value}"
+    },
+    {
+      "index": 173,
+      "sourceTransportEqual": true,
+      "preservationSource": "\f~~~\ncode\n~~~\ntext<A /><A /> \\{literal}import X from \"./x.mdx\"\n\r\n\r\n\\{literal}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\f~~~\ncode\n~~~\ntext<A /><A /> \\{literal}import X from \"./x.mdx\"\n\r\n\r\n\\{literal}"
+    },
+    {
+      "index": 174,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\{literal}<A />\r<A />\f<A />text```js\nimport hidden\n```\nimport X from \"./x.mdx\"\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\{literal}<A />\r<A />\f<A />text```js\nimport hidden\n```\nimport X from \"./x.mdx\"\n"
+    },
+    {
+      "index": 175,
+      "sourceTransportEqual": true,
+      "preservationSource": "import X from \"./x.mdx\"\nimport X from \"./x.mdx\"\n{value}text\\<A>\rimport X from \"./x.mdx\"\n",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "import X from \"./x.mdx\"\nimport X from \"./x.mdx\"\n{value}text\\<A>\rimport X from \"./x.mdx\"\n"
+    },
+    {
+      "index": 176,
+      "sourceTransportEqual": true,
+      "preservationSource": " ~~~\ncode\n~~~\n\n\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": " ~~~\ncode\n~~~\n\n\r"
+    },
+    {
+      "index": 177,
+      "sourceTransportEqual": true,
+      "preservationSource": "<A />\r\n`code`~~~\ncode\n~~~\n ~~~\ncode\n~~~\n \\<A>\timport X from \"./x.mdx\"\n\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<A />\r\n`code`~~~\ncode\n~~~\n ~~~\ncode\n~~~\n \\<A>\timport X from \"./x.mdx\"\n\n"
+    },
+    {
+      "index": 178,
+      "sourceTransportEqual": true,
+      "preservationSource": "text\r\ttext\u00e9\t\r\n\r\n<A />",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "text\r\ttext\u00e9\t\r\n\r\n<A />"
+    },
+    {
+      "index": 179,
+      "sourceTransportEqual": true,
+      "preservationSource": "\f`code`\f\n\f\r\u00e9\r\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\f`code`\f\n\f\r\u00e9\r\n"
+    },
+    {
+      "index": 180,
+      "sourceTransportEqual": true,
+      "preservationSource": "{value}~~~\ncode\n~~~\n\\{literal}{value}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{value}~~~\ncode\n~~~\n\\{literal}{value}"
+    },
+    {
+      "index": 181,
+      "sourceTransportEqual": true,
+      "preservationSource": "\n\\<A><A />import X from \"./x.mdx\"\n\\<A>`code`\u000b",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\n\\<A><A />import X from \"./x.mdx\"\n\\<A>`code`\u000b"
+    },
+    {
+      "index": 182,
+      "sourceTransportEqual": true,
+      "preservationSource": "\rtext",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\rtext"
+    },
+    {
+      "index": 183,
+      "sourceTransportEqual": true,
+      "preservationSource": " \r\n\f\t```js\nimport hidden\n```\n\r{value}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": " \r\n\f\t```js\nimport hidden\n```\n\r{value}"
+    },
+    {
+      "index": 184,
+      "sourceTransportEqual": true,
+      "preservationSource": "text\u000b{value}\u00e9import X from \"./x.mdx\"\n{value}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "text\u000b{value}\u00e9import X from \"./x.mdx\"\n{value}"
+    },
+    {
+      "index": 185,
+      "sourceTransportEqual": true,
+      "preservationSource": "\u00e9```js\nimport hidden\n```\n\\{literal}\t\ntext{value}{value} \u00e9\t",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\u00e9```js\nimport hidden\n```\n\\{literal}\t\ntext{value}{value} \u00e9\t"
+    },
+    {
+      "index": 186,
+      "sourceTransportEqual": true,
+      "preservationSource": "<A /><A />\u000btext\u000b\r\u00e9\f\u00e9\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<A /><A />\u000btext\u000b\r\u00e9\f\u00e9\r"
+    },
+    {
+      "index": 187,
+      "sourceTransportEqual": true,
+      "preservationSource": "\f\r\n~~~\ncode\n~~~\n{value}`code`\\{literal}\fimport X from \"./x.mdx\"\n\u00e9\u00e9",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\f\r\n~~~\ncode\n~~~\n{value}`code`\\{literal}\fimport X from \"./x.mdx\"\n\u00e9\u00e9"
+    },
+    {
+      "index": 188,
+      "sourceTransportEqual": true,
+      "preservationSource": "{value}\r\n\\{literal}\u00e9",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{value}\r\n\\{literal}\u00e9"
+    },
+    {
+      "index": 189,
+      "sourceTransportEqual": true,
+      "preservationSource": "```js\nimport hidden\n```\ntext`code`\u000b\u00e9\n\r\r~~~\ncode\n~~~\ntextimport X from \"./x.mdx\"\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "```js\nimport hidden\n```\ntext`code`\u000b\u00e9\n\r\r~~~\ncode\n~~~\ntextimport X from \"./x.mdx\"\n"
+    },
+    {
+      "index": 190,
+      "sourceTransportEqual": true,
+      "preservationSource": "<A />\r\n`code`{value}\t",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<A />\r\n`code`{value}\t"
+    },
+    {
+      "index": 191,
+      "sourceTransportEqual": true,
+      "preservationSource": "\t\u00e9export const value = 1\n```js\nimport hidden\n```\n\\{literal}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\t\u00e9export const value = 1\n```js\nimport hidden\n```\n\\{literal}"
+    },
+    {
+      "index": 192,
+      "sourceTransportEqual": true,
+      "preservationSource": "import X from \"./x.mdx\"\n\n\t<A />\f<A />",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import X from \"./x.mdx\"\n\n\t<A />\f<A />"
+    },
+    {
+      "index": 193,
+      "sourceTransportEqual": true,
+      "preservationSource": "```js\nimport hidden\n```\n\\<A>```js\nimport hidden\n```\n\t\n```js\nimport hidden\n```\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "```js\nimport hidden\n```\n\\<A>```js\nimport hidden\n```\n\t\n```js\nimport hidden\n```\n"
+    },
+    {
+      "index": 194,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\{literal}```js\nimport hidden\n```\n\\<A>\u00e9<A />\u00e9\t\u000b\t\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\{literal}```js\nimport hidden\n```\n\\<A>\u00e9<A />\u00e9\t\u000b\t\r"
+    },
+    {
+      "index": 195,
+      "sourceTransportEqual": true,
+      "preservationSource": "\u000b\\{literal} \n\u000b",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\u000b\\{literal} \n\u000b"
+    },
+    {
+      "index": 196,
+      "sourceTransportEqual": true,
+      "preservationSource": "```js\nimport hidden\n```\n\r\n \r\n\t{value}```js\nimport hidden\n```\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "```js\nimport hidden\n```\n\r\n \r\n\t{value}```js\nimport hidden\n```\n"
+    },
+    {
+      "index": 197,
+      "sourceTransportEqual": true,
+      "preservationSource": "textimport X from \"./x.mdx\"\n<A />\t\ttext\r{value}export const value = 1\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "textimport X from \"./x.mdx\"\n<A />\t\ttext\r{value}export const value = 1\n"
+    },
+    {
+      "index": 198,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\{literal}<A />```js\nimport hidden\n```\n\n{value}\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\{literal}<A />```js\nimport hidden\n```\n\n{value}\n"
+    },
+    {
+      "index": 199,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\{literal}```js\nimport hidden\n```\n\r\r\\<A>\r\ntextimport X from \"./x.mdx\"\n\u00e9",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\{literal}```js\nimport hidden\n```\n\r\r\\<A>\r\ntextimport X from \"./x.mdx\"\n\u00e9"
+    },
+    {
+      "index": 200,
+      "sourceTransportEqual": true,
+      "preservationSource": "import X from \"./x.mdx\"\n\timport X from \"./x.mdx\"\n~~~\ncode\n~~~\n\r\n{value}\u000b\f\\{literal}\r\n~~~\ncode\n~~~\n",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "import X from \"./x.mdx\"\n\timport X from \"./x.mdx\"\n~~~\ncode\n~~~\n\r\n{value}\u000b\f\\{literal}\r\n~~~\ncode\n~~~\n"
+    },
+    {
+      "index": 201,
+      "sourceTransportEqual": true,
+      "preservationSource": "<A />{value}\u000b\r\n\\<A>```js\nimport hidden\n```\n\f\\{literal}\r`code`\t\f",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<A />{value}\u000b\r\n\\<A>```js\nimport hidden\n```\n\f\\{literal}\r`code`\t\f"
+    },
+    {
+      "index": 202,
+      "sourceTransportEqual": true,
+      "preservationSource": "<A />text\r\n\f`code`export const value = 1\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<A />text\r\n\f`code`export const value = 1\n"
+    },
+    {
+      "index": 203,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r\t{value}{value}\u00e9~~~\ncode\n~~~\n\u000bexport const value = 1\nexport const value = 1\n\\<A>\\<A>",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\r\t{value}{value}\u00e9~~~\ncode\n~~~\n\u000bexport const value = 1\nexport const value = 1\n\\<A>\\<A>"
+    },
+    {
+      "index": 204,
+      "sourceTransportEqual": true,
+      "preservationSource": "{value}\\<A>\nimport X from \"./x.mdx\"\n`code``code`",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{value}\\<A>\nimport X from \"./x.mdx\"\n`code``code`"
+    },
+    {
+      "index": 205,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const value = 1\ntext\\<A>\u000bexport const value = 1\n<A />\r\r\n```js\nimport hidden\n```\n\\{literal}\u000b{value}",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "export const value = 1\ntext\\<A>\u000bexport const value = 1\n<A />\r\r\n```js\nimport hidden\n```\n\\{literal}\u000b{value}"
+    },
+    {
+      "index": 206,
+      "sourceTransportEqual": true,
+      "preservationSource": "\rtext",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\rtext"
+    },
+    {
+      "index": 207,
+      "sourceTransportEqual": true,
+      "preservationSource": "~~~\ncode\n~~~\n\t\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "~~~\ncode\n~~~\n\t\n"
+    },
+    {
+      "index": 208,
+      "sourceTransportEqual": true,
+      "preservationSource": "text import X from \"./x.mdx\"\n{value}\\{literal}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "text import X from \"./x.mdx\"\n{value}\\{literal}"
+    },
+    {
+      "index": 209,
+      "sourceTransportEqual": true,
+      "preservationSource": "\t\u00e9```js\nimport hidden\n```\ntext`code` \f",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\t\u00e9```js\nimport hidden\n```\ntext`code` \f"
+    },
+    {
+      "index": 210,
+      "sourceTransportEqual": true,
+      "preservationSource": "\n\r\n<A />\f<A />\\{literal}~~~\ncode\n~~~\n\u000b\fimport X from \"./x.mdx\"\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\n\r\n<A />\f<A />\\{literal}~~~\ncode\n~~~\n\u000b\fimport X from \"./x.mdx\"\n"
+    },
+    {
+      "index": 211,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\<A> \n```js\nimport hidden\n```\n`code`text\\{literal}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\<A> \n```js\nimport hidden\n```\n`code`text\\{literal}"
+    },
+    {
+      "index": 212,
+      "sourceTransportEqual": true,
+      "preservationSource": "texttext\t~~~\ncode\n~~~\n\r\ntext{value}\n\n\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "texttext\t~~~\ncode\n~~~\n\r\ntext{value}\n\n\n"
+    },
+    {
+      "index": 213,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const value = 1\n\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "export const value = 1\n\r"
+    },
+    {
+      "index": 214,
+      "sourceTransportEqual": true,
+      "preservationSource": "{value} text\timport X from \"./x.mdx\"\n\nexport const value = 1\n\r\n\n`code`\t```js\nimport hidden\n```\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{value} text\timport X from \"./x.mdx\"\n\nexport const value = 1\n\r\n\n`code`\t```js\nimport hidden\n```\n"
+    },
+    {
+      "index": 215,
+      "sourceTransportEqual": true,
+      "preservationSource": "import X from \"./x.mdx\"\n```js\nimport hidden\n```\nexport const value = 1\n\u00e9~~~\ncode\n~~~\n\\{literal}\u00e9\r\n",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "import X from \"./x.mdx\"\n```js\nimport hidden\n```\nexport const value = 1\n\u00e9~~~\ncode\n~~~\n\\{literal}\u00e9\r\n"
+    },
+    {
+      "index": 216,
+      "sourceTransportEqual": true,
+      "preservationSource": "~~~\ncode\n~~~\n<A />text",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "~~~\ncode\n~~~\n<A />text"
+    },
+    {
+      "index": 217,
+      "sourceTransportEqual": true,
+      "preservationSource": "~~~\ncode\n~~~\n\t```js\nimport hidden\n```\n```js\nimport hidden\n```\n\r\n<A />\\<A>\\<A> \r{value}\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "~~~\ncode\n~~~\n\t```js\nimport hidden\n```\n```js\nimport hidden\n```\n\r\n<A />\\<A>\\<A> \r{value}\n"
+    },
+    {
+      "index": 218,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\{literal}\t\t\u00e9\n\u000b\n```js\nimport hidden\n```\n\nimport X from \"./x.mdx\"\nimport X from \"./x.mdx\"\n\\<A>",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "\\{literal}\t\t\u00e9\n\u000b\n```js\nimport hidden\n```\n\nimport X from \"./x.mdx\"\nimport X from \"./x.mdx\"\n\\<A>"
+    },
+    {
+      "index": 219,
+      "sourceTransportEqual": true,
+      "preservationSource": "\f<A />\f\t\\{literal}\u00e9```js\nimport hidden\n```\n\u00e9~~~\ncode\n~~~\n\u000b",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\f<A />\f\t\\{literal}\u00e9```js\nimport hidden\n```\n\u00e9~~~\ncode\n~~~\n\u000b"
+    },
+    {
+      "index": 220,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\{literal}\r\ntextexport const value = 1\n\r\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\{literal}\r\ntextexport const value = 1\n\r\n"
+    },
+    {
+      "index": 221,
+      "sourceTransportEqual": true,
+      "preservationSource": "{value}<A />\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{value}<A />\r"
+    },
+    {
+      "index": 222,
+      "sourceTransportEqual": true,
+      "preservationSource": "\u000b`code`<A />export const value = 1\n`code`~~~\ncode\n~~~\n\texport const value = 1\n\n\t",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\u000b`code`<A />export const value = 1\n`code`~~~\ncode\n~~~\n\texport const value = 1\n\n\t"
+    },
+    {
+      "index": 223,
+      "sourceTransportEqual": true,
+      "preservationSource": "\n`code`",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\n`code`"
+    },
+    {
+      "index": 224,
+      "sourceTransportEqual": true,
+      "preservationSource": "{value}\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{value}\r"
+    },
+    {
+      "index": 225,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const value = 1\n~~~\ncode\n~~~\n\\{literal}\\{literal}\t\u00e9",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "export const value = 1\n~~~\ncode\n~~~\n\\{literal}\\{literal}\t\u00e9"
+    },
+    {
+      "index": 226,
+      "sourceTransportEqual": true,
+      "preservationSource": " ~~~\ncode\n~~~\n\r {value}\r\n\f\f\\<A>\f",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": " ~~~\ncode\n~~~\n\r {value}\r\n\f\f\\<A>\f"
+    },
+    {
+      "index": 227,
+      "sourceTransportEqual": true,
+      "preservationSource": "```js\nimport hidden\n```\n \t \f\t",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "```js\nimport hidden\n```\n \t \f\t"
+    },
+    {
+      "index": 228,
+      "sourceTransportEqual": true,
+      "preservationSource": "\u000btext\u000b~~~\ncode\n~~~\n~~~\ncode\n~~~\n\\{literal}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\u000btext\u000b~~~\ncode\n~~~\n~~~\ncode\n~~~\n\\{literal}"
+    },
+    {
+      "index": 229,
+      "sourceTransportEqual": true,
+      "preservationSource": "\f \f\u00e9\n ",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\f \f\u00e9\n "
+    },
+    {
+      "index": 230,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r\t~~~\ncode\n~~~\nexport const value = 1\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\r\t~~~\ncode\n~~~\nexport const value = 1\n"
+    },
+    {
+      "index": 231,
+      "sourceTransportEqual": true,
+      "preservationSource": "\f\u00e9\\{literal}\n~~~\ncode\n~~~\n{value}\t",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\f\u00e9\\{literal}\n~~~\ncode\n~~~\n{value}\t"
+    },
+    {
+      "index": 232,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const value = 1\n\u00e9{value}```js\nimport hidden\n```\n\\<A>\u000b \u000b\r\n",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "export const value = 1\n\u00e9{value}```js\nimport hidden\n```\n\\<A>\u000b \u000b\r\n"
+    },
+    {
+      "index": 233,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const value = 1\n~~~\ncode\n~~~\n",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "export const value = 1\n~~~\ncode\n~~~\n"
+    },
+    {
+      "index": 234,
+      "sourceTransportEqual": true,
+      "preservationSource": "{value}import X from \"./x.mdx\"\n\r\n\u000b ```js\nimport hidden\n```\n\rtext\u00e9",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{value}import X from \"./x.mdx\"\n\r\n\u000b ```js\nimport hidden\n```\n\rtext\u00e9"
+    },
+    {
+      "index": 235,
+      "sourceTransportEqual": true,
+      "preservationSource": "\u00e9~~~\ncode\n~~~\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\u00e9~~~\ncode\n~~~\n"
+    },
+    {
+      "index": 236,
+      "sourceTransportEqual": true,
+      "preservationSource": "<A />export const value = 1\nexport const value = 1\n`code````js\nimport hidden\n```\n{value}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<A />export const value = 1\nexport const value = 1\n`code````js\nimport hidden\n```\n{value}"
+    },
+    {
+      "index": 237,
+      "sourceTransportEqual": true,
+      "preservationSource": "import X from \"./x.mdx\"\n\n```js\nimport hidden\n```\nexport const value = 1\n\r\f\\<A>\r\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import X from \"./x.mdx\"\n\n```js\nimport hidden\n```\nexport const value = 1\n\r\f\\<A>\r\n"
+    },
+    {
+      "index": 238,
+      "sourceTransportEqual": true,
+      "preservationSource": "~~~\ncode\n~~~\n~~~\ncode\n~~~\n\u00e9~~~\ncode\n~~~\n\u00e9\f",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "~~~\ncode\n~~~\n~~~\ncode\n~~~\n\u00e9~~~\ncode\n~~~\n\u00e9\f"
+    },
+    {
+      "index": 239,
+      "sourceTransportEqual": true,
+      "preservationSource": "`code`text\u00e9\\{literal}~~~\ncode\n~~~\n`code`",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "`code`text\u00e9\\{literal}~~~\ncode\n~~~\n`code`"
+    },
+    {
+      "index": 240,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const value = 1\n{value}\\{literal}```js\nimport hidden\n```\n\\<A>",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "export const value = 1\n{value}\\{literal}```js\nimport hidden\n```\n\\<A>"
+    },
+    {
+      "index": 241,
+      "sourceTransportEqual": true,
+      "preservationSource": "\n\t<A /><A />`code`{value}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\n\t<A /><A />`code`{value}"
+    },
+    {
+      "index": 242,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\{literal}\u00e9export const value = 1\n<A />```js\nimport hidden\n```\n\r\nimport X from \"./x.mdx\"\n\r\n\r{value} ~~~\ncode\n~~~\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": false,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\{literal}\u00e9export const value = 1\n<A />```js\nimport hidden\n```\n\r\nimport X from \"./x.mdx\"\n\r\n\r{value} ~~~\ncode\n~~~\n"
+    },
+    {
+      "index": 243,
+      "sourceTransportEqual": true,
+      "preservationSource": "\u00e9```js\nimport hidden\n```\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\u00e9```js\nimport hidden\n```\n"
+    },
+    {
+      "index": 244,
+      "sourceTransportEqual": true,
+      "preservationSource": "\f\\<A><A />\\{literal} {value}\\<A>\t\\<A>\f```js\nimport hidden\n```\n\\<A>",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\f\\<A><A />\\{literal} {value}\\<A>\t\\<A>\f```js\nimport hidden\n```\n\\<A>"
+    },
+    {
+      "index": 245,
+      "sourceTransportEqual": true,
+      "preservationSource": "`code`{value}\n{value}~~~\ncode\n~~~\n \r```js\nimport hidden\n```\ntext",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "`code`{value}\n{value}~~~\ncode\n~~~\n \r```js\nimport hidden\n```\ntext"
+    },
+    {
+      "index": 246,
+      "sourceTransportEqual": true,
+      "preservationSource": "text<A />export const value = 1\nimport X from \"./x.mdx\"\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "text<A />export const value = 1\nimport X from \"./x.mdx\"\n"
+    },
+    {
+      "index": 247,
+      "sourceTransportEqual": true,
+      "preservationSource": "import X from \"./x.mdx\"\n`code`\u00e9{value}\r\n\u000b~~~\ncode\n~~~\nimport X from \"./x.mdx\"\n\u000b<A />export const value = 1\n\u00e9",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "import X from \"./x.mdx\"\n`code`\u00e9{value}\r\n\u000b~~~\ncode\n~~~\nimport X from \"./x.mdx\"\n\u000b<A />export const value = 1\n\u00e9"
+    },
+    {
+      "index": 248,
+      "sourceTransportEqual": true,
+      "preservationSource": "import X from \"./x.mdx\"\n\\{literal}import X from \"./x.mdx\"\n\u00e9",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "import X from \"./x.mdx\"\n\\{literal}import X from \"./x.mdx\"\n\u00e9"
+    },
+    {
+      "index": 249,
+      "sourceTransportEqual": true,
+      "preservationSource": "textimport X from \"./x.mdx\"\n<A />\t\\<A>\t \\<A><A />\\{literal}\n<A />",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "textimport X from \"./x.mdx\"\n<A />\t\\<A>\t \\<A><A />\\{literal}\n<A />"
+    },
+    {
+      "index": 250,
+      "sourceTransportEqual": true,
+      "preservationSource": "\u000b\f\r<A />~~~\ncode\n~~~\n\fimport X from \"./x.mdx\"\n~~~\ncode\n~~~\n\n text\f",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\u000b\f\r<A />~~~\ncode\n~~~\n\fimport X from \"./x.mdx\"\n~~~\ncode\n~~~\n\n text\f"
+    },
+    {
+      "index": 251,
+      "sourceTransportEqual": true,
+      "preservationSource": "\n{value}\f\\<A>\\{literal}\f\\<A>\r\n\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\n{value}\f\\<A>\\{literal}\f\\<A>\r\n\r"
+    },
+    {
+      "index": 252,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\<A>`code````js\nimport hidden\n```\n{value}\r\n`code`export const value = 1\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\<A>`code````js\nimport hidden\n```\n{value}\r\n`code`export const value = 1\n"
+    },
+    {
+      "index": 253,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\{literal}\u00e9<A /> <A />text \t",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\{literal}\u00e9<A /> <A />text \t"
+    },
+    {
+      "index": 254,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r\nexport const value = 1\n\u000b```js\nimport hidden\n```\ntext",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Unexpected `ExpressionStatement` in code: only import/exports are supported",
+      "source": "\r\nexport const value = 1\n\u000b```js\nimport hidden\n```\ntext"
+    },
+    {
+      "index": 255,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const value = 1\nexport const value = 1\n\rexport const value = 1\n\\<A>~~~\ncode\n~~~\nexport const value = 1\ntext\u000b{value}\\{literal}```js\nimport hidden\n```\n",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "export const value = 1\nexport const value = 1\n\rexport const value = 1\n\\<A>~~~\ncode\n~~~\nexport const value = 1\ntext\u000b{value}\\{literal}```js\nimport hidden\n```\n"
+    },
+    {
+      "index": 256,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r`code`~~~\ncode\n~~~\n\r\n\f\fexport const value = 1\n\u00e9",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\r`code`~~~\ncode\n~~~\n\r\n\f\fexport const value = 1\n\u00e9"
+    },
+    {
+      "index": 257,
+      "sourceTransportEqual": true,
+      "preservationSource": " ```js\nimport hidden\n```\ntext\\{literal}\u000bexport const value = 1\ntext\r\f\\{literal}\nexport const value = 1\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": " ```js\nimport hidden\n```\ntext\\{literal}\u000bexport const value = 1\ntext\r\f\\{literal}\nexport const value = 1\n"
+    },
+    {
+      "index": 258,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r\n\\{literal}text```js\nimport hidden\n```\n\r\\<A>\u000b\f\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\r\n\\{literal}text```js\nimport hidden\n```\n\r\\<A>\u000b\f\r"
+    },
+    {
+      "index": 259,
+      "sourceTransportEqual": true,
+      "preservationSource": "```js\nimport hidden\n```\n~~~\ncode\n~~~\n<A />export const value = 1\n\u00e9\u00e9`code````js\nimport hidden\n```\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "```js\nimport hidden\n```\n~~~\ncode\n~~~\n<A />export const value = 1\n\u00e9\u00e9`code````js\nimport hidden\n```\n"
+    },
+    {
+      "index": 260,
+      "sourceTransportEqual": true,
+      "preservationSource": "{value}textexport const value = 1\n\r\t\r<A />import X from \"./x.mdx\"\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{value}textexport const value = 1\n\r\t\r<A />import X from \"./x.mdx\"\n"
+    },
+    {
+      "index": 261,
+      "sourceTransportEqual": true,
+      "preservationSource": " `code``code`\u00e9import X from \"./x.mdx\"\n\\{literal}export const value = 1\n\t~~~\ncode\n~~~\n\\<A>",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": " `code``code`\u00e9import X from \"./x.mdx\"\n\\{literal}export const value = 1\n\t~~~\ncode\n~~~\n\\<A>"
+    },
+    {
+      "index": 262,
+      "sourceTransportEqual": true,
+      "preservationSource": "\n{value}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\n{value}"
+    },
+    {
+      "index": 263,
+      "sourceTransportEqual": true,
+      "preservationSource": "\t\u00e9~~~\ncode\n~~~\ntext~~~\ncode\n~~~\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\t\u00e9~~~\ncode\n~~~\ntext~~~\ncode\n~~~\n"
+    },
+    {
+      "index": 264,
+      "sourceTransportEqual": true,
+      "preservationSource": "~~~\ncode\n~~~\n`code````js\nimport hidden\n```\nexport const value = 1\nimport X from \"./x.mdx\"\n~~~\ncode\n~~~\n```js\nimport hidden\n```\n{value}\u00e9\u000b",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "~~~\ncode\n~~~\n`code````js\nimport hidden\n```\nexport const value = 1\nimport X from \"./x.mdx\"\n~~~\ncode\n~~~\n```js\nimport hidden\n```\n{value}\u00e9\u000b"
+    },
+    {
+      "index": 265,
+      "sourceTransportEqual": true,
+      "preservationSource": "\nimport X from \"./x.mdx\"\n\\{literal}export const value = 1\n<A />\t{value} export const value = 1\n{value}",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "\nimport X from \"./x.mdx\"\n\\{literal}export const value = 1\n<A />\t{value} export const value = 1\n{value}"
+    },
+    {
+      "index": 266,
+      "sourceTransportEqual": true,
+      "preservationSource": "<A />\r\n\u00e9~~~\ncode\n~~~\n\texport const value = 1\n {value}import X from \"./x.mdx\"\n\t```js\nimport hidden\n```\n\u00e9",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<A />\r\n\u00e9~~~\ncode\n~~~\n\texport const value = 1\n {value}import X from \"./x.mdx\"\n\t```js\nimport hidden\n```\n\u00e9"
+    },
+    {
+      "index": 267,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r\n\nexport const value = 1\n\\{literal}\r\n`code`",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "\r\n\nexport const value = 1\n\\{literal}\r\n`code`"
+    },
+    {
+      "index": 268,
+      "sourceTransportEqual": true,
+      "preservationSource": "`code``code`~~~\ncode\n~~~\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "`code``code`~~~\ncode\n~~~\n"
+    },
+    {
+      "index": 269,
+      "sourceTransportEqual": true,
+      "preservationSource": "\ftext`code`<A />\f\r\n\t```js\nimport hidden\n```\nexport const value = 1\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\ftext`code`<A />\f\r\n\t```js\nimport hidden\n```\nexport const value = 1\n"
+    },
+    {
+      "index": 270,
+      "sourceTransportEqual": true,
+      "preservationSource": "<A />\\<A>\r\r\n\r\n \t{value}texttext{value}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<A />\\<A>\r\r\n\r\n \t{value}texttext{value}"
+    },
+    {
+      "index": 271,
+      "sourceTransportEqual": true,
+      "preservationSource": "\n\u00e9text```js\nimport hidden\n```\n{value}{value}{value}{value}`code````js\nimport hidden\n```\n\r\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\n\u00e9text```js\nimport hidden\n```\n{value}{value}{value}{value}`code````js\nimport hidden\n```\n\r\n"
+    },
+    {
+      "index": 272,
+      "sourceTransportEqual": true,
+      "preservationSource": "{value}\r",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{value}\r"
+    },
+    {
+      "index": 273,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const value = 1\n\u00e9import X from \"./x.mdx\"\n\u00e9",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "export const value = 1\n\u00e9import X from \"./x.mdx\"\n\u00e9"
+    },
+    {
+      "index": 274,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\<A>\r\f`code````js\nimport hidden\n```\ntext\t",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\<A>\r\f`code````js\nimport hidden\n```\ntext\t"
+    },
+    {
+      "index": 275,
+      "sourceTransportEqual": true,
+      "preservationSource": "import X from \"./x.mdx\"\n  ```js\nimport hidden\n```\n<A />export const value = 1\n\\<A><A />\n<A />\\<A>",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Could not parse import/exports with acorn",
+      "source": "import X from \"./x.mdx\"\n  ```js\nimport hidden\n```\n<A />export const value = 1\n\\<A><A />\n<A />\\<A>"
+    },
+    {
+      "index": 276,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r \n\\{literal}import X from \"./x.mdx\"\n\r\n\t```js\nimport hidden\n```\n\r\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\r \n\\{literal}import X from \"./x.mdx\"\n\r\n\t```js\nimport hidden\n```\n\r\n"
+    },
+    {
+      "index": 277,
+      "sourceTransportEqual": true,
+      "preservationSource": "\r\n\u000b{value}\r\r\n\f{value}",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\r\n\u000b{value}\r\r\n\f{value}"
+    },
+    {
+      "index": 278,
+      "sourceTransportEqual": true,
+      "preservationSource": "\\<A>\\<A>~~~\ncode\n~~~\n\n\u00e9",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\\<A>\\<A>~~~\ncode\n~~~\n\n\u00e9"
+    },
+    {
+      "index": 279,
+      "sourceTransportEqual": true,
+      "preservationSource": "`code`export const value = 1\n\u00e9{value}```js\nimport hidden\n```\n~~~\ncode\n~~~\n\u000b```js\nimport hidden\n```\n\u00e9<A />",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "`code`export const value = 1\n\u00e9{value}```js\nimport hidden\n```\n~~~\ncode\n~~~\n\u000b```js\nimport hidden\n```\n\u00e9<A />"
+    },
+    {
+      "index": 280,
+      "sourceTransportEqual": true,
+      "preservationSource": "\n```js\nimport hidden\n```\n\u000b`code`",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\n```js\nimport hidden\n```\n\u000b`code`"
+    },
+    {
+      "index": 281,
+      "sourceTransportEqual": true,
+      "preservationSource": "plain\n\n   ~~~\ncode\n~~~\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "plain\n\n   ~~~\ncode\n~~~\n"
+    },
+    {
+      "index": 282,
+      "sourceTransportEqual": true,
+      "preservationSource": "plain\r\n\r\nimport X from \"./x.mdx\"\r\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./x.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "plain\r\n\r\nimport X from \"./x.mdx\"\r\n"
+    },
+    {
+      "index": 283,
+      "sourceTransportEqual": true,
+      "preservationSource": "text\n \t\nexport const x=1\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "text\n \t\nexport const x=1\n"
+    },
+    {
+      "index": 284,
+      "sourceTransportEqual": true,
+      "preservationSource": "\u00e9 text\n\n<Aside>{value}</Aside>",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "\u00e9 text\n\n<Aside>{value}</Aside>"
+    },
+    {
+      "index": 285,
+      "sourceTransportEqual": true,
+      "preservationSource": "---\r\ntitle: \u00e9\r\n---\r\nText",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "---\r\ntitle: \u00e9\r\n---\r\nText"
+    },
+    {
+      "index": 286,
+      "sourceTransportEqual": true,
+      "preservationSource": "import './a.mdx'\nimport './dir/../a.mdx'\nimport './note.md'\nimport './code.js'\nimport 'bare'\nroot\n",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./a.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./dir/../a.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./note.md",
+          "dependency": true
+        },
+        {
+          "specifier": "./code.js",
+          "dependency": false
+        },
+        {
+          "specifier": "bare",
+          "dependency": false
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Unexpected `ExpressionStatement` in code: only import/exports are supported",
+      "source": "import './a.mdx'\nimport './dir/../a.mdx'\nimport './note.md'\nimport './code.js'\nimport 'bare'\nroot\n"
+    },
+    {
+      "index": 287,
+      "sourceTransportEqual": true,
+      "preservationSource": "import './nested/b.mdx'\nimport './note.md'\nA\n",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./nested/b.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./note.md",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Unexpected `ExpressionStatement` in code: only import/exports are supported",
+      "source": "import './nested/b.mdx'\nimport './note.md'\nA\n"
+    },
+    {
+      "index": 288,
+      "sourceTransportEqual": true,
+      "preservationSource": "B\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "B\n"
+    },
+    {
+      "index": 289,
+      "sourceTransportEqual": true,
+      "preservationSource": "import './cycle-b.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./cycle-b.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./cycle-b.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import './cycle-b.mdx'\n"
+    },
+    {
+      "index": 290,
+      "sourceTransportEqual": true,
+      "preservationSource": "import './cycle-a.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./cycle-a.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./cycle-a.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import './cycle-a.mdx'\n"
+    },
+    {
+      "index": 291,
+      "sourceTransportEqual": true,
+      "preservationSource": "```\nimport './no.mdx'\n```\n`import './no2.mdx'`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "```\nimport './no.mdx'\n```\n`import './no2.mdx'`\n"
+    },
+    {
+      "index": 292,
+      "sourceTransportEqual": true,
+      "preservationSource": "Unicode path\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "Unicode path\n"
+    },
+    {
+      "index": 293,
+      "sourceTransportEqual": true,
+      "preservationSource": "import './space \u03bb.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./space \u03bb.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./space \u03bb.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import './space \u03bb.mdx'\n"
+    },
+    {
+      "index": 294,
+      "sourceTransportEqual": true,
+      "preservationSource": "import './absent.mdx'\nimport './x/../absent.mdx'\nimport './directory.mdx'\nimport './directory.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./absent.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./x/../absent.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./directory.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./directory.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./absent.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./x/../absent.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./directory.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./directory.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import './absent.mdx'\nimport './x/../absent.mdx'\nimport './directory.mdx'\nimport './directory.mdx'\n"
+    },
+    {
+      "index": 295,
+      "sourceTransportEqual": true,
+      "preservationSource": "import '../\u5bfe\u8c61.mdx'\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "../\u5bfe\u8c61.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "../\u5bfe\u8c61.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import '../\u5bfe\u8c61.mdx'\n"
+    },
+    {
+      "index": 296,
+      "sourceTransportEqual": true,
+      "preservationSource": "unicode target\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "unicode target\n"
+    },
+    {
+      "index": 297,
+      "sourceTransportEqual": true,
+      "preservationSource": "import \"./deep-1.mdx\"\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./deep-1.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./deep-1.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import \"./deep-1.mdx\"\n"
+    },
+    {
+      "index": 298,
+      "sourceTransportEqual": true,
+      "preservationSource": "import './intro.mdx'\npage\n",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./intro.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Unexpected `ExpressionStatement` in code: only import/exports are supported",
+      "source": "import './intro.mdx'\npage\n"
+    },
+    {
+      "index": 299,
+      "sourceTransportEqual": true,
+      "preservationSource": "import './nested.mdx'\nintro\n",
+      "preservationAccepted": true,
+      "compilerAccepted": false,
+      "importsEqual": null,
+      "preservationImports": [
+        {
+          "specifier": "./nested.mdx",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": "Unexpected `ExpressionStatement` in code: only import/exports are supported",
+      "source": "import './nested.mdx'\nintro\n"
+    },
+    {
+      "index": 300,
+      "sourceTransportEqual": true,
+      "preservationSource": "nested one\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "nested one\n"
+    },
+    {
+      "index": 301,
+      "sourceTransportEqual": true,
+      "preservationSource": "nested two\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "nested two\n"
+    },
+    {
+      "index": 302,
+      "sourceTransportEqual": true,
+      "preservationSource": "~~~mdx\nimport X from \"./hidden.mdx\"\n~~~\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "~~~mdx\nimport X from \"./hidden.mdx\"\n~~~\n"
+    },
+    {
+      "index": 303,
+      "sourceTransportEqual": true,
+      "preservationSource": "`import X from \"./hidden.mdx\"`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "`import X from \"./hidden.mdx\"`\n"
+    },
+    {
+      "index": 304,
+      "sourceTransportEqual": true,
+      "preservationSource": "{\"import X from './hidden.mdx'\"}\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{\"import X from './hidden.mdx'\"}\n"
+    },
+    {
+      "index": 305,
+      "sourceTransportEqual": true,
+      "preservationSource": "{/* import X from \"./hidden.mdx\" */}\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "{/* import X from \"./hidden.mdx\" */}\n"
+    },
+    {
+      "index": 306,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const text = `import X from \"./hidden.mdx\"`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "export const text = `import X from \"./hidden.mdx\"`\n"
+    },
+    {
+      "index": 307,
+      "sourceTransportEqual": true,
+      "preservationSource": "export const text = `template ${\"import ./hidden.mdx\"}`\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "export const text = `template ${\"import ./hidden.mdx\"}`\n"
+    },
+    {
+      "index": 308,
+      "sourceTransportEqual": true,
+      "preservationSource": "<A label={\"import ./hidden.mdx\"} />\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "<A label={\"import ./hidden.mdx\"} />\n"
+    },
+    {
+      "index": 309,
+      "sourceTransportEqual": true,
+      "preservationSource": "import A from \"./a.mdx\"\n\nimport B from \"./b.md\"\n\n<A />\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [
+        {
+          "specifier": "./a.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./b.md",
+          "dependency": true
+        }
+      ],
+      "compilerImports": [
+        {
+          "specifier": "./a.mdx",
+          "dependency": true
+        },
+        {
+          "specifier": "./b.md",
+          "dependency": true
+        }
+      ],
+      "compilerUnsupported": [],
+      "compilerError": null,
+      "source": "import A from \"./a.mdx\"\n\nimport B from \"./b.md\"\n\n<A />\n"
+    },
+    {
+      "index": 310,
+      "sourceTransportEqual": true,
+      "preservationSource": "{import(\"./dynamic.mdx\")}\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [
+        "dynamic_import"
+      ],
+      "compilerError": null,
+      "source": "{import(\"./dynamic.mdx\")}\n"
+    },
+    {
+      "index": 311,
+      "sourceTransportEqual": true,
+      "preservationSource": "export {x} from \"./reexport.mdx\"\n",
+      "preservationAccepted": true,
+      "compilerAccepted": true,
+      "importsEqual": true,
+      "preservationImports": [],
+      "compilerImports": [],
+      "compilerUnsupported": [
+        "document_reexport"
+      ],
+      "compilerError": null,
+      "source": "export {x} from \"./reexport.mdx\"\n"
+    }
+  ]
+}

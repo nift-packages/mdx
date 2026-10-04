@@ -1,0 +1,1212 @@
+[
+  {
+    "variant": "mdx-byte-view.f",
+    "records": [
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/intent-launcher/index.mdx",
+        "ms": 3728,
+        "ok": false
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/reference/build.mdx",
+        "ms": 2526,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/ios.mdx",
+        "ms": 2014,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/commands.mdx",
+        "ms": 1966,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/reference/bundle.mdx",
+        "ms": 1583,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/inappbrowser/getting-started.mdx",
+        "ms": 1944,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/firebase-authentication/getting-started.mdx",
+        "ms": 1783,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/configuration.mdx",
+        "ms": 1733,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/updater/debugging.mdx",
+        "ms": 1509,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/android.mdx",
+        "ms": 1067,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/android.mdx",
+        "ms": 1407,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/github-actions.mdx",
+        "ms": 1483,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/updater/settings.mdx",
+        "ms": 1309,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/youtube-player/getting-started.mdx",
+        "ms": 1229,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/getting-started/onboarding.mdx",
+        "ms": 1249,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/webapp/logs.mdx",
+        "ms": 1319,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/credentials.mdx",
+        "ms": 1355,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/oauth2.mdx",
+        "ms": 1166,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/camera-preview/getting-started.mdx",
+        "ms": 1305,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/native-loader/index.mdx",
+        "ms": 1011,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "variant": "mdx-instrumented.f",
+    "records": [
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/intent-launcher/index.mdx",
+        "ms": 4481,
+        "ok": false,
+        "phases": {
+          "line_info": {
+            "ms": 42,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 90,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 7,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 0,
+            "calls": 262
+          },
+          "scan_js": {
+            "ms": 0,
+            "calls": 0
+          },
+          "jsx": {
+            "ms": 0,
+            "calls": 0
+          },
+          "point": {
+            "ms": 202,
+            "calls": 2051
+          },
+          "node": {
+            "ms": 0,
+            "calls": 1024
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 0
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 775
+          },
+          "jsx_name": {
+            "ms": 0,
+            "calls": 0
+          },
+          "import_specifier": {
+            "ms": 0,
+            "calls": 0
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/reference/build.mdx",
+        "ms": 2804,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 58,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 5,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 66,
+            "calls": 83
+          },
+          "scan_js": {
+            "ms": 0,
+            "calls": 0
+          },
+          "jsx": {
+            "ms": 1402,
+            "calls": 170
+          },
+          "point": {
+            "ms": 0,
+            "calls": 1180
+          },
+          "node": {
+            "ms": 0,
+            "calls": 575
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 14
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 388
+          },
+          "jsx_name": {
+            "ms": 4,
+            "calls": 354
+          },
+          "import_specifier": {
+            "ms": 0,
+            "calls": 0
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/ios.mdx",
+        "ms": 2187,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 101,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 24,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 91,
+            "calls": 240
+          },
+          "scan_js": {
+            "ms": 90,
+            "calls": 9
+          },
+          "jsx": {
+            "ms": 1003,
+            "calls": 25
+          },
+          "point": {
+            "ms": 0,
+            "calls": 876
+          },
+          "node": {
+            "ms": 0,
+            "calls": 403
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 30
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 328
+          },
+          "jsx_name": {
+            "ms": 19,
+            "calls": 75
+          },
+          "import_specifier": {
+            "ms": 66,
+            "calls": 5
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/commands.mdx",
+        "ms": 2158,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 59,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 32,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 9,
+            "calls": 249
+          },
+          "scan_js": {
+            "ms": 13,
+            "calls": 1
+          },
+          "jsx": {
+            "ms": 127,
+            "calls": 10
+          },
+          "point": {
+            "ms": 0,
+            "calls": 1010
+          },
+          "node": {
+            "ms": 0,
+            "calls": 484
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 20
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 341
+          },
+          "jsx_name": {
+            "ms": 2,
+            "calls": 30
+          },
+          "import_specifier": {
+            "ms": 9,
+            "calls": 1
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/reference/bundle.mdx",
+        "ms": 1736,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 36,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 4,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 59,
+            "calls": 67
+          },
+          "scan_js": {
+            "ms": 0,
+            "calls": 0
+          },
+          "jsx": {
+            "ms": 862,
+            "calls": 108
+          },
+          "point": {
+            "ms": 0,
+            "calls": 772
+          },
+          "node": {
+            "ms": 0,
+            "calls": 376
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 9
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 238
+          },
+          "jsx_name": {
+            "ms": 0,
+            "calls": 225
+          },
+          "import_specifier": {
+            "ms": 0,
+            "calls": 0
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/inappbrowser/getting-started.mdx",
+        "ms": 2084,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 170,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 27,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 4,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 590,
+            "calls": 233
+          },
+          "scan_js": {
+            "ms": 0,
+            "calls": 0
+          },
+          "jsx": {
+            "ms": 0,
+            "calls": 0
+          },
+          "point": {
+            "ms": 5,
+            "calls": 572
+          },
+          "node": {
+            "ms": 0,
+            "calls": 285
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 0
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 158
+          },
+          "jsx_name": {
+            "ms": 0,
+            "calls": 0
+          },
+          "import_specifier": {
+            "ms": 0,
+            "calls": 0
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/firebase-authentication/getting-started.mdx",
+        "ms": 2028,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 120,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 26,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 4,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 400,
+            "calls": 370
+          },
+          "scan_js": {
+            "ms": 0,
+            "calls": 0
+          },
+          "jsx": {
+            "ms": 0,
+            "calls": 0
+          },
+          "point": {
+            "ms": 0,
+            "calls": 692
+          },
+          "node": {
+            "ms": 0,
+            "calls": 345
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 0
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 186
+          },
+          "jsx_name": {
+            "ms": 0,
+            "calls": 0
+          },
+          "import_specifier": {
+            "ms": 0,
+            "calls": 0
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/configuration.mdx",
+        "ms": 1821,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 49,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 27,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 88,
+            "calls": 114
+          },
+          "scan_js": {
+            "ms": 105,
+            "calls": 4
+          },
+          "jsx": {
+            "ms": 144,
+            "calls": 6
+          },
+          "point": {
+            "ms": 0,
+            "calls": 820
+          },
+          "node": {
+            "ms": 0,
+            "calls": 400
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 8
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 254
+          },
+          "jsx_name": {
+            "ms": 9,
+            "calls": 19
+          },
+          "import_specifier": {
+            "ms": 71,
+            "calls": 3
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/updater/debugging.mdx",
+        "ms": 1687,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 105,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 19,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 3,
+            "calls": 296
+          },
+          "scan_js": {
+            "ms": 17,
+            "calls": 1
+          },
+          "jsx": {
+            "ms": 48,
+            "calls": 3
+          },
+          "point": {
+            "ms": 0,
+            "calls": 580
+          },
+          "node": {
+            "ms": 0,
+            "calls": 283
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 6
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 257
+          },
+          "jsx_name": {
+            "ms": 5,
+            "calls": 9
+          },
+          "import_specifier": {
+            "ms": 14,
+            "calls": 1
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/android.mdx",
+        "ms": 1201,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 37,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 12,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 12,
+            "calls": 70
+          },
+          "scan_js": {
+            "ms": 13,
+            "calls": 1
+          },
+          "jsx": {
+            "ms": 1251,
+            "calls": 30
+          },
+          "point": {
+            "ms": 0,
+            "calls": 568
+          },
+          "node": {
+            "ms": 0,
+            "calls": 225
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 58
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 165
+          },
+          "jsx_name": {
+            "ms": 1,
+            "calls": 89
+          },
+          "import_specifier": {
+            "ms": 9,
+            "calls": 1
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/android.mdx",
+        "ms": 1522,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 37,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 10,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 11,
+            "calls": 84
+          },
+          "scan_js": {
+            "ms": 100,
+            "calls": 5
+          },
+          "jsx": {
+            "ms": 1617,
+            "calls": 47
+          },
+          "point": {
+            "ms": 0,
+            "calls": 652
+          },
+          "node": {
+            "ms": 0,
+            "calls": 240
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 83
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 169
+          },
+          "jsx_name": {
+            "ms": 6,
+            "calls": 136
+          },
+          "import_specifier": {
+            "ms": 67,
+            "calls": 3
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/github-actions.mdx",
+        "ms": 1575,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 59,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 17,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 152,
+            "calls": 109
+          },
+          "scan_js": {
+            "ms": 25,
+            "calls": 1
+          },
+          "jsx": {
+            "ms": 839,
+            "calls": 20
+          },
+          "point": {
+            "ms": 0,
+            "calls": 680
+          },
+          "node": {
+            "ms": 0,
+            "calls": 308
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 31
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 205
+          },
+          "jsx_name": {
+            "ms": 24,
+            "calls": 66
+          },
+          "import_specifier": {
+            "ms": 20,
+            "calls": 1
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/updater/settings.mdx",
+        "ms": 1397,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 74,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 26,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 159,
+            "calls": 219
+          },
+          "scan_js": {
+            "ms": 13,
+            "calls": 1
+          },
+          "jsx": {
+            "ms": 110,
+            "calls": 5
+          },
+          "point": {
+            "ms": 7,
+            "calls": 596
+          },
+          "node": {
+            "ms": 0,
+            "calls": 292
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 5
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 165
+          },
+          "jsx_name": {
+            "ms": 2,
+            "calls": 15
+          },
+          "import_specifier": {
+            "ms": 8,
+            "calls": 1
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/youtube-player/getting-started.mdx",
+        "ms": 1353,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 81,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 18,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 282,
+            "calls": 271
+          },
+          "scan_js": {
+            "ms": 0,
+            "calls": 0
+          },
+          "jsx": {
+            "ms": 0,
+            "calls": 0
+          },
+          "point": {
+            "ms": 8,
+            "calls": 496
+          },
+          "node": {
+            "ms": 0,
+            "calls": 247
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 0
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 120
+          },
+          "jsx_name": {
+            "ms": 0,
+            "calls": 0
+          },
+          "import_specifier": {
+            "ms": 0,
+            "calls": 0
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/getting-started/onboarding.mdx",
+        "ms": 1360,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 68,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 10,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 4,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 132,
+            "calls": 191
+          },
+          "scan_js": {
+            "ms": 20,
+            "calls": 1
+          },
+          "jsx": {
+            "ms": 969,
+            "calls": 33
+          },
+          "point": {
+            "ms": 0,
+            "calls": 526
+          },
+          "node": {
+            "ms": 0,
+            "calls": 220
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 42
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 131
+          },
+          "jsx_name": {
+            "ms": 13,
+            "calls": 108
+          },
+          "import_specifier": {
+            "ms": 14,
+            "calls": 1
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/webapp/logs.mdx",
+        "ms": 1388,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 29,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 26,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 0,
+            "calls": 99
+          },
+          "scan_js": {
+            "ms": 0,
+            "calls": 0
+          },
+          "jsx": {
+            "ms": 193,
+            "calls": 9
+          },
+          "point": {
+            "ms": 1,
+            "calls": 748
+          },
+          "node": {
+            "ms": 0,
+            "calls": 364
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 9
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 269
+          },
+          "jsx_name": {
+            "ms": 15,
+            "calls": 24
+          },
+          "import_specifier": {
+            "ms": 0,
+            "calls": 0
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/credentials.mdx",
+        "ms": 1340,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 67,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 18,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 154,
+            "calls": 181
+          },
+          "scan_js": {
+            "ms": 16,
+            "calls": 1
+          },
+          "jsx": {
+            "ms": 263,
+            "calls": 9
+          },
+          "point": {
+            "ms": 0,
+            "calls": 586
+          },
+          "node": {
+            "ms": 0,
+            "calls": 280
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 12
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 195
+          },
+          "jsx_name": {
+            "ms": 0,
+            "calls": 30
+          },
+          "import_specifier": {
+            "ms": 10,
+            "calls": 1
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/oauth2.mdx",
+        "ms": 1438,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 76,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 18,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 209,
+            "calls": 153
+          },
+          "scan_js": {
+            "ms": 13,
+            "calls": 1
+          },
+          "jsx": {
+            "ms": 136,
+            "calls": 5
+          },
+          "point": {
+            "ms": 40,
+            "calls": 510
+          },
+          "node": {
+            "ms": 0,
+            "calls": 254
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 0
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 180
+          },
+          "jsx_name": {
+            "ms": 8,
+            "calls": 10
+          },
+          "import_specifier": {
+            "ms": 8,
+            "calls": 1
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/camera-preview/getting-started.mdx",
+        "ms": 1466,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 109,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 17,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 3,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 359,
+            "calls": 256
+          },
+          "scan_js": {
+            "ms": 0,
+            "calls": 0
+          },
+          "jsx": {
+            "ms": 0,
+            "calls": 0
+          },
+          "point": {
+            "ms": 6,
+            "calls": 448
+          },
+          "node": {
+            "ms": 0,
+            "calls": 223
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 0
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 115
+          },
+          "jsx_name": {
+            "ms": 0,
+            "calls": 0
+          },
+          "import_specifier": {
+            "ms": 0,
+            "calls": 0
+          }
+        }
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/native-loader/index.mdx",
+        "ms": 1080,
+        "ok": true,
+        "phases": {
+          "line_info": {
+            "ms": 14,
+            "calls": 1
+          },
+          "backtick_matches": {
+            "ms": 3,
+            "calls": 1
+          },
+          "frontmatter": {
+            "ms": 6,
+            "calls": 1
+          },
+          "fence": {
+            "ms": 0,
+            "calls": 42
+          },
+          "scan_js": {
+            "ms": 213,
+            "calls": 27
+          },
+          "jsx": {
+            "ms": 487,
+            "calls": 20
+          },
+          "point": {
+            "ms": 0,
+            "calls": 380
+          },
+          "node": {
+            "ms": 0,
+            "calls": 126
+          },
+          "attribute": {
+            "ms": 0,
+            "calls": 50
+          },
+          "plain_end": {
+            "ms": 0,
+            "calls": 68
+          },
+          "jsx_name": {
+            "ms": 17,
+            "calls": 77
+          },
+          "import_specifier": {
+            "ms": 125,
+            "calls": 14
+          }
+        }
+      }
+    ]
+  }
+]

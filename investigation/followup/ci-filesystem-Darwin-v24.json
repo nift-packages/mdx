@@ -1,0 +1,430 @@
+{
+  "platform": "Darwin",
+  "node": "v24.20.0",
+  "records": [
+    {
+      "path": "normal.mdx",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx",
+      "exists": true
+    },
+    {
+      "path": "normal.mdx/.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx/",
+      "exists": false
+    },
+    {
+      "path": "normal.mdx\\.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx\\.",
+      "exists": false
+    },
+    {
+      "path": "normal.mdx/",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx/",
+      "exists": false
+    },
+    {
+      "path": "normal.mdx\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx\\",
+      "exists": false
+    },
+    {
+      "path": "normal.mdx/./",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx/",
+      "exists": false
+    },
+    {
+      "path": "normal.mdx\\.\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx\\.\\",
+      "exists": false
+    },
+    {
+      "path": "directory",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/directory",
+      "exists": true
+    },
+    {
+      "path": "directory/.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/directory/",
+      "exists": true
+    },
+    {
+      "path": "directory\\.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/directory\\.",
+      "exists": false
+    },
+    {
+      "path": "directory/",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/directory/",
+      "exists": true
+    },
+    {
+      "path": "directory\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/directory\\",
+      "exists": false
+    },
+    {
+      "path": "directory/./",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/directory/",
+      "exists": true
+    },
+    {
+      "path": "directory\\.\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/directory\\.\\",
+      "exists": false
+    },
+    {
+      "path": "nested/file.mdx",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/file.mdx",
+      "exists": true
+    },
+    {
+      "path": "nested/file.mdx/.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/file.mdx/",
+      "exists": false
+    },
+    {
+      "path": "nested/file.mdx\\.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/file.mdx\\.",
+      "exists": false
+    },
+    {
+      "path": "nested/file.mdx/",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/file.mdx/",
+      "exists": false
+    },
+    {
+      "path": "nested/file.mdx\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/file.mdx\\",
+      "exists": false
+    },
+    {
+      "path": "nested/file.mdx/./",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/file.mdx/",
+      "exists": false
+    },
+    {
+      "path": "nested/file.mdx\\.\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/file.mdx\\.\\",
+      "exists": false
+    },
+    {
+      "path": "nested/directory",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory",
+      "exists": true
+    },
+    {
+      "path": "nested/directory/.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested/directory\\.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory\\.",
+      "exists": false
+    },
+    {
+      "path": "nested/directory/",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested/directory\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory\\",
+      "exists": false
+    },
+    {
+      "path": "nested/directory/./",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested/directory\\.\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory\\.\\",
+      "exists": false
+    },
+    {
+      "path": "space file.mdx",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space file.mdx",
+      "exists": true
+    },
+    {
+      "path": "space file.mdx/.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space file.mdx/",
+      "exists": false
+    },
+    {
+      "path": "space file.mdx\\.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space file.mdx\\.",
+      "exists": false
+    },
+    {
+      "path": "space file.mdx/",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space file.mdx/",
+      "exists": false
+    },
+    {
+      "path": "space file.mdx\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space file.mdx\\",
+      "exists": false
+    },
+    {
+      "path": "space file.mdx/./",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space file.mdx/",
+      "exists": false
+    },
+    {
+      "path": "space file.mdx\\.\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space file.mdx\\.\\",
+      "exists": false
+    },
+    {
+      "path": "space directory",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space directory",
+      "exists": true
+    },
+    {
+      "path": "space directory/.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space directory/",
+      "exists": true
+    },
+    {
+      "path": "space directory\\.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space directory\\.",
+      "exists": false
+    },
+    {
+      "path": "space directory/",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space directory/",
+      "exists": true
+    },
+    {
+      "path": "space directory\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space directory\\",
+      "exists": false
+    },
+    {
+      "path": "space directory/./",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space directory/",
+      "exists": true
+    },
+    {
+      "path": "space directory\\.\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/space directory\\.\\",
+      "exists": false
+    },
+    {
+      "path": "caf\u00e9.mdx",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9.mdx",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9.mdx/.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9.mdx/",
+      "exists": false
+    },
+    {
+      "path": "caf\u00e9.mdx\\.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9.mdx\\.",
+      "exists": false
+    },
+    {
+      "path": "caf\u00e9.mdx/",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9.mdx/",
+      "exists": false
+    },
+    {
+      "path": "caf\u00e9.mdx\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9.mdx\\",
+      "exists": false
+    },
+    {
+      "path": "caf\u00e9.mdx/./",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9.mdx/",
+      "exists": false
+    },
+    {
+      "path": "caf\u00e9.mdx\\.\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9.mdx\\.\\",
+      "exists": false
+    },
+    {
+      "path": "caf\u00e9 directory",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9 directory",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9 directory/.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9 directory/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9 directory\\.",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9 directory\\.",
+      "exists": false
+    },
+    {
+      "path": "caf\u00e9 directory/",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9 directory/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9 directory\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9 directory\\",
+      "exists": false
+    },
+    {
+      "path": "caf\u00e9 directory/./",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9 directory/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9 directory\\.\\",
+      "normalized": "/private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/caf\u00e9 directory\\.\\",
+      "exists": false
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx",
+      "exists": true
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx/.",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx/",
+      "exists": false
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx\\.",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx\\.",
+      "exists": false
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx/",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx/",
+      "exists": false
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx\\",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx\\",
+      "exists": false
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx/./",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx/",
+      "exists": false
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx\\.\\",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/normal.mdx\\.\\",
+      "exists": false
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory",
+      "exists": true
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory/.",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory\\.",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory\\.",
+      "exists": false
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory/",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory\\",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory\\",
+      "exists": false
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory/./",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory\\.\\",
+      "normalized": "/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/nested/directory\\.\\",
+      "exists": false
+    }
+  ],
+  "operations": [
+    {
+      "expression": "ls(\"normal.mdx\")",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "error: /private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/isolated.f:1:1: ls: path is not a readable directory\n"
+    },
+    {
+      "expression": "ls(\"directory\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "ls(\"**\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[\".\",\"caf\u00e9 directory\",\"directory\",\"nested\",\"nested/directory\",\"space directory\"]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "ls(\"normal.mdx/**\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[\"normal.mdx\"]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "ls(\"directory/**\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[\"directory\"]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "ls(\".hidden directory/**\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[\".hidden directory\"]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "ls(\"normal.mdx/*\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "ls(\"directory/*\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "open(\"normal.mdx\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":\"text\"}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "open(\"directory\")",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "error: /private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/isolated.f:1:1: open: path is a directory\n"
+    },
+    {
+      "expression": "open_bytes(\"directory\")",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "error: /private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/isolated.f:1:1: open_bytes: path is a directory\n"
+    },
+    {
+      "expression": "handle.open(\"r\")",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "error: /private/var/folders/36/tjdph2t965j8snz9_vkdnw0r0000gn/T/mdx type spaces utpdl1re/isolated.f:1:1: open: path is a directory\n"
+    }
+  ]
+}

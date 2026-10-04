@@ -1,0 +1,317 @@
+[
+  {
+    "variant": "mdx.f",
+    "records": [
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/intent-launcher/index.mdx",
+        "ms": 3703,
+        "ok": false
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/reference/build.mdx",
+        "ms": 2562,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/ios.mdx",
+        "ms": 2012,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/commands.mdx",
+        "ms": 2015,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/reference/bundle.mdx",
+        "ms": 1594,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/inappbrowser/getting-started.mdx",
+        "ms": 1868,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/firebase-authentication/getting-started.mdx",
+        "ms": 1800,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/configuration.mdx",
+        "ms": 1722,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/updater/debugging.mdx",
+        "ms": 1489,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/android.mdx",
+        "ms": 1063,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/android.mdx",
+        "ms": 1363,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/github-actions.mdx",
+        "ms": 1440,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/updater/settings.mdx",
+        "ms": 1217,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/youtube-player/getting-started.mdx",
+        "ms": 1181,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/getting-started/onboarding.mdx",
+        "ms": 1197,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/webapp/logs.mdx",
+        "ms": 1298,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/credentials.mdx",
+        "ms": 1372,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/oauth2.mdx",
+        "ms": 1241,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/camera-preview/getting-started.mdx",
+        "ms": 1248,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/native-loader/index.mdx",
+        "ms": 1018,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "variant": "mdx-no-positions.f",
+    "records": [
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/intent-launcher/index.mdx",
+        "ms": 2032,
+        "ok": false
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/reference/build.mdx",
+        "ms": 1563,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/ios.mdx",
+        "ms": 1190,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/commands.mdx",
+        "ms": 1103,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/reference/bundle.mdx",
+        "ms": 960,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/inappbrowser/getting-started.mdx",
+        "ms": 1234,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/firebase-authentication/getting-started.mdx",
+        "ms": 1089,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/configuration.mdx",
+        "ms": 1002,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/updater/debugging.mdx",
+        "ms": 936,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/android.mdx",
+        "ms": 598,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/android.mdx",
+        "ms": 940,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/github-actions.mdx",
+        "ms": 968,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/updater/settings.mdx",
+        "ms": 821,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/youtube-player/getting-started.mdx",
+        "ms": 773,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/getting-started/onboarding.mdx",
+        "ms": 811,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/webapp/logs.mdx",
+        "ms": 758,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/credentials.mdx",
+        "ms": 855,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/oauth2.mdx",
+        "ms": 820,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/camera-preview/getting-started.mdx",
+        "ms": 844,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/native-loader/index.mdx",
+        "ms": 772,
+        "ok": true
+      }
+    ]
+  },
+  {
+    "variant": "mdx-no-nodes.f",
+    "records": [
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/intent-launcher/index.mdx",
+        "ms": 3651,
+        "ok": false
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/reference/build.mdx",
+        "ms": 2615,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/ios.mdx",
+        "ms": 2214,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/commands.mdx",
+        "ms": 2192,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/cli/reference/bundle.mdx",
+        "ms": 1658,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/inappbrowser/getting-started.mdx",
+        "ms": 2068,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/firebase-authentication/getting-started.mdx",
+        "ms": 1770,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/configuration.mdx",
+        "ms": 1693,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/updater/debugging.mdx",
+        "ms": 1497,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/android.mdx",
+        "ms": 1285,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/android.mdx",
+        "ms": 1648,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/github-actions.mdx",
+        "ms": 1553,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/updater/settings.mdx",
+        "ms": 1373,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/youtube-player/getting-started.mdx",
+        "ms": 1295,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/getting-started/onboarding.mdx",
+        "ms": 1296,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/webapp/logs.mdx",
+        "ms": 1364,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/builder/credentials.mdx",
+        "ms": 1423,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/social-login/oauth2.mdx",
+        "ms": 1377,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/camera-preview/getting-started.mdx",
+        "ms": 1397,
+        "ok": true
+      },
+      {
+        "path": "apps/docs/src/content/docs/docs/plugins/native-loader/index.mdx",
+        "ms": 1123,
+        "ok": true
+      }
+    ]
+  }
+]

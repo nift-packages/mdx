@@ -1,0 +1,745 @@
+{
+  "platform": "Windows",
+  "node": "v24.21.0",
+  "records": [
+    {
+      "path": "normal.mdx",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx",
+      "exists": true
+    },
+    {
+      "path": "normal.mdx/.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": true
+    },
+    {
+      "path": "normal.mdx\\.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": true
+    },
+    {
+      "path": "normal.mdx/",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": true
+    },
+    {
+      "path": "normal.mdx\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": true
+    },
+    {
+      "path": "normal.mdx/./",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": true
+    },
+    {
+      "path": "normal.mdx\\.\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": true
+    },
+    {
+      "path": "directory",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory",
+      "exists": true
+    },
+    {
+      "path": "directory/.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory/",
+      "exists": true
+    },
+    {
+      "path": "directory\\.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory/",
+      "exists": true
+    },
+    {
+      "path": "directory/",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory/",
+      "exists": true
+    },
+    {
+      "path": "directory\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory/",
+      "exists": true
+    },
+    {
+      "path": "directory/./",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory/",
+      "exists": true
+    },
+    {
+      "path": "directory\\.\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested/file.mdx",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx",
+      "exists": true
+    },
+    {
+      "path": "nested/file.mdx/.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "nested/file.mdx\\.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "nested/file.mdx/",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "nested/file.mdx\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "nested/file.mdx/./",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "nested/file.mdx\\.\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "nested/directory",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory",
+      "exists": true
+    },
+    {
+      "path": "nested/directory/.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested/directory\\.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested/directory/",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested/directory\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested/directory/./",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested/directory\\.\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "space file.mdx",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx",
+      "exists": true
+    },
+    {
+      "path": "space file.mdx/.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "space file.mdx\\.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "space file.mdx/",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "space file.mdx\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "space file.mdx/./",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "space file.mdx\\.\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "space directory",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory",
+      "exists": true
+    },
+    {
+      "path": "space directory/.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory/",
+      "exists": true
+    },
+    {
+      "path": "space directory\\.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory/",
+      "exists": true
+    },
+    {
+      "path": "space directory/",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory/",
+      "exists": true
+    },
+    {
+      "path": "space directory\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory/",
+      "exists": true
+    },
+    {
+      "path": "space directory/./",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory/",
+      "exists": true
+    },
+    {
+      "path": "space directory\\.\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9.mdx",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9.mdx/.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9.mdx\\.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9.mdx/",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9.mdx\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9.mdx/./",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9.mdx\\.\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9 directory",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9 directory/.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9 directory\\.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9 directory/",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9 directory\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9 directory/./",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory/",
+      "exists": true
+    },
+    {
+      "path": "caf\u00e9 directory\\.\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx/.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx\\.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx/",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx/./",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx\\.\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\nested\\directory",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\nested\\directory/.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\nested\\directory\\.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\nested\\directory/",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\nested\\directory\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\nested\\directory/./",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\nested\\directory\\.\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested\\file.mdx",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx",
+      "exists": true
+    },
+    {
+      "path": "nested\\file.mdx/.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "nested\\file.mdx\\.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "nested\\file.mdx/",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "nested\\file.mdx\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "nested\\file.mdx/./",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "nested\\file.mdx\\.\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/file.mdx/",
+      "exists": true
+    },
+    {
+      "path": "nested\\directory",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory",
+      "exists": true
+    },
+    {
+      "path": "nested\\directory/.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested\\directory\\.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested\\directory/",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested\\directory\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested\\directory/./",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "nested\\directory\\.\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/nested/directory/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx/.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx\\.",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx/",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx/./",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": true
+    },
+    {
+      "path": "C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx\\.\\",
+      "normalized": "C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": true
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx/.",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx\\.",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx/",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx\\",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx/./",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\normal.mdx\\.\\",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/normal.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\directory",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\directory/.",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\directory\\.",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\directory/",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\directory\\",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\directory/./",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\directory\\.\\",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space file.mdx",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space file.mdx/.",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space file.mdx\\.",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space file.mdx/",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space file.mdx\\",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space file.mdx/./",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space file.mdx\\.\\",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space file.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space directory",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space directory/.",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space directory\\.",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space directory/",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space directory\\",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space directory/./",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\space directory\\.\\",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/space directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx/.",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx\\.",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx/",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx\\",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx/./",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9.mdx\\.\\",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9.mdx/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9 directory",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9 directory/.",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9 directory\\.",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9 directory/",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9 directory\\",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9 directory/./",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory/",
+      "exists": false
+    },
+    {
+      "path": "\\\\?\\C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\mdx type spaces wqe25mrs\\caf\u00e9 directory\\.\\",
+      "normalized": "C:/?/C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/caf\u00e9 directory/",
+      "exists": false
+    }
+  ],
+  "operations": [
+    {
+      "expression": "ls(\"normal.mdx\")",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "error: C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/isolated.f:1:1: ls: path is not a readable directory\n"
+    },
+    {
+      "expression": "ls(\"directory\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "ls(\"**\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[\".\",\"caf\u00e9 directory\",\"directory\",\"directory link\",\"nested\",\"nested/directory\",\"space directory\"]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "ls(\"normal.mdx/**\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[\"normal.mdx\"]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "ls(\"directory/**\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[\"directory\"]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "ls(\".hidden directory/**\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[\".hidden directory\"]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "ls(\"normal.mdx/*\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "ls(\"directory/*\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":[]}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "open(\"normal.mdx\")",
+      "exitCode": 0,
+      "stdout": "{\"ok\":true,\"value\":\"text\"}\n",
+      "stderr": ""
+    },
+    {
+      "expression": "open(\"directory\")",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "error: C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/isolated.f:1:1: open: path is a directory\n"
+    },
+    {
+      "expression": "open_bytes(\"directory\")",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "error: C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/isolated.f:1:1: open_bytes: path is a directory\n"
+    },
+    {
+      "expression": "handle.open(\"r\")",
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "error: C:/Users/RUNNER~1/AppData/Local/Temp/mdx type spaces wqe25mrs/isolated.f:1:1: open: path is a directory\n"
+    }
+  ]
+}
