@@ -1,0 +1,220 @@
+{
+  "ok": true,
+  "source": "---\ntitle: Demonstration\n---\nimport Shared from \"./shared.mdx\"\n\n# Example\n\nOrdinary **Markdown**.\n\n<Aside type=\"warning\">Read this first.</Aside>\n\n<Shared />\n",
+  "path": "fixtures/page.mdx",
+  "frontmatter": {
+    "present": true,
+    "source": "---\ntitle: Demonstration\n---\n",
+    "body": "title: Demonstration\n",
+    "start": {
+      "offset": 0,
+      "line": 1,
+      "column": 1
+    },
+    "end": {
+      "offset": 29,
+      "line": 4,
+      "column": 1
+    }
+  },
+  "imports": [
+    {
+      "kind": "import",
+      "specifier": "./shared.mdx",
+      "source": "import Shared from \"./shared.mdx\"\n",
+      "local": true,
+      "extension": ".mdx",
+      "dependency": true,
+      "position": {
+        "start": {
+          "offset": 29,
+          "line": 4,
+          "column": 1
+        },
+        "end": {
+          "offset": 63,
+          "line": 5,
+          "column": 1
+        }
+      }
+    }
+  ],
+  "exports": [],
+  "nodes": [
+    {
+      "type": "import",
+      "source": "import Shared from \"./shared.mdx\"\n",
+      "name": null,
+      "value": "./shared.mdx",
+      "attributes": [],
+      "children": [],
+      "position": {
+        "start": {
+          "offset": 29,
+          "line": 4,
+          "column": 1
+        },
+        "end": {
+          "offset": 63,
+          "line": 5,
+          "column": 1
+        }
+      }
+    },
+    {
+      "type": "markdown",
+      "source": "\n# Example\n\nOrdinary **Markdown**.\n\n",
+      "name": null,
+      "value": null,
+      "attributes": [],
+      "children": [],
+      "position": {
+        "start": {
+          "offset": 63,
+          "line": 5,
+          "column": 1
+        },
+        "end": {
+          "offset": 99,
+          "line": 10,
+          "column": 1
+        }
+      }
+    },
+    {
+      "type": "jsx_element",
+      "source": "<Aside type=\"warning\">Read this first.</Aside>",
+      "name": "Aside",
+      "value": null,
+      "attributes": [
+        {
+          "name": "type",
+          "kind": "string",
+          "value": "warning",
+          "source": "type=\"warning\"",
+          "position": {
+            "start": {
+              "offset": 106,
+              "line": 10,
+              "column": 8
+            },
+            "end": {
+              "offset": 120,
+              "line": 10,
+              "column": 22
+            }
+          }
+        }
+      ],
+      "children": [
+        {
+          "type": "markdown",
+          "source": "Read this first.",
+          "name": null,
+          "value": null,
+          "attributes": [],
+          "children": [],
+          "position": {
+            "start": {
+              "offset": 121,
+              "line": 10,
+              "column": 23
+            },
+            "end": {
+              "offset": 137,
+              "line": 10,
+              "column": 39
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "offset": 99,
+          "line": 10,
+          "column": 1
+        },
+        "end": {
+          "offset": 145,
+          "line": 10,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": "markdown",
+      "source": "\n\n",
+      "name": null,
+      "value": null,
+      "attributes": [],
+      "children": [],
+      "position": {
+        "start": {
+          "offset": 145,
+          "line": 10,
+          "column": 47
+        },
+        "end": {
+          "offset": 147,
+          "line": 12,
+          "column": 1
+        }
+      }
+    },
+    {
+      "type": "jsx_element",
+      "source": "<Shared />",
+      "name": "Shared",
+      "value": null,
+      "attributes": [],
+      "children": [],
+      "position": {
+        "start": {
+          "offset": 147,
+          "line": 12,
+          "column": 1
+        },
+        "end": {
+          "offset": 157,
+          "line": 12,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": "markdown",
+      "source": "\n",
+      "name": null,
+      "value": null,
+      "attributes": [],
+      "children": [],
+      "position": {
+        "start": {
+          "offset": 157,
+          "line": 12,
+          "column": 11
+        },
+        "end": {
+          "offset": 158,
+          "line": 12,
+          "column": 12
+        }
+      }
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "fixtures/shared.mdx",
+      "from": "fixtures/page.mdx",
+      "specifier": "./shared.mdx",
+      "depth": 1
+    },
+    {
+      "path": "fixtures/nested.mdx",
+      "from": "fixtures/shared.mdx",
+      "specifier": "./nested.mdx",
+      "depth": 2
+    }
+  ],
+  "diagnostics": []
+}

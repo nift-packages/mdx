@@ -1,0 +1,5 @@
+PASS public=2 private=55 exports=1 files=7
+PASS corpus=121 malformed=13 boundaries=22
+PASS filesystem DFS, cycles, limits, parse/input consistency, and --no-process
+PASS real @dep root/transitive metadata and isolated incremental rebuild
+TIMING contract=1.518s corpus=5.426s boundaries=48.355s graph=0.384s graph_limits=19.831s plain_scaling=7.055s backtick_scaling=1.827s malformed_scaling=3.742s object_scaling=19.399s graph_scaling=3.926s full=118.991s

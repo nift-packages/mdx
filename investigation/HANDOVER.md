@@ -1,0 +1,9 @@
+# Investigation handover
+
+Completed: full package inspection; official compiler/renderer research; pinned Node helper; actual Nift input→html composition; transitive MDX; rendered two-target incremental site; baseline parser regression archive;100-process versus100/1000-batch measurements; corpus byte analysis; report and22-checkpoint implementation gameplan.
+
+Recommendation: additive mdx.html facade with optional pinned build-time Node/MDX/React renderer, explicit trusted execution, preserved parse/input contracts, new dependencies registered with Nift, batch support before full-site certification. No browser React runtime. Parser profiling/limits are a release gate.
+
+Not implemented/certified: production API, stable transport, config/adapter dependency closure, safe expression subset, cache/daemon, Starlight/Astro adapters, all Capgo content, raised limits, macOS/Windows or Bun. No Nift core or Capgo implementation edits.
+
+Saved evidence: benchmark-results.json, build-results.json, demo-document.json/demo.html, capgo-compile-results.json, parser-memory-results.txt, baseline-regression.txt, capgo-corpus.json. Test sources remain available to reproduce. Recorded paths describe this workstation; install pinned npm dependencies before running elsewhere.

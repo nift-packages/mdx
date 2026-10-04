@@ -1,0 +1,168 @@
+{
+  "environment": {
+    "node": "v22.22.1",
+    "nift": "/home/nick/Repositories/nift/nift/nift"
+  },
+  "cases": {
+    "small": {
+      "bytes": 26,
+      "parser_process_wall_seconds_median": 0.034620692022144794,
+      "renderer_process_wall_seconds_median": 0.3258531979518011,
+      "renderer_metrics": [
+        {
+          "ok": true,
+          "html": "<h1 id=\"small\">Small</h1>\n<p>Hello <strong>world</strong>.</p>",
+          "timing": {
+            "compileMs": 19.386708,
+            "evaluateMs": 0.2701230000000123,
+            "renderMs": 6.069533999999976,
+            "totalMs": 25.825470000000024
+          },
+          "maxRssKiB": 97820
+        },
+        {
+          "ok": true,
+          "html": "<h1 id=\"small\">Small</h1>\n<p>Hello <strong>world</strong>.</p>",
+          "timing": {
+            "compileMs": 21.071946000000025,
+            "evaluateMs": 0.23227799999995113,
+            "renderMs": 8.675004000000001,
+            "totalMs": 30.078272999999996
+          },
+          "maxRssKiB": 92984
+        },
+        {
+          "ok": true,
+          "html": "<h1 id=\"small\">Small</h1>\n<p>Hello <strong>world</strong>.</p>",
+          "timing": {
+            "compileMs": 19.458534999999983,
+            "evaluateMs": 0.2947889999999802,
+            "renderMs": 6.249653000000023,
+            "totalMs": 26.11402800000002
+          },
+          "maxRssKiB": 89772
+        }
+      ],
+      "batch_100": {
+        "wall_seconds": 0.4238496460020542,
+        "compile_ms_sum": 115.53580000000036,
+        "render_ms_sum": 28.79920299999972,
+        "peak_rss_kib": 109684
+      },
+      "batch_1000": {
+        "wall_seconds": 1.060189489973709,
+        "compile_ms_sum": 570.7275440000012,
+        "render_ms_sum": 154.62034199999925,
+        "peak_rss_kib": 124196
+      },
+      "spawn_100_wall_seconds": 45.9771793349646
+    },
+    "realistic": {
+      "bytes": 1661,
+      "parser_process_wall_seconds_median": 1.5369766249787062,
+      "renderer_process_wall_seconds_median": 0.40115447889547795,
+      "renderer_metrics": [
+        {
+          "ok": true,
+          "html": "<h1 id=\"documentation\">Documentation</h1>\n<h2 id=\"install\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-1\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-2\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-3\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-4\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-5\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-6\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-7\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-8\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-9\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-10\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-11\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>",
+          "timing": {
+            "compileMs": 48.58012299999996,
+            "evaluateMs": 0.37887600000004795,
+            "renderMs": 11.114480999999955,
+            "totalMs": 60.184901999999965
+          },
+          "maxRssKiB": 98260
+        },
+        {
+          "ok": true,
+          "html": "<h1 id=\"documentation\">Documentation</h1>\n<h2 id=\"install\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-1\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-2\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-3\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-4\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-5\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-6\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-7\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-8\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-9\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-10\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-11\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>",
+          "timing": {
+            "compileMs": 43.28731700000003,
+            "evaluateMs": 0.4899609999999939,
+            "renderMs": 10.85251199999999,
+            "totalMs": 54.73124899999999
+          },
+          "maxRssKiB": 96660
+        },
+        {
+          "ok": true,
+          "html": "<h1 id=\"documentation\">Documentation</h1>\n<h2 id=\"install\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-1\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-2\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-3\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-4\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-5\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-6\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-7\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-8\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-9\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-10\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>\n<h2 id=\"install-11\">Install</h2>\n<p>Follow <a href=\"https://example.org\">instructions</a>.</p>\n<ul>\n<li>Configure credentials</li>\n<li>Run your application</li>\n</ul>\n<pre><code class=\"language-js\">console.log(&quot;ready&quot;)\n</code></pre>",
+          "timing": {
+            "compileMs": 61.40826500000003,
+            "evaluateMs": 0.41392700000000104,
+            "renderMs": 11.964132000000006,
+            "totalMs": 73.91394099999997
+          },
+          "maxRssKiB": 96648
+        }
+      ],
+      "batch_100": {
+        "wall_seconds": 1.4440725180320442,
+        "compile_ms_sum": 785.2986899999994,
+        "render_ms_sum": 252.11587299999928,
+        "peak_rss_kib": 127308
+      },
+      "batch_1000": {
+        "wall_seconds": 10.067708304035477,
+        "compile_ms_sum": 7205.960407000014,
+        "render_ms_sum": 2222.033171999996,
+        "peak_rss_kib": 282652
+      },
+      "spawn_100_wall_seconds": 41.35256097302772
+    },
+    "components": {
+      "bytes": 2444,
+      "parser_process_wall_seconds_median": 1.9085627640597522,
+      "renderer_process_wall_seconds_median": 0.7701179910218343,
+      "renderer_metrics": [
+        {
+          "ok": true,
+          "html": "<h1 id=\"components\">Components</h1>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>",
+          "timing": {
+            "compileMs": 48.463247000000024,
+            "evaluateMs": 0.3637530000000311,
+            "renderMs": 12.032690000000002,
+            "totalMs": 60.95959899999997
+          },
+          "maxRssKiB": 97316
+        },
+        {
+          "ok": true,
+          "html": "<h1 id=\"components\">Components</h1>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>",
+          "timing": {
+            "compileMs": 133.28752899999995,
+            "evaluateMs": 0.879470000000083,
+            "renderMs": 36.776715999999965,
+            "totalMs": 171.231179
+          },
+          "maxRssKiB": 95996
+        },
+        {
+          "ok": true,
+          "html": "<h1 id=\"components\">Components</h1>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>\n<aside data-type=\"warning\">Important <strong>content</strong>.</aside>",
+          "timing": {
+            "compileMs": 174.49727600000006,
+            "evaluateMs": 0.8786059999999907,
+            "renderMs": 33.683024000000046,
+            "totalMs": 209.432272
+          },
+          "maxRssKiB": 97984
+        }
+      ],
+      "batch_100": {
+        "wall_seconds": 2.93908800103236,
+        "compile_ms_sum": 1620.4091620000008,
+        "render_ms_sum": 584.7320460000009,
+        "peak_rss_kib": 132528
+      },
+      "batch_1000": {
+        "wall_seconds": 20.322897613048553,
+        "compile_ms_sum": 14165.161042000023,
+        "render_ms_sum": 5108.377387000002,
+        "peak_rss_kib": 276360
+      },
+      "spawn_100_wall_seconds": 47.772000071941875
+    }
+  },
+  "empty_node_startup_seconds_median": 0.11364877095911652
+}

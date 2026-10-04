@@ -1,0 +1,17 @@
+{
+  "initial": {
+    "seconds": 0.5991488290019333,
+    "stdout": "\ud83d\udce6 2 files built successfully\ntime taken: 0.595402 seconds\n",
+    "stderr": ""
+  },
+  "no_change": {
+    "seconds": 0.009156181011348963,
+    "stdout": "\u2713 2 tracked files are up to date\ntime taken: 0.005597 seconds\n",
+    "stderr": ""
+  },
+  "transitive_edit": {
+    "seconds": 0.6144907400012016,
+    "stdout": "built /\n    \u21b3 dependency changed: fixtures/nested.mdx\n\ud83d\udce6 1 file rebuilt successfully\ntime taken: 0.610983 seconds\n",
+    "stderr": ""
+  }
+}

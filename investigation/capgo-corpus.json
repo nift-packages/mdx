@@ -1,0 +1,12 @@
+{
+  "root": "apps/docs/src/content",
+  "files": 519,
+  "over_4096": 242,
+  "min": 434,
+  "median": 3782,
+  "p95": 16576,
+  "p99": 27257,
+  "max": 43342,
+  "over_262144": 0,
+  "largest": "apps/docs/src/content/docs/docs/plugins/inappbrowser/getting-started.mdx"
+}

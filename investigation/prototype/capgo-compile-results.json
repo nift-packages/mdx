@@ -1,0 +1,10 @@
+[
+  {
+    "path": "/tmp/capgo-upstream-planning/apps/docs/src/content/docs/docs/plugins/inappbrowser/getting-started.mdx",
+    "bytes": 43342,
+    "ok": true,
+    "compileMs": 102.034896,
+    "outputBytes": 64129,
+    "peakRssKiB": 100208
+  }
+]
