@@ -25,6 +25,13 @@ class RendererTests(unittest.TestCase):
   self.assertEqual(error['stage'],'render');self.assertEqual(error['path'],'article.mdx');self.assertEqual(error['line'],7);self.assertIsInstance(error['column'],int)
   run,response=self.invoke([{'id':'child','source':'import Child from "./child.mdx"\n\n<Child />','path':'root.mdx','dependencies':[{'path':'child.mdx'}]}],files={'child.mdx':source});error=response['results'][0]['diagnostics'][0]
   self.assertEqual(error['path'],str(error['path']));self.assertTrue(error['path'].endswith('child.mdx'));self.assertEqual(error['line'],7)
+ def test_thousand_document_batch(self):
+  sources=['# Heading\n\nA paragraph.','| A | B |\n| - | - |\n| 1 | 2 |','<div>Static</div>','{1 + 2}','- One\n- Two']
+  documents=[{'id':str(i),'source':sources[i%len(sources)],'path':None,'dependencies':[]} for i in range(1000)]
+  run,response=self.invoke(documents);self.assertEqual(run.returncode,0,response);self.assertEqual([r['id'] for r in response['results']],[str(i) for i in range(1000)])
+  for i,source in enumerate(sources):
+   scalar,single=self.invoke([documents[i]]);self.assertEqual(scalar.returncode,0);self.assertEqual(response['results'][i]['html'],single['results'][0]['html'])
+  documents[500]['source']='<Unknown />';run,mixed=self.invoke(documents);self.assertNotEqual(run.returncode,0);self.assertEqual([r['id'] for r in mixed['results'] if not r['ok']],['500']);self.assertEqual(mixed['results'][501]['html'],response['results'][501]['html'])
  def test_installed_nift_facade(self):
   nift=os.environ.get('NIFT','/home/nick/Repositories/nift/nift/nift')
   with tempfile.TemporaryDirectory(prefix='mdx-installed-') as folder:

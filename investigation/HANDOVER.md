@@ -66,3 +66,8 @@ cost remain CP22 release gates. No Capgo website implementation started.
 CP14 complete: compiler/import original positions, mapped root/imported runtime
 expressions and component/adapter attribution;28 renderer tests pass. Unmapped
 process/adapter/generated locations remain null. No client source-map runtime.
+
+CP15 complete:1,000-document independent failures/scalar parity pass; actual
+installed100/500/1,000-target builds use one renderer helper each. Full cold
+6.944/36.222/80.117s and warm3.648/18.769/44.821s. Pre-hook parsing dominates;
+Capgo latency remains an unresolved release gate. Raw stage evidence committed.

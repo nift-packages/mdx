@@ -1,0 +1,107 @@
+[
+  {
+    "pages": 100,
+    "builds": [
+      {
+        "mode": "cold",
+        "fullBuildSeconds": 6.944016300956719,
+        "parserMs": 2658,
+        "prepareMs": 939,
+        "helperTotalsMs": {
+          "compileMs": 258.73932100000076,
+          "evaluateMs": 26.57735699999978,
+          "renderMs": 70.63914600000038,
+          "totalMs": 470.2876020000007
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 100
+      },
+      {
+        "mode": "warm",
+        "fullBuildSeconds": 3.6476850420003757,
+        "parserMs": 2520,
+        "prepareMs": 1090,
+        "helperTotalsMs": {
+          "compileMs": 271.82929699999937,
+          "evaluateMs": 28.505843999999513,
+          "renderMs": 75.53288199999986,
+          "totalMs": 506.98551500000025
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 100
+      }
+    ]
+  },
+  {
+    "pages": 500,
+    "builds": [
+      {
+        "mode": "cold",
+        "fullBuildSeconds": 36.22192076907959,
+        "parserMs": 15564,
+        "prepareMs": 3304,
+        "helperTotalsMs": {
+          "compileMs": 1312.1341039999998,
+          "evaluateMs": 157.41332799999674,
+          "renderMs": 405.36345000000006,
+          "totalMs": 2475.558195000005
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 500
+      },
+      {
+        "mode": "warm",
+        "fullBuildSeconds": 18.768535737064667,
+        "parserMs": 16003,
+        "prepareMs": 2640,
+        "helperTotalsMs": {
+          "compileMs": 997.2985090000009,
+          "evaluateMs": 130.98318100000114,
+          "renderMs": 310.4683150000034,
+          "totalMs": 1955.1480729999996
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 500
+      }
+    ]
+  },
+  {
+    "pages": 1000,
+    "builds": [
+      {
+        "mode": "cold",
+        "fullBuildSeconds": 80.11654108110815,
+        "parserMs": 39127,
+        "prepareMs": 6139,
+        "helperTotalsMs": {
+          "compileMs": 2377.4089479999952,
+          "evaluateMs": 370.78529100000634,
+          "renderMs": 785.3035169999991,
+          "totalMs": 4890.687854000001
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 1000
+      },
+      {
+        "mode": "warm",
+        "fullBuildSeconds": 44.82142650592141,
+        "parserMs": 39432,
+        "prepareMs": 5155,
+        "helperTotalsMs": {
+          "compileMs": 2074.705567999999,
+          "evaluateMs": 314.38290900000396,
+          "renderMs": 673.2651449999958,
+          "totalMs": 4032.755540999997
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 1000
+      }
+    ]
+  }
+]
