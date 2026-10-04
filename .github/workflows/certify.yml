@@ -64,6 +64,7 @@ jobs:
           import os,pathlib
           root=pathlib.Path.cwd()
           (root/'investigation/checkpoints/CP13-profile-results.json').unlink(missing_ok=True)
+          for report in (root/'investigation/followup').glob('filesystem-*.json'):report.unlink()
           with open(os.environ['GITHUB_ENV'],'a',encoding='utf-8') as f:
               f.write('NIFT='+str(root.parent/'core'/('nift.exe' if os.name=='nt' else 'nift'))+'\n')
               f.write('MDX_NODE_MODULES='+str(root/'renderer/node_modules')+'\n')
