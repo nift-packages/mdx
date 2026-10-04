@@ -6,11 +6,11 @@ class RendererTests(unittest.TestCase):
   with tempfile.TemporaryDirectory(prefix='mdx protocol café ') as folder:
    path=pathlib.Path(folder);request={'version':1,'documents':documents or [{'id':'one','source':'# Hello','path':None,'dependencies':[]}],'options':options or {'policy':'trusted'}}
    for name,content in (files or {}).items():
-    file=path/name;file.parent.mkdir(parents=True,exist_ok=True);file.write_text(content)
-   (path/'request.json').write_text(raw if raw is not None else json.dumps(request))
+    file=path/name;file.parent.mkdir(parents=True,exist_ok=True);file.write_text(content,encoding="utf-8",newline="")
+   (path/'request.json').write_text(raw if raw is not None else json.dumps(request),encoding="utf-8",newline="")
    env=os.environ.copy();env.setdefault('MDX_NODE_MODULES','/usr/local/lib/node_modules')
    run=subprocess.run(['node',str(ROOT/'renderer/cli.mjs'),'--request','request.json','--response','response.json'],cwd=path,env=env,capture_output=True,text=True,timeout=20)
-   return run,json.loads((path/'response.json').read_text())
+   return run,json.loads((path/'response.json').read_text(encoding="utf-8"))
  def test_source_aware_diagnostics(self):
   source='---\ntitle: Example\n---\n\nimport Missing from "unmapped"\n\n<Missing />'
   run,response=self.invoke([{'id':'imports','source':source,'path':'article.mdx','dependencies':[]}])
@@ -39,30 +39,30 @@ class RendererTests(unittest.TestCase):
    options={'policy':'trusted','cache':'content','components':'components.mjs','dependencies':['asset.txt'],'remarkPlugins':[{'path':'plugin.mjs'}]}
    document={'id':'cache','source':'import Child from "./child.mdx"\n\n<Aside><Child /></Aside>','path':'page.mdx','dependencies':[{'path':'child.mdx'}]}
    files={'child.mdx':'# Child','components.mjs':'import {tag} from "./shared.mjs";export function components({element}){return {Aside:({children})=>element(tag,{},children)}}','shared.mjs':'export const tag="aside"','asset.txt':'first','plugin.mjs':'export default function(){return tree=>{}}'}
-   for name,content in files.items():(path/name).write_text(content)
+   for name,content in files.items():(path/name).write_text(content,encoding="utf-8",newline="")
    def invoke(raw=False):
-    (path/'request.json').write_text(json.dumps({'version':1,'documents':[document],'options':options}))
+    (path/'request.json').write_text(json.dumps({'version':1,'documents':[document],'options':options}),encoding="utf-8",newline="")
     run=subprocess.run(['node',str(helper/'cli.mjs'),'--request','request.json','--response','response.json'],cwd=path,env=env,capture_output=True,text=True,timeout=30)
-    response=json.loads((path/'response.json').read_text())
+    response=json.loads((path/'response.json').read_text(encoding="utf-8"))
     if raw:return run,response
     self.assertEqual(run.returncode,0,response);return response['results'][0]
    cold=invoke();warm=invoke();self.assertFalse(cold['cacheHit']);self.assertTrue(warm['cacheHit']);self.assertEqual(cold['html'],warm['html']);self.assertEqual(cold['dependencies'],warm['dependencies'])
    for name in files:
-    (path/name).write_text(files[name]+'\n');self.assertFalse(invoke()['cacheHit'],name);self.assertTrue(invoke()['cacheHit'],name)
-   (helper/'cache.mjs').write_text((helper/'cache.mjs').read_text()+'\n');self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
-   lock=helper/'package-lock.json';lock.write_text(lock.read_text()+'\n');self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
+    (path/name).write_text(files[name]+'\n',encoding="utf-8",newline="");self.assertFalse(invoke()['cacheHit'],name);self.assertTrue(invoke()['cacheHit'],name)
+   (helper/'cache.mjs').write_text((helper/'cache.mjs').read_text(encoding="utf-8")+'\n',encoding="utf-8",newline="");self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
+   lock=helper/'package-lock.json';lock.write_text(lock.read_text(encoding="utf-8")+'\n',encoding="utf-8",newline="");self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
    options['remarkPlugins'][0]['options']={'changed':True};self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
    env['MDX_CACHE_TEST_CONTEXT']='changed';self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
    document['source']+='\n';self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
-   for file in (path/'.nift/mdx-cache').glob('*.json'):file.write_text('corrupt')
+   for file in (path/'.nift/mdx-cache').glob('*.json'):file.write_text('corrupt',encoding="utf-8",newline="")
    self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
    options['cache']=False;disabled=invoke();self.assertFalse(disabled['cacheHit']);self.assertEqual(disabled['html'],cold['html']);options['cache']='content'
    for file in (path/'.nift/mdx-cache').glob('*.json'):file.unlink()
-   (path/'request.json').write_text(json.dumps({'version':1,'documents':[document],'options':options}))
+   (path/'request.json').write_text(json.dumps({'version':1,'documents':[document],'options':options}),encoding="utf-8",newline="")
    workers=[subprocess.Popen(['node',str(helper/'cli.mjs'),'--request','request.json','--response',f'concurrent-{i}.json'],cwd=path,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True) for i in range(2)]
    for worker in workers:
     output,error=worker.communicate(timeout=30);self.assertEqual(worker.returncode,0,error)
-   self.assertEqual(json.loads((path/'concurrent-0.json').read_text())['results'][0]['html'],json.loads((path/'concurrent-1.json').read_text())['results'][0]['html']);self.assertTrue(invoke()['cacheHit'])
+   self.assertEqual(json.loads((path/'concurrent-0.json').read_text(encoding="utf-8"))['results'][0]['html'],json.loads((path/'concurrent-1.json').read_text(encoding="utf-8"))['results'][0]['html']);self.assertTrue(invoke()['cacheHit'])
    options['policy']='untrusted';run,response=invoke(True);self.assertNotEqual(run.returncode,0);options['policy']='trusted'
    (path/'asset.txt').unlink();run,response=invoke(True);self.assertNotEqual(run.returncode,0)
  def test_installed_nift_facade(self):
@@ -70,13 +70,13 @@ class RendererTests(unittest.TestCase):
   with tempfile.TemporaryDirectory(prefix='mdx-installed-') as folder:
    path=pathlib.Path(folder);env=os.environ.copy();env.setdefault('MDX_NODE_MODULES','/usr/local/lib/node_modules')
    subprocess.run([nift,'add',str(ROOT)],cwd=path,env=env,capture_output=True,text=True,check=True)
-   (path/'.nift/mdx-render.json').write_text(json.dumps({'policy':'trusted'}))
-   (path/'page.mdx').write_text('# Prepared\n\nHello.')
-   (path/'render.f').write_text('@import("mdx")\nmdx.prepare([mdx.input("page.mdx")])\nprint(mdx.html(mdx.input("page.mdx")))\nprint(mdx.html(mdx.parse("# Inline")))\n')
+   (path/'.nift/mdx-render.json').write_text(json.dumps({'policy':'trusted'}),encoding="utf-8",newline="")
+   (path/'page.mdx').write_text('# Prepared\n\nHello.',encoding="utf-8",newline="")
+   (path/'render.f').write_text('@import("mdx")\nmdx.prepare([mdx.input("page.mdx")])\nprint(mdx.html(mdx.input("page.mdx")))\nprint(mdx.html(mdx.parse("# Inline")))\n',encoding="utf-8",newline="")
    run=subprocess.run([nift,'render.f'],cwd=path,env=env,capture_output=True,text=True);self.assertEqual(run.returncode,0,run.stderr);self.assertIn('mdx-prepared',run.stdout);self.assertIn('mdx-inline',run.stdout)
    blocked=subprocess.run([nift,'render.f','--no-process'],cwd=path,env=env,capture_output=True,text=True);self.assertNotEqual(blocked.returncode,0);self.assertIn('execution disabled',blocked.stderr)
-   (path/'page.mdx').write_text('# Changed')
-   (path/'stale.f').write_text('@import("mdx")\nprint(mdx.html(mdx.input("page.mdx")))\n')
+   (path/'page.mdx').write_text('# Changed',encoding="utf-8",newline="")
+   (path/'stale.f').write_text('@import("mdx")\nprint(mdx.html(mdx.input("page.mdx")))\n',encoding="utf-8",newline="")
    stale=subprocess.run([nift,'stale.f'],cwd=path,env=env,capture_output=True,text=True);self.assertNotEqual(stale.returncode,0);self.assertIn('stale',stale.stderr)
  def test_protocol(self):
   run,response=self.invoke();self.assertEqual(response['version'],1);self.assertEqual(response['results'][0]['id'],'one');self.assertTrue(response['ok']);self.assertIn('<h1 id="mdx-hello">',response['results'][0]['html'])
@@ -140,7 +140,7 @@ class RendererTests(unittest.TestCase):
   with tempfile.TemporaryDirectory(prefix='mdx-site-') as folder:
    path=pathlib.Path(folder);env=os.environ.copy();env.setdefault('MDX_NODE_MODULES','/usr/local/lib/node_modules')
    def write(name,content):
-    file=path/name;file.parent.mkdir(parents=True,exist_ok=True);file.write_text(content)
+    file=path/name;file.parent.mkdir(parents=True,exist_ok=True);file.write_text(content,encoding="utf-8",newline="")
    def call(*args):
     run=subprocess.run([nift,*args],cwd=path,env=env,capture_output=True,text=True);self.assertEqual(run.returncode,0,run.stdout+run.stderr);return run
    origin=path/'package-origin';origin.mkdir()
@@ -149,7 +149,7 @@ class RendererTests(unittest.TestCase):
    subprocess.run(['git','init','-q',str(origin)],check=True)
    subprocess.run(['git','add','.'],cwd=origin,check=True)
    subprocess.run(['git','-c','user.name=mdx-test','-c','user.email=mdx@example.invalid','commit','-qm','fixture'],cwd=origin,check=True)
-   call('add','file://'+str(origin),'--ref=HEAD')
+   call('add',origin.as_uri(),'--ref=HEAD')
    write('.nift/mdx-render.json',json.dumps({'policy':'trusted','components':'components.mjs','dependencies':['asset.txt'],'remarkPlugins':[{'path':'plugin.mjs','options':{'text':'Plugin'}}]}))
    write('components.mjs','import {tag} from "./shared.mjs";export function components({element}) {return {Aside:({children})=>element(tag,{},children)}}')
    write('shared.mjs','export const tag="aside"');write('asset.txt','first');write('plugin.mjs','export default function(options){return tree=>{tree.children.unshift({type:"paragraph",children:[{type:"text",value:options.text}]})}}')
@@ -161,8 +161,8 @@ class RendererTests(unittest.TestCase):
    call('build','--all');unrelated=(path/'public/other.html').stat().st_mtime_ns
    noop=call('build');self.assertIn('up to date',noop.stdout)
    for name,text,expected in [('shared.mdx','<Aside>Nested changed</Aside>','Nested changed'),('shared.mjs','export const tag="section"','<section>'),('asset.txt','second','<section>'),('plugin.mjs','export default function(){return tree=>{tree.children.unshift({type:"paragraph",children:[{type:"text",value:"Updated plugin"}]})}}','Updated plugin'),('.nift/mdx-render.json',json.dumps({'policy':'trusted','components':'components.mjs','dependencies':['asset.txt'],'remarkPlugins':[{'path':'plugin.mjs','options':{'text':'Different'}}]}),'<section>')]:
-    write(name,text);rebuilt=call('build');self.assertIn('1 file rebuilt',rebuilt.stdout);self.assertIn(expected,(path/'public/index.html').read_text());self.assertEqual((path/'public/other.html').stat().st_mtime_ns,unrelated)
-   metadata=(path/'.nift/public/index.info.json').read_text()
+    write(name,text);rebuilt=call('build');self.assertIn('1 file rebuilt',rebuilt.stdout);self.assertIn(expected,(path/'public/index.html').read_text(encoding="utf-8"));self.assertEqual((path/'public/other.html').stat().st_mtime_ns,unrelated)
+   metadata=(path/'.nift/public/index.info.json').read_text(encoding="utf-8")
    for dependency in ['page.mdx','shared.mdx','components.mjs','shared.mjs','asset.txt','plugin.mjs','.nift/mdx-render.json']:self.assertEqual(metadata.count('"'+dependency+'"'),1,dependency)
  def test_gfm_heading_ids_and_markdown_defaults(self):
   source='# Duplicate\n\n# Duplicate\n\n~~gone~~ and https://example.org\n\n| Name | Value |\n| --- | --- |\n| One | Two |\n\n- [x] Done\n- [ ] Todo\n\nReference[^note].\n\n[^note]: Footnote text.\n\n"Straight quotes" -- plain.\n'

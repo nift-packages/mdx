@@ -2,7 +2,7 @@ import {load} from './dependencies.mjs';
 import {diagnostic} from './protocol.mjs';
 import {Inputs} from './inputs.mjs';
 import {pathToFileURL,fileURLToPath} from 'node:url';
-import {resolve,dirname,extname} from 'node:path';
+import {resolve,dirname,extname,relative,isAbsolute} from 'node:path';
 import {body,originalLocation} from './source.mjs';
 import * as cache from './cache.mjs';
 import {performance} from 'node:perf_hooks';
@@ -27,7 +27,7 @@ export async function renderBatch(request){
  for(const path of request.options.dependencies??[])await shared.track(path);
  const packageRoot=dirname(fileURLToPath(import.meta.url));
  for(const name of ['cli.mjs','worker.mjs','render.mjs','inputs.mjs','source.mjs','dependencies.mjs','protocol.mjs','cache.mjs','package-lock.json']){
-  const path=resolve(packageRoot,name);if(!path.startsWith(resolve(process.cwd())+'/'))continue;await shared.track(path);
+  const path=resolve(packageRoot,name),rel=relative(resolve(process.cwd()),path);if(rel.startsWith('..')||isAbsolute(rel))continue;await shared.track(path);
  }
  async function configuredModule(path){const module=await import(pathToFileURL(await shared.module(path)).href);return module.components?module.components({element:React.createElement}):module.default??module;}
  for(const [specifier,path] of Object.entries(request.options.imports??{}))mappedImports[specifier]=await configuredModule(path);

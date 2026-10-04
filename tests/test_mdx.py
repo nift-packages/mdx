@@ -161,7 +161,7 @@ try:
     revision = run_external(["git", "rev-parse", "HEAD"], origin).stdout.strip()
     independent = work / "independent"
     independent.mkdir()
-    install(independent, f"file://{origin}", revision)
+    install(independent, origin.as_uri(), revision)
     independent_entry = independent / ".nift" / "packages" / "mdx" / "src" / "mdx.f"
     require(independent_entry.is_file() and not independent_entry.is_symlink(),
             "Git-installed entry must be a staged regular file")
@@ -169,7 +169,7 @@ try:
 
     website = work / "website"
     website.mkdir()
-    install(website, f"file://{origin}", revision)
+    install(website, origin.as_uri(), revision)
     shutil.rmtree(origin)
     independent_result = run(["contract.f", "--no-process"], independent)
     require(independent_result.returncode == 0 and
