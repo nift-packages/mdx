@@ -49,3 +49,6 @@ CP10 complete: static adapter/plugin closure, declared assets/config, helper/loc
 dependencies and explicit MDX import mappings.24 tests plus actual site checks
 prove incremental invalidation and unrelated/no-change behavior. Local package
 links outside project cannot be used by build templates; use Git-installed copy.
+
+CP11 complete: default CommonMark/GFM/prefixed IDs documented and verified,
+including footnotes/duplicate headings/inert code and JSX HTML boundaries.

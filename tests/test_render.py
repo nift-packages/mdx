@@ -110,6 +110,15 @@ class RendererTests(unittest.TestCase):
     write(name,text);rebuilt=call('build');self.assertIn('1 file rebuilt',rebuilt.stdout);self.assertIn(expected,(path/'public/index.html').read_text());self.assertEqual((path/'public/other.html').stat().st_mtime_ns,unrelated)
    metadata=(path/'.nift/public/index.info.json').read_text()
    for dependency in ['page.mdx','shared.mdx','components.mjs','shared.mjs','asset.txt','plugin.mjs','.nift/mdx-render.json']:self.assertEqual(metadata.count('"'+dependency+'"'),1,dependency)
+ def test_gfm_heading_ids_and_markdown_defaults(self):
+  source='# Duplicate\n\n# Duplicate\n\n~~gone~~ and https://example.org\n\n| Name | Value |\n| --- | --- |\n| One | Two |\n\n- [x] Done\n- [ ] Todo\n\nReference[^note].\n\n[^note]: Footnote text.\n\n"Straight quotes" -- plain.\n'
+  run,response=self.invoke([{'id':'gfm','source':source,'path':None,'dependencies':[]}]);self.assertEqual(run.returncode,0,response);html=response['results'][0]['html']
+  for fragment in ['id="mdx-duplicate"','id="mdx-duplicate-1"','<del>gone</del>','href="https://example.org"','<table>','type="checkbox"','Footnote text','data-footnote']:self.assertIn(fragment,html)
+  self.assertNotIn('“',html);self.assertNotIn('”',html);self.assertIn('-- plain',html)
+ def test_jsx_html_and_inert_code(self):
+  source='<div><em>HTML</em></div>\n\n```mdx\nimport Hidden from "./hidden.mdx"\n<Unknown />\n{process.exit()}\n```'
+  run,response=self.invoke([{'id':'code','source':source,'path':None,'dependencies':[]}]);self.assertEqual(run.returncode,0,response);self.assertIn('<div><em>HTML</em></div>',response['results'][0]['html']);self.assertIn('process.exit',response['results'][0]['html'])
+  run,response=self.invoke([{'id':'comment','source':'<!-- HTML comment -->','path':None,'dependencies':[]}]);self.assertNotEqual(run.returncode,0)
  def test_source_bound(self):
   run,response=self.invoke([{'id':'large','source':'x'*262145,'path':None,'dependencies':[]}]);self.assertNotEqual(run.returncode,0);self.assertIn('limit',response['diagnostics'][0]['message'])
  def test_duplicate(self):

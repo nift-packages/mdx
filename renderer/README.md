@@ -113,3 +113,16 @@ no unchanged batch timing data is written into them.
 For build-hosted use prefer the normal Git package installation. Local path
 installation creates a symlink; Nift correctly refuses an out-of-project symlink
 when templates import it. The tests use a Git-installed real package tree.
+
+## Default Markdown pipeline
+
+CommonMark + remark-gfm + rehype-slug with a stable `mdx-` heading prefix.
+Tables, literal autolinks, strikethrough, task lists and footnotes are enabled;
+duplicate headings gain deterministic suffixes. Nested lists, links/images and
+inline/fenced code use ordinary compiler semantics; code text stays inert and
+escaped. Smart punctuation and syntax highlighting are optional explicit local
+plugins, not default package installs. MDX supports JSX-valid HTML tags; HTML
+comments and unrestricted raw HTML Markdown are not silently enabled through
+rehype-raw. Follow JSX syntax for authored MDX. No browser code is injected by
+this pipeline. Caller-controlled plugins must preserve/validate their own ID and
+escaping behavior; a trusted plugin can change the pipeline.
