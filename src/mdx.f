@@ -889,6 +889,7 @@ struct(mdx) {
     }
 
     private fn(normalize(path)) {
+        if(os() == "windows") { path = path.replace("\\", "/") }
         absolute := path.starts_with("/")
         parts := path.split("/")
         clean := []
@@ -922,9 +923,12 @@ struct(mdx) {
 
     private fn(project_path(path)) {
         root := pwd()
+        if(os() == "windows") { root = root.replace("\\", "/"); path = path.replace("\\", "/") }
         normalized := this.normalize(path)
         if(normalized == null) { return null }
-        if(normalized.starts_with("/")) {
+        drive_absolute := os() == "windows" && normalized.length() >= 3 && normalized.substr(1, 2) == ":/"
+        if(os() == "windows" && (path.starts_with("//") || (path.contains(":") && !drive_absolute))) { return null }
+        if(normalized.starts_with("/") || drive_absolute) {
             prefix := root
             if(!prefix.ends_with("/")) { prefix += "/" }
             if(!normalized.starts_with(prefix)) { return null }

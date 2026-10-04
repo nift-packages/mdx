@@ -65,6 +65,16 @@ class RendererTests(unittest.TestCase):
    self.assertEqual(json.loads((path/'concurrent-0.json').read_text(encoding="utf-8"))['results'][0]['html'],json.loads((path/'concurrent-1.json').read_text(encoding="utf-8"))['results'][0]['html']);self.assertTrue(invoke()['cacheHit'])
    options['policy']='untrusted';run,response=invoke(True);self.assertNotEqual(run.returncode,0);options['policy']='trusted'
    (path/'asset.txt').unlink();run,response=invoke(True);self.assertNotEqual(run.returncode,0)
+ @unittest.skipUnless(os.name=='nt','Windows native path contract')
+ def test_windows_native_input_paths(self):
+  nift=os.environ['NIFT']
+  with tempfile.TemporaryDirectory(prefix='mdx native café ') as folder:
+   path=pathlib.Path(folder);(path/'nested').mkdir();(path/'nested/root.mdx').write_text('import Child from "./child.mdx"\n\n<Child />',encoding='utf-8',newline='');(path/'nested/child.mdx').write_text('# Child',encoding='utf-8',newline='')
+   sources=[str(path/'nested/root.mdx'),'nested\\root.mdx','C:page.mdx','\\\\server\\share\\page.mdx']
+   script='@import('+json.dumps(str(ROOT/'src/mdx.f'))+')\n'+''.join('print(mdx.input('+json.dumps(source)+').stringify())\n' for source in sources)
+   (path/'paths.f').write_text(script,encoding='utf-8',newline='');run=subprocess.run([nift,'paths.f','--no-process'],cwd=path,capture_output=True,text=True);self.assertEqual(run.returncode,0,run.stderr)
+   records=[json.loads(x) for x in run.stdout.splitlines()];self.assertTrue(records[0]['ok']);self.assertTrue(records[1]['ok']);self.assertEqual(records[0]['path'],'nested/root.mdx');self.assertEqual(records[1]['dependencies'][0]['path'],'nested/child.mdx')
+   for record in records[2:]:self.assertEqual(record['diagnostics'][0]['code'],'path_escape')
  def test_installed_nift_facade(self):
   nift=os.environ.get('NIFT','/home/nick/Repositories/nift/nift/nift')
   with tempfile.TemporaryDirectory(prefix='mdx-installed-') as folder:
