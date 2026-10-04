@@ -1,0 +1,3152 @@
+{
+  "upstream_commit": "7d5b69d6ba8a6630384dffc7d012431ee3ed22ec",
+  "profile": "trusted",
+  "pages": 519,
+  "accepted": 518,
+  "scan_parser_milliseconds": 204836,
+  "median_milliseconds": 266,
+  "exclusions": [
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intent-launcher/index.mdx",
+      "ok": false,
+      "diagnostics": [
+        {
+          "code": "too_many_syntax_objects",
+          "message": "document exceeds 1024 syntax objects",
+          "severity": "error",
+          "path": null,
+          "line": 308,
+          "column": 36,
+          "offset": 30570
+        }
+      ],
+      "milliseconds": 3603
+    }
+  ],
+  "records": [
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/inappbrowser/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1862
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 2049
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/faq.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 333
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intent-launcher/index.mdx",
+      "ok": false,
+      "diagnostics": [
+        {
+          "code": "too_many_syntax_objects",
+          "message": "document exceeds 1024 syntax objects",
+          "severity": "error",
+          "path": null,
+          "line": 308,
+          "column": 36,
+          "offset": 30570
+        }
+      ],
+      "milliseconds": 3603
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/build.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 2678
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-play-store-review.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 554
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-authentication/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1812
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/facebook.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1139
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/channels.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1156
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1072
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/version-targeting.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1036
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/commands.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1991
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/debugging.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1747
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/credentials.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1331
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/github-actions.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1568
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/camera-preview/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1313
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/watch/examples.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 835
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-app-store-review.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 670
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/oauth2.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1318
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/configuration.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1809
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/logs.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1332
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/organization-roles.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 859
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/onboarding.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1370
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/channels.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 812
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/azure-devops.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 706
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/live-activities/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 963
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/bundles.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 743
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/youtube-player/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1428
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1590
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/encryption.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 547
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-audio/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 904
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/progressive-rollouts.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 895
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/bundle.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1945
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/compliance.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 678
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/github-actions.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 650
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/appsflyer/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1075
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/printer/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 449
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/troubleshooting.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 689
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/handling-channels.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 602
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1585
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/bitbucket-pipeline.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 616
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/watch/watch-app-setup.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 742
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/organization-system.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 642
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/features.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 330
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/contributing/adding-plugins.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 615
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/ci-ota-or-native.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1067
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/organization-security.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 313
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/bluetooth-low-energy/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1102
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/webhooks.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 867
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/general.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 679
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/settings.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1459
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-introductory-offer.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 283
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 841
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-create-subscription.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 230
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/update-behavior.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 766
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/better-auth.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 509
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/sheets/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 967
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/Apple/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 531
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/video-player/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 861
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 947
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/electron-updater/api.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 934
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/notifications/debugging.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 523
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 910
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/channels.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 641
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/compatibility.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 747
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/gitlab-ci.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 548
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1173
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/wifi/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 769
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/speech-recognition/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 771
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/prescan.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1111
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/cicd-integration.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 669
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/watch/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 767
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 980
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/api-keys.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 629
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/background-geolocation/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 424
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/china-configuration.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 503
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/troubleshooting.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 490
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-subscription-group.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 231
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/upgrade/from-capawesome-to-capgo.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 549
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/streamcall/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 847
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/upgrade/from-appflow-to-capgo.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 403
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-firestore/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 751
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/custom-storage.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 618
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/is-root/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 886
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/ci-ui-trigger.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 735
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/health/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 581
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-navigation/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 622
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/data-storage-sqlite/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 835
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-biometric/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 537
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-storage/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 615
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/inappbrowser/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 868
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/channel.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1258
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/google/general.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 466
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-crash/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 566
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/revenue-playbook.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 295
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/main-app-page.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 216
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/contacts/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 879
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/commonProblems.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 750
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/transitions/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 794
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/rollbacks.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 261
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/speech-synthesis/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 641
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/widget-kit/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 583
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/zebra-datawedge/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 907
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/notifications/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 375
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/events.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 608
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/zip/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 228
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 496
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-analytics/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 743
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/hipaa-compliance.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 526
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/api-keys.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 578
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ibeacon/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 591
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-remote-config/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 597
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/appsflyer/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 520
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/screen-orientation/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 400
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/audio-recorder/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 587
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/quickstart.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 452
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file-picker/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 579
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/wechat/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 582
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/device-info/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 625
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/capacitor-plus/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 674
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-performance/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 781
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intercom/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 885
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file-compressor/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 314
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-sandbox-testing.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 155
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/native-ota-channel-workflow.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 697
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-messaging/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 669
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/nfc/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 648
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/devices.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 477
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 665
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/twilio-voice/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 431
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/app.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 386
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/differentials.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 439
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/electron-updater/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 402
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/after-onboarding-setup-checklist.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 746
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/sheets/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 674
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/compass/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 471
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/photo-library/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 511
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pay/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 422
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-sandbox-testing.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 129
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/facebook.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 325
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/ionic-auth-connect.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 409
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-crashlytics/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 577
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 685
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-introductory-offer.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 126
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/brightness/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 585
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-authentication/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 678
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persona/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 597
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/google.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 332
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/handling-stats.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 348
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 625
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/google/web.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 566
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/statistics.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 243
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ivs-player/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 652
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/enterprise-sso.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 230
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 382
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/rudderstack/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 623
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/update-types.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 614
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/android-create-subscription.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 119
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/2fa-enforcement.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 245
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intent-launcher/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 470
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/widget-kit/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 539
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 568
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/bundles.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 196
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/apple.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 293
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pedometer/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 457
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/app.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 831
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/organization.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 800
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/camera-preview/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 587
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/fast-sql/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 463
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-loader/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 1289
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/google/web.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 192
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/asset-cache/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 531
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/ios-monthly-commitment.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 293
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-app-check/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 356
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/document-scanner/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 278
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/alarm/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 374
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 391
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 435
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ricoh360-camera/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 532
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-loader/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 840
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/members.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 305
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/notifications/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 303
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-usagestatsmanager/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 318
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/deploy.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 365
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/uploader/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 276
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/versioning.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 338
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ffmpeg/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 545
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/organizations.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 398
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/youtube-player/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 495
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 621
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/mfa.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 698
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/admob/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 472
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-kiosk/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 335
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/launch-navigator/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 386
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/crisp/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 413
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/Apple/general.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 304
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/known-issues.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 288
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/jw-player/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 572
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/google/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 181
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-crash/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 355
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/llm/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 376
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/calendar/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 287
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/sim/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 276
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/payment.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 109
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/age-range/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 282
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/twilio-video/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 374
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-version-checker/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 455
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/accelerometer/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 420
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/organisation.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 644
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/barometer/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 407
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/add-an-app.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 655
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/incoming-call-kit/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 460
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/light-sensor/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 367
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-guardian/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 332
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/is-root/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 392
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/keycloak.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 205
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/electron-updater/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 391
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/public-api/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 458
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/age-signals/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 238
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/asset-cache/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 489
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-biometric/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 402
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/bluetooth-low-energy/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 431
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 234
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/wifi/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 208
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/Apple/web.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 137
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intune/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 429
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/background-task/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 259
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/introduction.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 110
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/live-reload/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 381
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-functions/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 354
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mux-player/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 255
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-navigation/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 416
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file-sharer/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 416
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/transitions/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 441
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/app-attest/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 436
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/testing-native-builds-without-live-updates.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 518
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/upgrade/from-ionic-identity-vault.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 112
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/auto-update.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 270
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/compass/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 180
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/capgo-availability.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 28
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-map/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 395
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/audiosession/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 329
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/introduction.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 111
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/passkey/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 540
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/network-diagnostics/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 218
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-map/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 552
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/integrations/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 261
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/downloader/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 287
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/background-task/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 263
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/live-activities/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 303
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/zebra-datawedge/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 329
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/capacitor-patch/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 497
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ivs-player/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 441
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/background-geolocation/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 254
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ibeacon/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 268
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 458
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/app-attest/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 374
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/devices.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 176
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/facebook-analytics/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 235
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-purchases/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 208
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/google/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 129
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/nativegeocoder/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 254
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/share-target/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 255
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/general.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 466
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/watch/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 207
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/app-attest/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 252
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/date-picker/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 414
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intercom/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 335
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/troubleshooting.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 240
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/date-picker/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 432
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/media-session/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 361
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/supabase/Apple/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 95
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/firebase/google/web.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 179
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persona/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 227
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intune/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 227
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/auto/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 362
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/capacitor-plus/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 275
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/contentsquare/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 229
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/video-thumbnails/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 192
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/incoming-call-kit/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 171
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/twilio-voice/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 333
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-firestore/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 263
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/speech-recognition/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 267
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-audio/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 327
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-sms-retriever/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 181
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/twilio-video/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 267
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/speech-synthesis/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 273
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/capacitor-patch/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 330
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/privacy-and-ios-handlers.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 145
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/live-updates/data-location.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 278
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-messaging/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 256
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/handling-updates.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 191
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pretty-toast/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 343
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/recaptcha/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 259
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-inline-install/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 185
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/crisp/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 191
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-kiosk/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 141
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/auto/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 327
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 582
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/brightness/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 193
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/app-tracking-transparency/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 205
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-sms-retriever/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 197
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/supabase/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 178
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/migrations/v7.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 208
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/proximity/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 353
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/streamcall/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 314
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/facebook-analytics/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 177
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mqtt/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 265
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 191
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/light-sensor/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 170
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intune/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 273
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/photo-library/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 179
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/health/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 181
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/proximity/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 264
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-analytics/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 235
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/cordova-updater/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 334
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/audio-recorder/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 205
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/incoming-call-kit/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 205
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/contacts/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 273
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/incoming-call-kit/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 134
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file-sharer/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 149
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/video-player/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 225
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/navigation-bar/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 168
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/calendar/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 326
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-app/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 223
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/privacy-screen/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 249
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/keep-awake/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 238
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/web.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 209
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/passkey/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 274
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/age-signals/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 155
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/install-referrer/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 156
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/install-referrer/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 119
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-market/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 212
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pdf-generator/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 207
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-crashlytics/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 173
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/encrypted-bundles.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 298
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/autofill-save-password/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 211
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/volume-buttons/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 230
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-usagestatsmanager/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 121
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/passkey/backend.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 76
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/downloader/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 174
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file-picker/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 183
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/device-info/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 126
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/upgrade/from-ionic-secure-storage.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 39
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/data-storage-sqlite/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 290
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/alarm/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 141
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/rudderstack/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 225
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/gtm/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 214
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-market/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 160
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/fast-sql/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 166
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-version-checker/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 193
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/uwb/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 373
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-performance/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 210
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/screen-recorder/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 134
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/nfc/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 208
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-version-checker/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 184
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/intune/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 231
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/passkey/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 153
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/home-indicator/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 162
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/textinteraction/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 163
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/recaptcha/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 152
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/llm/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 186
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/rich-notifications/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 248
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/stripe-terminal/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 176
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/in-app-review/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 109
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-remote-config/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 202
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/uwb/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 245
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/jw-player/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 266
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/realtimekit/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 182
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/flash/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 216
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/live-reload/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 173
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pedometer/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 168
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persistent-account/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 149
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persistent-uuid/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 34
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/network-diagnostics/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 213
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pretty-toast/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 250
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/azure.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 120
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/local-dev/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 184
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ricoh360-camera/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 209
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persistent-uuid/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 122
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/accelerometer/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 166
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/screen-orientation/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 170
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/self-hosted/manual-update.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 92
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/app-attest/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 201
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/zebra-datawedge/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 152
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/upgrade/from-ionic-auth-connect.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 61
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/builder/ai-debug.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 115
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/observe.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 28
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/local-dev/capacitor-updater.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 93
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/auth0.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 130
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ssl-pinning/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 197
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/appinsights/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 207
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-guardian/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 139
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/cognito.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 92
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/barometer/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 179
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/contentsquare/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 199
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/cordova-updater/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 428
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/passkey/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 204
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/verisoul/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 191
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/audiosession/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 126
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/gtm/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 149
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/stripe-pay/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 145
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-started/wrapping-up.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 371
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/launch-navigator/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 150
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/admob/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 238
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/onelogin.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 94
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/getting-help.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 273
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/okta.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 105
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/wechat/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 168
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/auto/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 123
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/key.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 237
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mock-location-detector/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 224
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/keep-awake/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 139
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/supabase/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 140
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/log-insights.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 30
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/home-indicator/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 119
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/app-tracking-transparency/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 96
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/contentsquare/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 135
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/local-dev/contributing.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 27
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/shake/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 163
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/recaptcha/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 145
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/printer/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 150
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/install-referrer/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 126
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/permissions/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 189
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 147
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mux-player/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 143
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pay/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 104
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/auto/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 131
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-storage/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 174
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/autofill-save-password/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 97
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-app-check/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 149
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/verisoul/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 150
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/navigation-bar/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 111
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/media-session/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 138
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/realtimekit/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 92
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/stripe-identity/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 126
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/contentsquare/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 109
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/in-app-review/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 71
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/screen-recorder/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 91
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/notify-app-ready.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 307
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/nativegeocoder/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 121
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ffmpeg/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 141
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/volume-buttons/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 101
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/install-referrer/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 115
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mqtt/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 158
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/file-compressor/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 70
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/video-thumbnails/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 71
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/uploader/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 100
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/appinsights/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 110
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pdf-generator/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 93
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pdf-viewer/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 140
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/how-to.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 339
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mute/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 146
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persistent-account/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 93
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/android-inline-install/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 73
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-functions/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 112
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/flash/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 143
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/recaptcha/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 105
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/env/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 118
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/background-task/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 115
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/privacy-screen/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 113
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/sim/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 114
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/share-target/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 104
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/background-task/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 60
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/zip/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 93
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 176
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/age-range/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 74
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/shake/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 86
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/integrations/github.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 67
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/privacy-screen/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 50
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/textinteraction/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 72
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/document-scanner/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 63
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-map/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 188
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/ssl-pinning/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 78
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/env/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 73
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/firebase-app/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 96
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/settings.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 253
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/native-map/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 218
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/permissions/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 398
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/uwb/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 168
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/mcp.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 281
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/updater/local-dev/cli.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 85
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/rich-notifications/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 114
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/get-qr.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 220
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/init.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 151
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/permissions/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 157
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mute/index.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 91
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pdf-viewer/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 114
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mock-location-detector/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 100
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/privacy-screen/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 76
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persistent-uuid/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 53
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/webapp/main-page.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 72
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/uwb/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 165
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mock-location-detector/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 127
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/login.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 125
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/star-all.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 107
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/webview-version-checker/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 29
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/persistent-uuid/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 49
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/permissions/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 263
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/verisoul/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 102
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/mock-location-detector/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 97
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/social-login/apple/general.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 21
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/probe.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 82
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/account.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 81
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/doctor.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 80
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/verisoul/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 89
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/stripe-pay/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 116
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/notifications.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 150
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/network-diagnostics/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 104
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/rich-notifications/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 123
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/run.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 87
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/stripe-identity/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 90
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/stripe-terminal/getting-started.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 99
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/migrations/cli-from-0x-to-1x.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 37
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/cli/reference/star.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 34
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/network-diagnostics/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 100
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/rich-notifications/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 82
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pdf-viewer/android.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 54
+    },
+    {
+      "path": "apps/docs/src/content/docs/docs/plugins/pdf-viewer/ios.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 60
+    }
+  ]
+}

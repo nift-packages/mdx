@@ -1,0 +1,56 @@
+{
+  "records": [
+    {
+      "path": "exact.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 8
+    },
+    {
+      "path": "over.mdx",
+      "ok": false,
+      "diagnostics": [
+        {
+          "code": "source_too_large",
+          "message": "source exceeds 65536 bytes",
+          "severity": "error",
+          "path": "over.mdx",
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        }
+      ],
+      "milliseconds": 3
+    },
+    {
+      "path": "lines.mdx",
+      "ok": false,
+      "diagnostics": [
+        {
+          "code": "too_many_lines",
+          "message": "source exceeds 8192 lines",
+          "severity": "error",
+          "path": "lines.mdx",
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        }
+      ],
+      "milliseconds": 1003
+    },
+    {
+      "path": "unicode.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 6
+    },
+    {
+      "path": "exact-lines.mdx",
+      "ok": true,
+      "diagnostics": [],
+      "milliseconds": 13280
+    }
+  ],
+  "full_wall_seconds": 15.505052751977928,
+  "peak_rss_kib": 18604
+}

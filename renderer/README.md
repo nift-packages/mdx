@@ -126,3 +126,27 @@ comments and unrestricted raw HTML Markdown are not silently enabled through
 rehype-raw. Follow JSX syntax for authored MDX. No browser code is injected by
 this pipeline. Caller-controlled plugins must preserve/validate their own ID and
 escaping behavior; a trusted plugin can change the pipeline.
+
+## Parser capacity profiles
+
+`mdx` remains the original bounded parser. For trusted authored projects, create
+an independent facade with `trusted := mdx.with_profile("trusted")`, then use
+`trusted.input(path)`, `trusted.prepare(documents)` and `trusted.html(document)`.
+Selecting parser capacity does not grant execution permission; rendering still
+requires `policy: "trusted"` in `.nift/mdx-render.json`.
+
+| Limit | bounded (unchanged) | trusted |
+| --- | ---: | ---: |
+| File UTF-8 bytes | 4,096 | 65,536 |
+| Physical lines | 1,024 | 8,192 |
+| Physical line bytes | 16,384 | 65,536 |
+| Aggregate MDX graph bytes | 16,384 | 2,097,152 |
+
+Syntax objects (1,024), imports (256), graph files (64), graph depth (16),
+expression/JSX nesting (64/48), delimiter runs and path limits remain bounded
+in both profiles. The retained object guard intentionally rejects some dense
+real pages; consult CP13 corpus evidence before claiming full Capgo support.
+The provisional 256 KiB/file and 8 MiB graph profile was not adopted: prose is
+now fast, but dense JSX still has substantial interpreter cost. `input` reads
+the source before it can check its encoded size; these guards do not claim
+pre-read allocation protection or an untrusted execution sandbox.

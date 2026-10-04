@@ -56,3 +56,9 @@ including footnotes/duplicate headings/inert code and JSX HTML boundaries.
 CP12 complete: native plain-span/line/backtick operations, cached byte length;
 165 exact baseline parity cases and full parser suite pass.4KB prose3,003→14ms;
 dense JSX2,929→2,165ms and backticks3,502→1,591ms. Dense syntax remains a gate.
+
+CP13 complete: independent opt-in64 KiB/2 MiB trusted capacity profile; default
+bounded behavior unchanged. Full regression and26 renderer tests pass. Actual
+pinned Capgo scan accepts 518/519 canonical docs, cumulative parser
+204.836s. Retained syntax-object exclusions and parser
+cost remain CP22 release gates. No Capgo website implementation started.

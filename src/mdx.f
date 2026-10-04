@@ -1,6 +1,21 @@
 /* Bounded MDX preservation parser. Public API: only the `mdx` facade. */
 
 struct(mdx) {
+    profile_name := "bounded"
+
+    private fn(limits()) {
+        if(this.profile_name == "bounded") { return {"bytes":4096,"lines":1024,"line_bytes":16384,"aggregate":16384} }
+        if(this.profile_name == "trusted") { return {"bytes":65536,"lines":8192,"line_bytes":65536,"aggregate":2097152} }
+        throw error("Unknown MDX parser profile", "user.mdx_profile")
+    }
+
+    fn(with_profile(name)) {
+        if(name != "bounded" && name != "trusted") { throw error("Unknown MDX parser profile", "user.mdx_profile") }
+        configured := mdx()
+        configured.profile_name = name
+        return configured
+    }
+
     private fn(byte_at(source, index)) { return source.data[index] }
     private fn(text(source, begin, end)) { return source.raw.substr(begin, end - begin) }
     private fn(source_length(source)) { return source.data.length() }
@@ -39,12 +54,12 @@ struct(mdx) {
             width := line.encode("utf-8").length()
             cursor += width
             if(cursor < source.length) {
-                if(width > 16384) { return {"ok":false,"starts":starts,"offset":line_begin} }
+                if(width > source.limits.line_bytes) { return {"ok":false,"starts":starts,"offset":line_begin} }
                 if(source.data[cursor] == 13 && cursor + 1 < source.length && source.data[cursor + 1] == 10) { cursor += 2 } else { cursor += 1 }
                 if(cursor < source.length) { starts.push(cursor); line_begin = cursor }
             }
         }
-        if(source.length - line_begin > 16384) { return {"ok":false,"starts":starts,"offset":line_begin} }
+        if(source.length - line_begin > source.limits.line_bytes) { return {"ok":false,"starts":starts,"offset":line_begin} }
         return {"ok":true,"starts":starts,"offset":0}
     }
 
@@ -720,7 +735,7 @@ struct(mdx) {
         return cursor + distance
     }
 
-    private fn(parse_core(value, path, provided_bytes)) {
+    private fn(parse_core(value, path, provided_bytes, limits)) {
         lines := [0]
         issue := [null]
         if(type(value) != "string") {
@@ -729,19 +744,19 @@ struct(mdx) {
         }
         encoded := value.encode("utf-8")
         if(provided_bytes != null) { encoded = provided_bytes }
-        if(encoded.length() > 4096) {
-            issue[0] = this.diagnostic("source_too_large", "source exceeds 4096 bytes", path, lines, 0)
+        if(encoded.length() > limits.bytes) {
+            issue[0] = this.diagnostic("source_too_large", "source exceeds " + limits.bytes.to_string() + " bytes", path, lines, 0)
             return this.empty_failure(null, path, this.default_frontmatter(), issue[0])
         }
-        source := {"raw":value,"data":encoded,"length":encoded.length()}
+        source := {"raw":value,"data":encoded,"length":encoded.length(),"limits":limits}
         line_scan := this.line_info(source)
         lines = line_scan.starts
         if(!line_scan.ok) {
-            issue[0] = this.diagnostic("physical_line_too_long", "physical line exceeds 16384 bytes", path, lines, line_scan.offset)
+            issue[0] = this.diagnostic("physical_line_too_long", "physical line exceeds " + limits.line_bytes.to_string() + " bytes", path, lines, line_scan.offset)
             return this.empty_failure(value, path, this.default_frontmatter(), issue[0])
         }
-        if(lines.length() > 1024) {
-            issue[0] = this.diagnostic("too_many_lines", "source exceeds 1024 lines", path, lines, 0)
+        if(lines.length() > limits.lines) {
+            issue[0] = this.diagnostic("too_many_lines", "source exceeds " + limits.lines.to_string() + " lines", path, lines, 0)
             return this.empty_failure(value, path, this.default_frontmatter(), issue[0])
         }
         backticks := this.backtick_matches(source)
@@ -924,8 +939,8 @@ struct(mdx) {
         return {"code":code,"message":message,"severity":"error","path":path,"line":1,"column":1,"offset":0}
     }
 
-    private fn(graph_state(root_result, dependencies, dependency_paths, diagnostics, diagnostic_keys, visited, visiting, files, aggregate)) {
-        return {"root":root_result,"dependencies":dependencies,"dependency_paths":dependency_paths,"diagnostics":diagnostics,"diagnostic_keys":diagnostic_keys,"visited":visited,"visiting":visiting,"files":files,"aggregate":aggregate}
+    private fn(graph_state(root_result, dependencies, dependency_paths, diagnostics, diagnostic_keys, visited, visiting, files, aggregate, limits)) {
+        return {"root":root_result,"dependencies":dependencies,"dependency_paths":dependency_paths,"diagnostics":diagnostics,"diagnostic_keys":diagnostic_keys,"visited":visited,"visiting":visiting,"files":files,"aggregate":aggregate,"limits":limits}
     }
 
     private fn(add_graph_diagnostic(state, diagnostic)) {
@@ -935,7 +950,7 @@ struct(mdx) {
         keys := state.diagnostic_keys
         diagnostics.push(diagnostic)
         keys.push(key)
-        return this.graph_state(state.root, state.dependencies, state.dependency_paths, diagnostics, keys, state.visited, state.visiting, state.files, state.aggregate)
+        return this.graph_state(state.root, state.dependencies, state.dependency_paths, diagnostics, keys, state.visited, state.visiting, state.files, state.aggregate, state.limits)
     }
 
     private fn(walk(path, depth, root, state)) {
@@ -949,17 +964,17 @@ struct(mdx) {
         source_text := open(path)
         source_bytes := source_text.encode("utf-8")
         next_aggregate := state.aggregate + source_bytes.length()
-        state = this.graph_state(state.root, state.dependencies, state.dependency_paths, state.diagnostics, state.diagnostic_keys, state.visited, state.visiting, state.files + 1, next_aggregate)
-        if(next_aggregate > 16384) { return this.add_graph_diagnostic(state, this.graph_diagnostic("aggregate_source_limit", "recursive source exceeds 16384 bytes", path)) }
-        parsed := this.parse_core(source_text, path, source_bytes)
-        if(path == root) { state = this.graph_state(parsed, state.dependencies, state.dependency_paths, state.diagnostics, state.diagnostic_keys, state.visited, state.visiting, state.files, state.aggregate) }
+        state = this.graph_state(state.root, state.dependencies, state.dependency_paths, state.diagnostics, state.diagnostic_keys, state.visited, state.visiting, state.files + 1, next_aggregate, state.limits)
+        if(next_aggregate > state.limits.aggregate) { return this.add_graph_diagnostic(state, this.graph_diagnostic("aggregate_source_limit", "recursive source exceeds " + state.limits.aggregate.to_string() + " bytes", path)) }
+        parsed := this.parse_core(source_text, path, source_bytes, state.limits)
+        if(path == root) { state = this.graph_state(parsed, state.dependencies, state.dependency_paths, state.diagnostics, state.diagnostic_keys, state.visited, state.visiting, state.files, state.aggregate, state.limits) }
         for(issue : parsed.diagnostics) { state = this.add_graph_diagnostic(state, issue) }
         if(!parsed.ok) {
             failed_visited := state.visited; failed_visited.push(path)
-            return this.graph_state(state.root, state.dependencies, state.dependency_paths, state.diagnostics, state.diagnostic_keys, failed_visited, state.visiting, state.files, state.aggregate)
+            return this.graph_state(state.root, state.dependencies, state.dependency_paths, state.diagnostics, state.diagnostic_keys, failed_visited, state.visiting, state.files, state.aggregate, state.limits)
         }
         visiting := state.visiting; visiting.push(path)
-        state = this.graph_state(state.root, state.dependencies, state.dependency_paths, state.diagnostics, state.diagnostic_keys, state.visited, visiting, state.files, state.aggregate)
+        state = this.graph_state(state.root, state.dependencies, state.dependency_paths, state.diagnostics, state.diagnostic_keys, state.visited, visiting, state.files, state.aggregate, state.limits)
         for(record : parsed.imports) {
             if(!record.dependency) { continue }
             resolved := this.resolve(path, record.specifier)
@@ -970,7 +985,7 @@ struct(mdx) {
             dependency_paths := state.dependency_paths
             dependencies.push({"path":resolved,"from":path,"specifier":record.specifier,"depth":depth + 1})
             dependency_paths.push(resolved)
-            state = this.graph_state(state.root, dependencies, dependency_paths, state.diagnostics, state.diagnostic_keys, state.visited, state.visiting, state.files, state.aggregate)
+            state = this.graph_state(state.root, dependencies, dependency_paths, state.diagnostics, state.diagnostic_keys, state.visited, state.visiting, state.files, state.aggregate, state.limits)
             if(!exists(resolved)) { state = this.add_graph_diagnostic(state, this.graph_diagnostic("missing_dependency", "imported dependency does not exist", resolved)); continue }
             if(exists(resolved + "/.")) { state = this.add_graph_diagnostic(state, this.graph_diagnostic("dependency_is_directory", "imported dependency is a directory", resolved)); continue }
             if(record.extension == ".mdx") { state = this.walk(resolved, depth + 1, root, state) }
@@ -980,7 +995,7 @@ struct(mdx) {
         for(active : state.visiting) { if(active != path) { next_visiting.push(active) } }
         visited := state.visited
         if(!visited.contains(path)) { visited.push(path) }
-        return this.graph_state(state.root, state.dependencies, state.dependency_paths, state.diagnostics, state.diagnostic_keys, visited, next_visiting, state.files, state.aggregate)
+        return this.graph_state(state.root, state.dependencies, state.dependency_paths, state.diagnostics, state.diagnostic_keys, visited, next_visiting, state.files, state.aggregate, state.limits)
     }
 
     private fn(render_read(path)) {
@@ -1060,7 +1075,7 @@ struct(mdx) {
         return result.html
     }
 
-    fn(parse(source)) { return this.parse_core(source, null, null) }
+    fn(parse(source)) { return this.parse_core(source, null, null, this.limits()) }
 
     fn(input(path)) {
         if(type(path) != "string") { return this.empty_failure(null, null, this.default_frontmatter(), this.graph_diagnostic("invalid_path_type", "path must be a string", null)) }
@@ -1070,7 +1085,7 @@ struct(mdx) {
         if(normalized == null || normalized == "") { return this.empty_failure(null, null, this.default_frontmatter(), this.graph_diagnostic("path_escape", "path escapes the project root", null)) }
         if(!exists(normalized)) { return this.empty_failure(null, normalized, this.default_frontmatter(), this.graph_diagnostic("missing_file", "input file does not exist", normalized)) }
         if(exists(normalized + "/.")) { return this.empty_failure(null, normalized, this.default_frontmatter(), this.graph_diagnostic("input_is_directory", "input path is a directory", normalized)) }
-        state := this.graph_state(null, [], [], [], [], [], [], 0, 0)
+        state := this.graph_state(null, [], [], [], [], [], [], 0, 0, this.limits())
         state = this.walk(normalized, 0, normalized, state)
         if(state.root == null) { return this.empty_failure(null, normalized, this.default_frontmatter(), state.diagnostics[0]) }
         root_result := state.root

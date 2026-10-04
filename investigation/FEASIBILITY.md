@@ -106,3 +106,14 @@ Real prototype build: initial 0.599s; no-change 0.009s; nested edit 0.614s. Insp
 ### Additional real-content check
 
 The largest canonical Capgo docs MDX file (43,342B) compiled successfully through MDX+GFM+slug in102.03ms, peak Node RSS97.9MiB. This is compile-only evidence: its imported adapters were not executed and Nift’s unchanged4KB parser rejects it. The component-heavy2,444B Nift parser process measured10,416KiB peak RSS via `/usr/bin/time`; other parser fixture peaks and raised-limit memory have not been measured. Raw observations are saved alongside the benchmark. Baseline suite:121 corpus cases,13 malformed cases,22 boundaries; full archive run118.991s, including real @dep incremental certification.
+
+### Implementation profile decision (CP13)
+
+The opt-in trusted parser profile uses 64 KiB/file, 8,192 physical lines,
+64 KiB/line and 2 MiB/MDX graph. Original bounded defaults and all object, import,
+nesting and graph-count safeguards remain unchanged. A fresh configured facade
+keeps the original `mdx` instance unchanged. This deliberately narrows the
+provisional 256 KiB/8 MiB target because dense-syntax scanner cost remains a
+release concern. Capacity selection and trusted execution policy are separate.
+Actual Capgo coverage is measured, with dense-page exclusions recorded rather
+than silently weakening guards. See checkpoints/CP13.md and its corpus JSON.
