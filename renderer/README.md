@@ -53,3 +53,27 @@ requires an AST allowlist, not HTML sanitizing or merely removing expressions.
 Ordinary static output requires no React/JSX/hydration in the browser. Local
 framework islands remain a separate calling-application decision. Current
 unsupported imports fail explicitly rather than inheriting Node's loader.
+
+## Static component mappings
+
+Set `components` to a project-relative ES module in mdx-render.json. Prefer a
+factory that receives a semantic element constructor; the Nift API remains
+renderer-neutral:
+
+```js
+export function components({element}) {
+  return {
+    Aside: ({type = 'note', children}) =>
+      element('aside', {'data-type': type}, children)
+  }
+}
+```
+
+The factory and adapters are synchronous. Evaluated props and rendered children
+are provided at build time; unknown components and adapter errors fail clearly.
+`element` handles ordinary HTML attribute/text escaping through the build-time
+renderer. No arbitrary HTML-string insertion API is provided. Importing React
+inside a project adapter is possible only with its own provisioned module scope;
+it is not required by this mapping interface. Async adapters are rejected rather
+than quietly emitting Suspense fallback output. Mapping files are declared render
+inputs; their transitive closure is addressed by the dependency checkpoint.

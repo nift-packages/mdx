@@ -38,3 +38,6 @@ untrusted/sandbox claim; synchronous authored loop is stopped by worker deadline
 
 CP07 complete: frontmatter preserved, body compiled via verified UTF-8 boundary,
 compiler locations map to original lines/byte columns; fifteen tests pass.
+
+CP08 complete: project component factory with semantic element constructor,
+synchronous props/children contracts, root dependency reporting; seventeen tests.

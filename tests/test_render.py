@@ -2,9 +2,11 @@
 import json,os,pathlib,subprocess,tempfile,unittest
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 class RendererTests(unittest.TestCase):
- def invoke(self,documents=None,options=None,raw=None):
+ def invoke(self,documents=None,options=None,raw=None,files=None):
   with tempfile.TemporaryDirectory(prefix='mdx protocol café ') as folder:
    path=pathlib.Path(folder);request={'version':1,'documents':documents or [{'id':'one','source':'# Hello','path':None,'dependencies':[]}],'options':options or {'policy':'trusted'}}
+   for name,content in (files or {}).items():
+    file=path/name;file.parent.mkdir(parents=True,exist_ok=True);file.write_text(content)
    (path/'request.json').write_text(raw if raw is not None else json.dumps(request))
    env=os.environ.copy();env.setdefault('MDX_NODE_MODULES','/usr/local/lib/node_modules')
    run=subprocess.run(['node',str(ROOT/'renderer/cli.mjs'),'--request','request.json','--response','response.json'],cwd=path,env=env,capture_output=True,text=True,timeout=20)
@@ -50,6 +52,14 @@ class RendererTests(unittest.TestCase):
   run,response=self.invoke([{'id':'unclosed','source':'---\ntitle: x','path':None,'dependencies':[]}]);self.assertNotEqual(run.returncode,0);self.assertIn('Unclosed frontmatter',response['results'][0]['diagnostics'][0]['message'])
  def test_invalid_frontmatter_boundary(self):
   run,response=self.invoke([{'id':'front','source':'# Body','path':None,'dependencies':[],'frontmatter':{'present':True,'source':'wrong','end':{'offset':2}}}]);self.assertNotEqual(run.returncode,0);self.assertIn('frontmatter boundary',response['results'][0]['diagnostics'][0]['message'])
+ def test_component_mapping_props_children_fragments(self):
+  adapter='export function components({element}) { return {Aside:({type,enabled,count,children})=>element("aside",{"data-type":type,"data-enabled":String(enabled),"data-count":count},children)} }'
+  source='<><Aside type="warning" enabled count={1 + 2}><strong>Nested</strong></Aside></>'
+  run,response=self.invoke([{'id':'components','source':source,'path':None,'dependencies':[]}],options={'policy':'trusted','components':'components.mjs'},files={'components.mjs':adapter});self.assertEqual(run.returncode,0,run.stderr)
+  html=response['results'][0]['html'];self.assertIn('data-count="3"',html);self.assertIn('data-enabled="true"',html);self.assertIn('<strong>Nested</strong>',html);self.assertIn('components.mjs',response['results'][0]['dependencies'])
+ def test_component_exception_and_async_refusal(self):
+  for adapter,message in [('()=>{throw new Error("adapter failed")}','adapter failed'),('async()=>"bad"','Async component')]:
+   run,response=self.invoke([{'id':'components','source':'<Aside />','path':None,'dependencies':[]}],options={'policy':'trusted','components':'components.mjs'},files={'components.mjs':'export default {Aside:'+adapter+'}'});self.assertNotEqual(run.returncode,0);self.assertIn(message,response['results'][0]['diagnostics'][0]['message'])
  def test_source_bound(self):
   run,response=self.invoke([{'id':'large','source':'x'*262145,'path':None,'dependencies':[]}]);self.assertNotEqual(run.returncode,0);self.assertIn('limit',response['diagnostics'][0]['message'])
  def test_duplicate(self):
