@@ -4,6 +4,7 @@ import {Inputs} from './inputs.mjs';
 import {pathToFileURL,fileURLToPath} from 'node:url';
 import {resolve,dirname,extname,relative,isAbsolute} from 'node:path';
 import {body,originalLocation} from './source.mjs';
+import {realpath} from 'node:fs/promises';
 import * as cache from './cache.mjs';
 import {performance} from 'node:perf_hooks';
 const {compile,run}=await load('@mdx-js/mdx');
@@ -43,18 +44,20 @@ export async function renderBatch(request){
  const remarkPlugins=await plugins(request.options.remarkPlugins),rehypePlugins=await plugins(request.options.rehypePlugins);
  if(request.options.cache!==undefined&&request.options.cache!==false&&request.options.cache!=='content')throw new Error('cache must be false or content');
  const runtimeHash=request.options.cache==='content'?await cache.runtimeDigest():null;
+ const projectRoot=await realpath(process.cwd());
  const results=[];
  for(const document of request.documents){
   let stage='compile',active=document,lineOffset=0;const start=performance.now();const inputs=new Inputs();for(const path of shared.list())await inputs.track(path);
-  const allowed=new Set(document.dependencies.map(dependency=>resolve(dependency.path)));
+  const allowed=new Set();
   const visiting=new Set(),modules=new Map();let compileMs=0,evaluateMs=0;const sourceMaps=[];
   try{
+   for(const dependency of document.dependencies)allowed.add(await inputs.track(dependency.path));
    const fingerprintInputs=new Inputs();if(runtimeHash)for(const path of [...shared.list(),...document.dependencies.map(x=>x.path)])await fingerprintInputs.track(path);
    const key=runtimeHash?await cache.cacheKey(document,request.options,fingerprintInputs.list(),runtimeHash):null;
    const hit=key?await cache.get(key):null;
    if(hit){for(const path of hit.dependencies)await inputs.track(path);results.push({id:document.id,ok:true,html:hit.html,dependencies:inputs.list(),timing:{compileMs:0,evaluateMs:0,renderMs:0,totalMs:performance.now()-start},cacheHit:true});continue;}
    async function moduleFor(current){
-    active=current;const key=resolve(current.path??document.id);
+    active=current;let key=resolve(projectRoot,current.path??document.id);if(current.path)try{key=await realpath(key);}catch(error){if(error.code!=='ENOENT')throw error;}
     if(visiting.size>32||modules.size>=256)throw new Error('Rendering document graph limit exceeded');
     if(visiting.has(key))throw new Error('Cyclic MDX document import: '+current.path);
     if(modules.has(key))return modules.get(key);

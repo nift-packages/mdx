@@ -63,6 +63,7 @@ jobs:
         run: |
           import os,pathlib
           root=pathlib.Path.cwd()
+          (root/'investigation/checkpoints/CP13-profile-results.json').unlink(missing_ok=True)
           with open(os.environ['GITHUB_ENV'],'a',encoding='utf-8') as f:
               f.write('NIFT='+str(root.parent/'core'/('nift.exe' if os.name=='nt' else 'nift'))+'\n')
               f.write('MDX_NODE_MODULES='+str(root/'renderer/node_modules')+'\n')
@@ -89,9 +90,24 @@ jobs:
         run: |
           import subprocess,sys
           subprocess.run([sys.executable,'tests/test_render.py'],check=True)
+      - name: Standalone helper certification (independent of Nift installer)
+        if: ${{ !cancelled() }}
+        shell: python
+        run: |
+          import importlib.util,json,pathlib,platform,subprocess,unittest
+          spec=importlib.util.spec_from_file_location('mdx_renderer_tests','tests/test_render.py')
+          module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+          excluded={'test_installed_nift_facade','test_nift_dependency_invalidation_site','test_windows_native_input_paths'}
+          suite=unittest.TestSuite(test for test in unittest.TestLoader().loadTestsFromTestCase(module.RendererTests) if test._testMethodName not in excluded)
+          result=unittest.TextTestRunner(verbosity=2).run(suite)
+          record={'platform':platform.system(),'node':subprocess.check_output(['node','--version'],text=True).strip(),'testsRun':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'success':result.wasSuccessful()}
+          pathlib.Path('investigation/checkpoints/CP19-helper-result.json').write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8')
+          if not result.wasSuccessful():raise SystemExit(1)
       - name: Save certification artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: mdx-${{ runner.os }}-node${{ matrix.node }}
-          path: mdx/investigation/checkpoints/CP13-profile-results.json
+          path: |
+            mdx/investigation/checkpoints/CP13-profile-results.json
+            mdx/investigation/checkpoints/CP19-helper-result.json
