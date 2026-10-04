@@ -17,3 +17,7 @@ detail; the public abstraction is MDX document → HTML. No implementation began
 Authorized by the user’s subsequent handoff. CP01 complete: baseline tag and
 unchanged parser contracts, corrected inventory check, full Linux Nift4.6 suite
 passed. Checkpoint evidence is under investigation/checkpoints/. No Capgo work.
+
+CP02 complete: optional local/offline and explicit global dependency loading,
+exact direct pins, transitive lock, installation staging and license inventory.
+No mandatory npm cost for parse/input consumers.
