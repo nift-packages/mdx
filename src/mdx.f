@@ -32,45 +32,45 @@ struct(mdx) {
 
     private fn(line_info(source)) {
         starts := [0]
-        i := 0
-        length := this.source_length(source)
+        cursor := 0
         line_begin := 0
-        while(i < length) {
-            value := this.byte_at(source, i)
-            if(value == 13) {
-                if(i - line_begin > 16384) { return {"ok":false,"starts":starts,"offset":line_begin} }
-                if(i + 1 < length && this.byte_at(source, i + 1) == 10) { i += 1 }
-                if(i + 1 < length) { starts.push(i + 1); line_begin = i + 1 }
-            } else if(value == 10) {
-                if(i - line_begin > 16384) { return {"ok":false,"starts":starts,"offset":line_begin} }
-                if(i + 1 < length) { starts.push(i + 1); line_begin = i + 1 }
+        normalized := source.raw.replace("\r\n", "\n").replace("\r", "\n")
+        for(line : normalized.split("\n")) {
+            width := line.encode("utf-8").length()
+            cursor += width
+            if(cursor < source.length) {
+                if(width > 16384) { return {"ok":false,"starts":starts,"offset":line_begin} }
+                if(source.data[cursor] == 13 && cursor + 1 < source.length && source.data[cursor + 1] == 10) { cursor += 2 } else { cursor += 1 }
+                if(cursor < source.length) { starts.push(cursor); line_begin = cursor }
             }
-            i += 1
         }
-        if(length - line_begin > 16384) { return {"ok":false,"starts":starts,"offset":line_begin} }
+        if(source.length - line_begin > 16384) { return {"ok":false,"starts":starts,"offset":line_begin} }
         return {"ok":true,"starts":starts,"offset":0}
     }
 
     private fn(line_end(source, begin)) {
-        cursor := begin
-        while(cursor < this.source_length(source) && this.byte_at(source, cursor) != 10 && this.byte_at(source, cursor) != 13) { cursor += 1 }
-        return cursor
+        tail := source.raw.substr(begin)
+        next := tail.index_of("\n")
+        carriage := tail.index_of("\r")
+        if(next < 0 || (carriage >= 0 && carriage < next)) { next = carriage }
+        if(next < 0) { return source.length }
+        return begin + next
     }
 
     private fn(after_line(source, end)) {
-        if(end >= this.source_length(source)) { return end }
-        if(this.byte_at(source, end) == 13 && end + 1 < this.source_length(source) && this.byte_at(source, end + 1) == 10) { return end + 2 }
+        if(end >= source.length) { return end }
+        if(source.data[end] == 13 && end + 1 < source.length && source.data[end + 1] == 10) { return end + 2 }
         return end + 1
     }
 
     private fn(at_line_start(source, offset)) {
-        return offset == 0 || this.byte_at(source, offset - 1) == 10 || this.byte_at(source, offset - 1) == 13
+        return offset == 0 || source.data[offset - 1] == 10 || source.data[offset - 1] == 13
     }
 
     private fn(escaped(source, offset)) {
         count := 0
         cursor := offset
-        while(cursor > 0 && this.byte_at(source, cursor - 1) == 92) { count += 1; cursor -= 1 }
+        while(cursor > 0 && source.data[cursor - 1] == 92) { count += 1; cursor -= 1 }
         return count % 2 == 1
     }
 
@@ -103,14 +103,14 @@ struct(mdx) {
 
     private fn(frontmatter(source, lines)) {
         absent := {"ok":true,"frontmatter":this.default_frontmatter(),"end":0,"diagnostic":null}
-        if(this.source_length(source) < 3 || this.byte_at(source, 0) != 45 || this.byte_at(source, 1) != 45 || this.byte_at(source, 2) != 45) { return absent }
+        if(source.length < 3 || source.data[0] != 45 || source.data[1] != 45 || source.data[2] != 45) { return absent }
         first_end := this.line_end(source, 0)
         if(first_end != 3) { return absent }
         body_begin := this.after_line(source, first_end)
         cursor := body_begin
-        while(cursor < this.source_length(source)) {
+        while(cursor < source.length) {
             end := this.line_end(source, cursor)
-            if(end - cursor == 3 && this.byte_at(source, cursor) == 45 && this.byte_at(source, cursor + 1) == 45 && this.byte_at(source, cursor + 2) == 45) {
+            if(end - cursor == 3 && source.data[cursor] == 45 && source.data[cursor + 1] == 45 && source.data[cursor + 2] == 45) {
                 finish := this.after_line(source, end)
                 front := {"present":true,"source":this.text(source, 0, finish),"body":this.text(source, body_begin, cursor),"start":this.point(lines, 0),"end":this.point(lines, finish)}
                 return {"ok":true,"frontmatter":front,"end":finish,"diagnostic":null}
@@ -127,7 +127,7 @@ struct(mdx) {
 
     private fn(scan_js(source, begin, expression, declaration_kind)) {
         cursor := begin
-        length := this.source_length(source)
+        length := source.length
         curly := 0
         if(expression) { curly = 1 }
         round := 0
@@ -147,9 +147,9 @@ struct(mdx) {
         export_prefix_incomplete := declaration_kind == "export"
         maximum := curly
         while(cursor < length) {
-            value := this.byte_at(source, cursor)
+            value := source.data[cursor]
             next := -1
-            if(cursor + 1 < length) { next = this.byte_at(source, cursor + 1) }
+            if(cursor + 1 < length) { next = source.data[cursor + 1] }
 
             if(mode == "line_comment") {
                 if(value == 10 || value == 13) {
@@ -178,7 +178,7 @@ struct(mdx) {
                 else if(value == 93) { regex_class = false }
                 else if(value == 47 && !regex_class) {
                     cursor += 1
-                    while(cursor < length && (this.is_alpha(this.byte_at(source, cursor)) || this.is_digit(this.byte_at(source, cursor)))) { cursor += 1 }
+                    while(cursor < length && (this.is_alpha(source.data[cursor]) || this.is_digit(source.data[cursor]))) { cursor += 1 }
                     mode = "code"
                     regex_allowed = false
                     continue
@@ -217,7 +217,7 @@ struct(mdx) {
                 word_begin := cursor
                 cursor += 1
                 while(cursor < length) {
-                    word_byte := this.byte_at(source, cursor)
+                    word_byte := source.data[cursor]
                     if(!(this.is_alpha(word_byte) || this.is_digit(word_byte) || word_byte == 95 || word_byte == 36)) { break }
                     cursor += 1
                 }
@@ -233,7 +233,7 @@ struct(mdx) {
                 export_prefix_incomplete = false
                 cursor += 1
                 while(cursor < length) {
-                    number_byte := this.byte_at(source, cursor)
+                    number_byte := source.data[cursor]
                     if(!(this.is_alpha(number_byte) || this.is_digit(number_byte) || number_byte == 46 || number_byte == 95)) { break }
                     cursor += 1
                 }
@@ -304,11 +304,12 @@ struct(mdx) {
     private fn(backtick_matches(source)) {
         matches := {}
         last := {}
-        cursor := this.source_length(source) - 1
+        cursor := source.length - 1
         while(cursor >= 0) {
-            if(this.byte_at(source, cursor) != 96) { cursor -= 1; continue }
+            cursor = source.raw.substr(0, cursor + 1).last_index_of("`")
+            if(cursor < 0) { break }
             finish := cursor + 1
-            while(cursor >= 0 && this.byte_at(source, cursor) == 96) { cursor -= 1 }
+            while(cursor >= 0 && source.data[cursor] == 96) { cursor -= 1 }
             begin := cursor + 1
             run_key := (finish - begin).to_string()
             next := -1
@@ -321,7 +322,7 @@ struct(mdx) {
 
     private fn(inline_code(source, lines, begin, syntax_count, backticks)) {
         run := 0
-        while(begin + run < this.source_length(source) && this.byte_at(source, begin + run) == 96) { run += 1 }
+        while(begin + run < source.length && source.data[begin + run] == 96) { run += 1 }
         if(run > 256) { return {"ok":false,"fatal":true,"end":begin + run,"count":syntax_count,"node":null,"diagnostic":this.diagnostic("delimiter_run_too_long", "backtick run exceeds 256 bytes", null, lines, begin)} }
         cursor := backticks[begin.to_string()]
         if(cursor >= 0) {
@@ -336,34 +337,34 @@ struct(mdx) {
     private fn(fence(source, lines, begin, syntax_count)) {
         cursor := begin
         spaces := 0
-        while(cursor < this.source_length(source) && spaces < 3 && this.byte_at(source, cursor) == 32) { spaces += 1; cursor += 1 }
-        if(cursor >= this.source_length(source)) { return {"matched":false} }
-        marker := this.byte_at(source, cursor)
+        while(cursor < source.length && spaces < 3 && source.data[cursor] == 32) { spaces += 1; cursor += 1 }
+        if(cursor >= source.length) { return {"matched":false} }
+        marker := source.data[cursor]
         if(marker != 96 && marker != 126) { return {"matched":false} }
         count := 0
-        while(cursor + count < this.source_length(source) && this.byte_at(source, cursor + count) == marker) { count += 1 }
+        while(cursor + count < source.length && source.data[cursor + count] == marker) { count += 1 }
         if(count < 3) { return {"matched":false} }
         if(count > 256) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("delimiter_run_too_long", "fence marker run exceeds 256 bytes", null, lines, cursor)} }
         opening_end := this.line_end(source, begin)
         scan := this.after_line(source, opening_end)
-        finish := this.source_length(source)
-        while(scan < this.source_length(source)) {
+        finish := source.length
+        while(scan < source.length) {
             line_cursor := scan
             close_spaces := 0
-            while(line_cursor < this.source_length(source) && close_spaces < 3 && this.byte_at(source, line_cursor) == 32) { close_spaces += 1; line_cursor += 1 }
+            while(line_cursor < source.length && close_spaces < 3 && source.data[line_cursor] == 32) { close_spaces += 1; line_cursor += 1 }
             close_count := 0
-            while(line_cursor + close_count < this.source_length(source) && this.byte_at(source, line_cursor + close_count) == marker) { close_count += 1 }
+            while(line_cursor + close_count < source.length && source.data[line_cursor + close_count] == marker) { close_count += 1 }
             if(close_count > 256) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("delimiter_run_too_long", "fence marker run exceeds 256 bytes", null, lines, line_cursor)} }
             line_finish := this.line_end(source, scan)
             tail := line_cursor + close_count
-            while(tail < line_finish && this.is_hspace(this.byte_at(source, tail))) { tail += 1 }
-            if(close_count >= count && tail == line_finish) { finish = this.after_line(source, line_finish); scan = this.source_length(source) }
+            while(tail < line_finish && this.is_hspace(source.data[tail])) { tail += 1 }
+            if(close_count >= count && tail == line_finish) { finish = this.after_line(source, line_finish); scan = source.length }
             else { scan = this.after_line(source, line_finish) }
         }
         info_begin := cursor + count
-        while(info_begin < opening_end && this.is_hspace(this.byte_at(source, info_begin))) { info_begin += 1 }
+        while(info_begin < opening_end && this.is_hspace(source.data[info_begin])) { info_begin += 1 }
         info_end := opening_end
-        while(info_end > info_begin && this.is_hspace(this.byte_at(source, info_end - 1))) { info_end -= 1 }
+        while(info_end > info_begin && this.is_hspace(source.data[info_end - 1])) { info_end -= 1 }
         fence_name := [null]
         if(info_begin < info_end) { fence_name[0] = this.text(source, info_begin, info_end) }
         if(syntax_count >= 1024) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("too_many_syntax_objects", "document exceeds 1024 syntax objects", null, lines, begin)} }
@@ -373,30 +374,30 @@ struct(mdx) {
 
     private fn(keyword_at(source, offset, keyword)) {
         encoded := keyword.encode("utf-8")
-        if(offset + encoded.length() > this.source_length(source)) { return false }
+        if(offset + encoded.length() > source.length) { return false }
         return this.text(source, offset, offset + encoded.length()) == keyword
     }
 
     private fn(quoted_value(source, begin)) {
-        quote := this.byte_at(source, begin)
+        quote := source.data[begin]
         cursor := begin + 1
-        while(cursor < this.source_length(source)) {
-            value := this.byte_at(source, cursor)
+        while(cursor < source.length) {
+            value := source.data[cursor]
             if(value == 92) { cursor += 2 }
             else if(value == quote) { return {"ok":true,"value":this.text(source, begin + 1, cursor),"end":cursor + 1} }
             else { cursor += 1 }
         }
-        return {"ok":false,"value":null,"end":this.source_length(source)}
+        return {"ok":false,"value":null,"end":source.length}
     }
 
     private fn(jsx_quoted_value(source, begin)) {
-        quote := this.byte_at(source, begin)
+        quote := source.data[begin]
         cursor := begin + 1
-        while(cursor < this.source_length(source)) {
-            if(this.byte_at(source, cursor) == quote) { return {"ok":true,"value":this.text(source, begin + 1, cursor),"end":cursor + 1} }
+        while(cursor < source.length) {
+            if(source.data[cursor] == quote) { return {"ok":true,"value":this.text(source, begin + 1, cursor),"end":cursor + 1} }
             cursor += 1
         }
-        return {"ok":false,"value":null,"end":this.source_length(source)}
+        return {"ok":false,"value":null,"end":source.length}
     }
 
     private fn(hex_value(value)) {
@@ -410,20 +411,20 @@ struct(mdx) {
         output := []
         cursor := begin
         while(cursor < end) {
-            value := this.byte_at(source, cursor)
+            value := source.data[cursor]
             if(value != 92) { output.push(value); cursor += 1; continue }
             if(cursor + 1 >= end) { return {"ok":false,"value":null} }
-            escaped := this.byte_at(source, cursor + 1)
+            escaped := source.data[cursor + 1]
             if(escaped == 92 || escaped == quote || escaped == 39 || escaped == 34) { output.push(escaped); cursor += 2; continue }
             if(escaped == 120 && cursor + 3 < end) {
-                high := this.hex_value(this.byte_at(source, cursor + 2))
-                low := this.hex_value(this.byte_at(source, cursor + 3))
+                high := this.hex_value(source.data[cursor + 2])
+                low := this.hex_value(source.data[cursor + 3])
                 if(high < 0 || low < 0 || high * 16 + low > 127) { return {"ok":false,"value":null} }
                 output.push(high * 16 + low); cursor += 4; continue
             }
-            if(escaped == 117 && cursor + 5 < end && this.byte_at(source, cursor + 2) == 48 && this.byte_at(source, cursor + 3) == 48) {
-                unicode_high := this.hex_value(this.byte_at(source, cursor + 4))
-                unicode_low := this.hex_value(this.byte_at(source, cursor + 5))
+            if(escaped == 117 && cursor + 5 < end && source.data[cursor + 2] == 48 && source.data[cursor + 3] == 48) {
+                unicode_high := this.hex_value(source.data[cursor + 4])
+                unicode_low := this.hex_value(source.data[cursor + 5])
                 if(unicode_high < 0 || unicode_low < 0 || unicode_high * 16 + unicode_low > 127) { return {"ok":false,"value":null} }
                 output.push(unicode_high * 16 + unicode_low); cursor += 6; continue
             }
@@ -435,7 +436,7 @@ struct(mdx) {
     private fn(specifier_quote(source, begin)) {
         quoted := this.quoted_value(source, begin)
         if(!quoted.ok) { return {"ok":false,"specifier":null,"end":quoted.end,"escape":false} }
-        decoded := this.decode_specifier(source, begin + 1, quoted.end - 1, this.byte_at(source, begin))
+        decoded := this.decode_specifier(source, begin + 1, quoted.end - 1, source.data[begin])
         if(!decoded.ok) { return {"ok":false,"specifier":null,"end":quoted.end,"escape":true} }
         return {"ok":true,"specifier":decoded.value,"end":quoted.end,"escape":false}
     }
@@ -443,19 +444,19 @@ struct(mdx) {
     private fn(skip_js_space(source, begin, end)) {
         cursor := begin
         while(cursor < end) {
-            while(cursor < end && this.is_space(this.byte_at(source, cursor))) { cursor += 1 }
-            if(cursor + 1 >= end || this.byte_at(source, cursor) != 47) { break }
-            next := this.byte_at(source, cursor + 1)
+            while(cursor < end && this.is_space(source.data[cursor])) { cursor += 1 }
+            if(cursor + 1 >= end || source.data[cursor] != 47) { break }
+            next := source.data[cursor + 1]
             if(next == 47) {
                 cursor += 2
-                while(cursor < end && this.byte_at(source, cursor) != 10 && this.byte_at(source, cursor) != 13) { cursor += 1 }
+                while(cursor < end && source.data[cursor] != 10 && source.data[cursor] != 13) { cursor += 1 }
                 continue
             }
             if(next == 42) {
                 cursor += 2
                 closed := false
                 while(cursor + 1 < end) {
-                    if(this.byte_at(source, cursor) == 42 && this.byte_at(source, cursor + 1) == 47) { cursor += 2; closed = true; break }
+                    if(source.data[cursor] == 42 && source.data[cursor + 1] == 47) { cursor += 2; closed = true; break }
                     cursor += 1
                 }
                 if(!closed) { return {"ok":false,"end":cursor} }
@@ -470,7 +471,7 @@ struct(mdx) {
         skipped := this.skip_js_space(source, begin + 6, end)
         if(!skipped.ok) { return {"kind":"import","specifier":null,"escape":false} }
         cursor := skipped.end
-        if(cursor < end && (this.byte_at(source, cursor) == 39 || this.byte_at(source, cursor) == 34)) {
+        if(cursor < end && (source.data[cursor] == 39 || source.data[cursor] == 34)) {
             side := this.specifier_quote(source, cursor)
             if(side.escape) { return {"kind":"side_effect","specifier":null,"escape":true} }
             if(side.ok && side.end <= end) { return {"kind":"side_effect","specifier":side.specifier,"escape":false} }
@@ -478,9 +479,9 @@ struct(mdx) {
         mode := "code"
         quote := 0
         while(cursor < end) {
-            value := this.byte_at(source, cursor)
+            value := source.data[cursor]
             next := -1
-            if(cursor + 1 < end) { next = this.byte_at(source, cursor + 1) }
+            if(cursor + 1 < end) { next = source.data[cursor + 1] }
             if(mode == "quote") { if(value == 92) { cursor += 2 } else { if(value == quote) { mode = "code" }; cursor += 1 }; continue }
             if(mode == "line_comment") { if(value == 10 || value == 13) { mode = "code" }; cursor += 1; continue }
             if(mode == "block_comment") { if(value == 42 && next == 47) { cursor += 2; mode = "code" } else { cursor += 1 }; continue }
@@ -488,14 +489,14 @@ struct(mdx) {
             if(value == 47 && next == 47) { mode = "line_comment"; cursor += 2; continue }
             if(value == 47 && next == 42) { mode = "block_comment"; cursor += 2; continue }
             if(this.keyword_at(source, cursor, "from")) {
-                before_ok := cursor == begin || !this.name_byte(this.byte_at(source, cursor - 1))
+                before_ok := cursor == begin || !this.name_byte(source.data[cursor - 1])
                 after := cursor + 4
-                after_ok := after >= end || !this.name_byte(this.byte_at(source, after))
+                after_ok := after >= end || !this.name_byte(source.data[after])
                 if(before_ok && after_ok) {
                     after_space := this.skip_js_space(source, after, end)
                     if(!after_space.ok) { return {"kind":"import","specifier":null,"escape":false} }
                     after = after_space.end
-                    if(after < end && (this.byte_at(source, after) == 39 || this.byte_at(source, after) == 34)) {
+                    if(after < end && (source.data[after] == 39 || source.data[after] == 34)) {
                         from_quoted := this.specifier_quote(source, after)
                         if(from_quoted.escape) { return {"kind":"import","specifier":null,"escape":true} }
                         if(from_quoted.ok && from_quoted.end <= end) { return {"kind":"import","specifier":from_quoted.specifier,"escape":false} }
@@ -530,38 +531,38 @@ struct(mdx) {
     }
 
     private fn(jsx_name(source, begin, end, attribute)) {
-        if(begin >= end || !this.name_start(this.byte_at(source, begin))) { return {"ok":false,"end":begin} }
+        if(begin >= end || !this.name_start(source.data[begin])) { return {"ok":false,"end":begin} }
         cursor := begin + 1
-        while(cursor < end && this.name_byte(this.byte_at(source, cursor))) { cursor += 1 }
-        if(cursor < end && this.byte_at(source, cursor) == 58) {
+        while(cursor < end && this.name_byte(source.data[cursor])) { cursor += 1 }
+        if(cursor < end && source.data[cursor] == 58) {
             cursor += 1
-            if(cursor >= end || !this.name_start(this.byte_at(source, cursor))) { return {"ok":false,"end":cursor} }
+            if(cursor >= end || !this.name_start(source.data[cursor])) { return {"ok":false,"end":cursor} }
             cursor += 1
-            while(cursor < end && this.name_byte(this.byte_at(source, cursor))) { cursor += 1 }
-            if(cursor < end && (this.byte_at(source, cursor) == 58 || this.byte_at(source, cursor) == 46)) { return {"ok":false,"end":cursor} }
-        } else if(cursor < end && this.byte_at(source, cursor) == 46) {
+            while(cursor < end && this.name_byte(source.data[cursor])) { cursor += 1 }
+            if(cursor < end && (source.data[cursor] == 58 || source.data[cursor] == 46)) { return {"ok":false,"end":cursor} }
+        } else if(cursor < end && source.data[cursor] == 46) {
             if(attribute) { return {"ok":false,"end":cursor} }
-            while(cursor < end && this.byte_at(source, cursor) == 46) {
+            while(cursor < end && source.data[cursor] == 46) {
                 cursor += 1
-                if(cursor >= end || !this.name_start(this.byte_at(source, cursor))) { return {"ok":false,"end":cursor} }
+                if(cursor >= end || !this.name_start(source.data[cursor])) { return {"ok":false,"end":cursor} }
                 cursor += 1
-                while(cursor < end && this.name_byte(this.byte_at(source, cursor))) { cursor += 1 }
+                while(cursor < end && this.name_byte(source.data[cursor])) { cursor += 1 }
             }
-            if(cursor < end && this.byte_at(source, cursor) == 58) { return {"ok":false,"end":cursor} }
+            if(cursor < end && source.data[cursor] == 58) { return {"ok":false,"end":cursor} }
         }
         return {"ok":true,"end":cursor}
     }
 
     private fn(jsx(source, lines, begin, depth, syntax_count, backticks)) {
         if(depth > 48) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("nesting_limit", "JSX nesting exceeds 48", null, lines, begin)} }
-        length := this.source_length(source)
-        if(begin + 1 >= length || this.byte_at(source, begin) != 60) { return {"matched":false} }
-        if(begin + 3 < length && this.byte_at(source, begin + 1) == 33 && this.byte_at(source, begin + 2) == 45 && this.byte_at(source, begin + 3) == 45) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("html_comment_unsupported", "HTML comments are not supported", null, lines, begin)} }
+        length := source.length
+        if(begin + 1 >= length || source.data[begin] != 60) { return {"matched":false} }
+        if(begin + 3 < length && source.data[begin + 1] == 33 && source.data[begin + 2] == 45 && source.data[begin + 3] == 45) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("html_comment_unsupported", "HTML comments are not supported", null, lines, begin)} }
         cursor := begin + 1
         fragment := false
-        if(this.byte_at(source, cursor) == 62) { fragment = true; cursor += 1 }
+        if(source.data[cursor] == 62) { fragment = true; cursor += 1 }
         else {
-            if(this.byte_at(source, cursor) == 47 || !this.name_start(this.byte_at(source, cursor))) { return {"matched":false} }
+            if(source.data[cursor] == 47 || !this.name_start(source.data[cursor])) { return {"matched":false} }
         }
         tag_name := [null]
         if(!fragment) {
@@ -576,12 +577,12 @@ struct(mdx) {
         self_closing := false
         if(!fragment) {
             while(cursor < length) {
-                while(cursor < length && this.is_space(this.byte_at(source, cursor))) { cursor += 1 }
+                while(cursor < length && this.is_space(source.data[cursor])) { cursor += 1 }
                 if(cursor >= length) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("unclosed_jsx", "JSX opening tag is not closed", null, lines, begin)} }
-                if(this.byte_at(source, cursor) == 62) { cursor += 1; break }
-                if(this.byte_at(source, cursor) == 47 && cursor + 1 < length && this.byte_at(source, cursor + 1) == 62) { cursor += 2; self_closing = true; break }
+                if(source.data[cursor] == 62) { cursor += 1; break }
+                if(source.data[cursor] == 47 && cursor + 1 < length && source.data[cursor + 1] == 62) { cursor += 2; self_closing = true; break }
                 attr_begin := cursor
-                if(this.byte_at(source, cursor) == 123) {
+                if(source.data[cursor] == 123) {
                     expression := this.expression_parts(source, lines, cursor)
                     if(!expression.ok) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":expression.diagnostic} }
                     interior := expression.value.trim()
@@ -597,18 +598,18 @@ struct(mdx) {
                 name_end := parsed_attribute_name.end
                 attr_name := this.text(source, cursor, name_end)
                 cursor = name_end
-                while(cursor < length && this.is_space(this.byte_at(source, cursor))) { cursor += 1 }
+                while(cursor < length && this.is_space(source.data[cursor])) { cursor += 1 }
                 kind := "boolean"
                 attr_value := [null]
-                if(cursor < length && this.byte_at(source, cursor) == 61) {
+                if(cursor < length && source.data[cursor] == 61) {
                     cursor += 1
-                    while(cursor < length && this.is_space(this.byte_at(source, cursor))) { cursor += 1 }
+                    while(cursor < length && this.is_space(source.data[cursor])) { cursor += 1 }
                     if(cursor >= length) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("invalid_jsx_attribute", "JSX attribute value is missing", null, lines, attr_begin)} }
-                    if(this.byte_at(source, cursor) == 39 || this.byte_at(source, cursor) == 34) {
+                    if(source.data[cursor] == 39 || source.data[cursor] == 34) {
                         quoted := this.jsx_quoted_value(source, cursor)
                         if(!quoted.ok) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("unclosed_jsx_attribute", "quoted JSX attribute is not closed", null, lines, cursor)} }
                         kind = "string"; attr_value[0] = quoted.value; cursor = quoted.end
-                    } else if(this.byte_at(source, cursor) == 123) {
+                    } else if(source.data[cursor] == 123) {
                         attribute_expression := this.expression_parts(source, lines, cursor)
                         if(!attribute_expression.ok) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":attribute_expression.diagnostic} }
                         kind = "expression"; attr_value[0] = attribute_expression.value; cursor = attribute_expression.end
@@ -629,7 +630,7 @@ struct(mdx) {
         children := []
         markdown_begin := cursor
         while(cursor < length) {
-            value_byte := this.byte_at(source, cursor)
+            value_byte := source.data[cursor]
             special := false
             child := [null]
             child_end := cursor
@@ -641,11 +642,11 @@ struct(mdx) {
                 }
             }
             if(!special && value_byte == 60 && !this.escaped(source, cursor)) {
-                if(cursor + 1 < length && this.byte_at(source, cursor + 1) == 47) {
+                if(cursor + 1 < length && source.data[cursor + 1] == 47) {
                     close := cursor + 2
                     if(fragment) {
-                        while(close < length && this.is_space(this.byte_at(source, close))) { close += 1 }
-                        if(close >= length || this.byte_at(source, close) != 62) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("mismatched_jsx", "fragment closing tag does not match", null, lines, cursor)} }
+                        while(close < length && this.is_space(source.data[close])) { close += 1 }
+                        if(close >= length || source.data[close] != 62) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("mismatched_jsx", "fragment closing tag does not match", null, lines, cursor)} }
                         close += 1
                     } else {
                         close_begin := close
@@ -653,8 +654,8 @@ struct(mdx) {
                         if(!closing_name.ok) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("invalid_jsx_name", "invalid JSX closing name", null, lines, closing_name.end)} }
                         close = closing_name.end
                         close_name := this.text(source, close_begin, close)
-                        while(close < length && this.is_space(this.byte_at(source, close))) { close += 1 }
-                        if(close_name != tag_name[0] || close >= length || this.byte_at(source, close) != 62) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("mismatched_jsx", "JSX closing tag does not match", null, lines, cursor)} }
+                        while(close < length && this.is_space(source.data[close])) { close += 1 }
+                        if(close_name != tag_name[0] || close >= length || source.data[close] != 62) { return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("mismatched_jsx", "JSX closing tag does not match", null, lines, cursor)} }
                         close += 1
                     }
                     if(markdown_begin < cursor) {
@@ -692,9 +693,31 @@ struct(mdx) {
                 children.push(child[0])
                 cursor = child_end
                 markdown_begin = cursor
-            } else { cursor += 1 }
+            } else {
+                finish_plain := this.plain_end(source, cursor, false)
+                if(finish_plain > cursor) { cursor = finish_plain } else { cursor += 1 }
+            }
         }
         return {"matched":true,"ok":false,"count":syntax_count,"diagnostic":this.diagnostic("unclosed_jsx", "JSX element is not closed", null, lines, begin)}
+    }
+
+    private fn(plain_end(source, cursor, statements)) {
+        tail := source.raw.substr(cursor)
+        distance := source.length - cursor
+        markers := ["<", "{", "`", "~"]
+        if(statements) { markers.push("import"); markers.push("export") }
+        for(marker : markers) {
+            found := tail.index_of(marker)
+            if(found >= 0) {
+                if(marker != "<" && marker != "{") {
+                    prefix := tail.substr(0, found)
+                    line_start := max(prefix.last_index_of("\n"), prefix.last_index_of("\r")) + 1
+                    if(line_start > 0) { found = line_start }
+                }
+                if(found < distance) { distance = found }
+            }
+        }
+        return cursor + distance
     }
 
     private fn(parse_core(value, path, provided_bytes)) {
@@ -710,7 +733,7 @@ struct(mdx) {
             issue[0] = this.diagnostic("source_too_large", "source exceeds 4096 bytes", path, lines, 0)
             return this.empty_failure(null, path, this.default_frontmatter(), issue[0])
         }
-        source := {"raw":value,"data":encoded}
+        source := {"raw":value,"data":encoded,"length":encoded.length()}
         line_scan := this.line_info(source)
         lines = line_scan.starts
         if(!line_scan.ok) {
@@ -735,7 +758,7 @@ struct(mdx) {
         syntax_count := 0
         paragraph_open := false
         line_nonspace := false
-        while(cursor < this.source_length(source)) {
+        while(cursor < source.length) {
             special := false
             parsed_node := [null]
             finish := cursor
@@ -749,8 +772,8 @@ struct(mdx) {
                 }
                 else {
                     lead := cursor
-                    while(lead < this.source_length(source) && this.is_hspace(this.byte_at(source, lead))) { lead += 1 }
-                    if(!paragraph_open && lead == cursor && this.keyword_at(source, lead, "import") && lead + 6 < this.source_length(source) && this.is_hspace(this.byte_at(source, lead + 6))) {
+                    while(lead < source.length && this.is_hspace(source.data[lead])) { lead += 1 }
+                    if(!paragraph_open && lead == cursor && this.keyword_at(source, lead, "import") && lead + 6 < source.length && this.is_hspace(source.data[lead + 6])) {
                         scanned := this.scan_js(source, lead + 6, false, "import")
                         if(!scanned.ok) { issue[0] = this.diagnostic("malformed_import", "import declaration is structurally incomplete", path, lines, lead) }
                         else {
@@ -766,7 +789,7 @@ struct(mdx) {
                                 syntax_count += 1; finish = scanned.end; special = true; paragraph_open = false; line_nonspace = false
                             }
                         }
-                    } else if(!paragraph_open && lead == cursor && this.keyword_at(source, lead, "export") && lead + 6 < this.source_length(source) && this.is_hspace(this.byte_at(source, lead + 6))) {
+                    } else if(!paragraph_open && lead == cursor && this.keyword_at(source, lead, "export") && lead + 6 < source.length && this.is_hspace(source.data[lead + 6])) {
                         scanned_export := this.scan_js(source, lead + 6, false, "export")
                         if(!scanned_export.ok) { issue[0] = this.diagnostic("malformed_export", "export declaration is structurally incomplete", path, lines, lead) }
                         else {
@@ -786,46 +809,63 @@ struct(mdx) {
                     }
                 }
             }
-            if(issue[0] == null && !special && this.byte_at(source, cursor) == 96) {
+            if(issue[0] == null && !special && source.data[cursor] == 96) {
                 inline := this.inline_code(source, lines, cursor, syntax_count, backticks)
                 if(inline.fatal) { issue[0] = inline.diagnostic }
                 else if(inline.ok) { special = true; parsed_node[0] = inline.node; finish = inline.end; syntax_count = inline.count; paragraph_open = true; line_nonspace = true }
                 else { cursor = inline.end; paragraph_open = true; line_nonspace = true; continue }
             }
-            if(issue[0] == null && !special && this.byte_at(source, cursor) == 123 && !this.escaped(source, cursor)) {
+            if(issue[0] == null && !special && source.data[cursor] == 123 && !this.escaped(source, cursor)) {
                 expression := this.expression_node(source, lines, cursor, syntax_count)
                 if(!expression.ok) { expression_issue := expression.diagnostic; expression_issue["path"] = path; issue[0] = expression_issue }
                 else { special = true; parsed_node[0] = expression.node; finish = expression.end; syntax_count = expression.count; paragraph_open = true; line_nonspace = true }
             }
-            if(issue[0] == null && !special && this.byte_at(source, cursor) == 60 && !this.escaped(source, cursor)) {
+            if(issue[0] == null && !special && source.data[cursor] == 60 && !this.escaped(source, cursor)) {
                 parsed_jsx := this.jsx(source, lines, cursor, 1, syntax_count, backticks)
                 if(parsed_jsx.matched) {
                     if(!parsed_jsx.ok) { jsx_issue := parsed_jsx.diagnostic; jsx_issue["path"] = path; issue[0] = jsx_issue }
                     else { special = true; parsed_node[0] = parsed_jsx.node; finish = parsed_jsx.end; syntax_count = parsed_jsx.count; paragraph_open = true; line_nonspace = true }
                 }
             }
-            if(issue[0] != null) { diagnostics.push(issue[0]); structural = true; cursor = this.source_length(source); continue }
+            if(issue[0] != null) { diagnostics.push(issue[0]); structural = true; cursor = source.length; continue }
             if(special) {
                 if(markdown_begin < cursor) {
                     markdown := this.markdown_node(source, lines, markdown_begin, cursor, syntax_count)
-                    if(!markdown.ok) { diagnostic_markdown := markdown.diagnostic; diagnostic_markdown["path"] = path; diagnostics.push(diagnostic_markdown); structural = true; cursor = this.source_length(source); continue }
+                    if(!markdown.ok) { diagnostic_markdown := markdown.diagnostic; diagnostic_markdown["path"] = path; diagnostics.push(diagnostic_markdown); structural = true; cursor = source.length; continue }
                     nodes.push(markdown.node); syntax_count = markdown.count
                 }
                 nodes.push(parsed_node[0])
-                if(imports.length() > 256) { diagnostics.push(this.diagnostic("too_many_imports", "document exceeds 256 imports", path, lines, cursor)); structural = true; cursor = this.source_length(source); continue }
+                if(imports.length() > 256) { diagnostics.push(this.diagnostic("too_many_imports", "document exceeds 256 imports", path, lines, cursor)); structural = true; cursor = source.length; continue }
                 cursor = finish
                 markdown_begin = cursor
             } else {
-                ordinary := this.byte_at(source, cursor)
+                ordinary := source.data[cursor]
                 if(ordinary == 10 || ordinary == 13) {
                     if(!line_nonspace) { paragraph_open = false } else { paragraph_open = true }
                     line_nonspace = false
-                    if(ordinary == 13 && cursor + 1 < this.source_length(source) && this.byte_at(source, cursor + 1) == 10) { cursor += 2 } else { cursor += 1 }
-                } else { if(!this.is_hspace(ordinary)) { line_nonspace = true; paragraph_open = true }; cursor += 1 }
+                    if(ordinary == 13 && cursor + 1 < source.length && source.data[cursor + 1] == 10) { cursor += 2 } else { cursor += 1 }
+                } else {
+                    if(!this.is_hspace(ordinary)) {
+                        line_nonspace = true; paragraph_open = true
+                        tail := source.raw.substr(cursor)
+                        distance := this.plain_end(source, cursor, true) - cursor
+                        if(distance > 0) {
+                            span := tail.substr(0, distance)
+                            parts := span.replace("\r\n", "\n").replace("\r", "\n").split("\n")
+                            if(parts.length() > 1) {
+                                final := parts[parts.length() - 1].replace(" ", "").replace("\t", "")
+                                previous := parts[parts.length() - 2].replace(" ", "").replace("\t", "")
+                                line_nonspace = final != ""
+                                paragraph_open = line_nonspace || previous != ""
+                            }
+                            cursor += distance
+                        } else { cursor += 1 }
+                    } else { cursor += 1 }
+                }
             }
         }
-        if(!structural && markdown_begin < this.source_length(source)) {
-            final_markdown := this.markdown_node(source, lines, markdown_begin, this.source_length(source), syntax_count)
+        if(!structural && markdown_begin < source.length) {
+            final_markdown := this.markdown_node(source, lines, markdown_begin, source.length, syntax_count)
             if(!final_markdown.ok) { final_issue := final_markdown.diagnostic; final_issue["path"] = path; diagnostics.push(final_issue); structural = true }
             else { nodes.push(final_markdown.node); syntax_count = final_markdown.count }
         }

@@ -52,3 +52,7 @@ links outside project cannot be used by build templates; use Git-installed copy.
 
 CP11 complete: default CommonMark/GFM/prefixed IDs documented and verified,
 including footnotes/duplicate headings/inert code and JSX HTML boundaries.
+
+CP12 complete: native plain-span/line/backtick operations, cached byte length;
+165 exact baseline parity cases and full parser suite pass.4KB prose3,003→14ms;
+dense JSX2,929→2,165ms and backticks3,502→1,591ms. Dense syntax remains a gate.

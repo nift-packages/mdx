@@ -1,0 +1,69 @@
+{
+  "nift": "/home/nick/Repositories/nift/nift/nift",
+  "source": "/home/nick/Repositories/nift/nift-packages/mdx/src/mdx.f",
+  "rows": [
+    {
+      "kind": "plain",
+      "bytes": 986,
+      "parse_ms_median": 7,
+      "process_wall_seconds_median": 0.021026688045822084,
+      "peak_rss_kib": 8916
+    },
+    {
+      "kind": "plain",
+      "bytes": 2030,
+      "parse_ms_median": 9,
+      "process_wall_seconds_median": 0.021514541003853083,
+      "peak_rss_kib": 9000
+    },
+    {
+      "kind": "plain",
+      "bytes": 4060,
+      "parse_ms_median": 14,
+      "process_wall_seconds_median": 0.02687080600298941,
+      "peak_rss_kib": 9648
+    },
+    {
+      "kind": "jsx",
+      "bytes": 1014,
+      "parse_ms_median": 482,
+      "process_wall_seconds_median": 0.49780480202753097,
+      "peak_rss_kib": 10388
+    },
+    {
+      "kind": "jsx",
+      "bytes": 2028,
+      "parse_ms_median": 994,
+      "process_wall_seconds_median": 1.0063953389180824,
+      "peak_rss_kib": 11672
+    },
+    {
+      "kind": "jsx",
+      "bytes": 4082,
+      "parse_ms_median": 2165,
+      "process_wall_seconds_median": 2.1823151520220563,
+      "peak_rss_kib": 15692
+    },
+    {
+      "kind": "backticks",
+      "bytes": 1017,
+      "parse_ms_median": 413,
+      "process_wall_seconds_median": 0.42534171999432147,
+      "peak_rss_kib": 10732
+    },
+    {
+      "kind": "backticks",
+      "bytes": 2043,
+      "parse_ms_median": 783,
+      "process_wall_seconds_median": 0.7945214071078226,
+      "peak_rss_kib": 13660
+    },
+    {
+      "kind": "backticks",
+      "bytes": 4095,
+      "parse_ms_median": 1591,
+      "process_wall_seconds_median": 1.6058763780165464,
+      "peak_rss_kib": 19308
+    }
+  ]
+}

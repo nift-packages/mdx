@@ -1,0 +1,69 @@
+{
+  "nift": "/home/nick/Repositories/nift/nift/nift",
+  "source": "/tmp/mdx-scanner-before.f",
+  "rows": [
+    {
+      "kind": "plain",
+      "bytes": 986,
+      "parse_ms_median": 759,
+      "process_wall_seconds_median": 0.7739092760020867,
+      "peak_rss_kib": 8584
+    },
+    {
+      "kind": "plain",
+      "bytes": 2030,
+      "parse_ms_median": 1637,
+      "process_wall_seconds_median": 1.6492523431079462,
+      "peak_rss_kib": 8608
+    },
+    {
+      "kind": "plain",
+      "bytes": 4060,
+      "parse_ms_median": 3003,
+      "process_wall_seconds_median": 3.014208816923201,
+      "peak_rss_kib": 9560
+    },
+    {
+      "kind": "jsx",
+      "bytes": 1014,
+      "parse_ms_median": 695,
+      "process_wall_seconds_median": 0.7060372129781172,
+      "peak_rss_kib": 10188
+    },
+    {
+      "kind": "jsx",
+      "bytes": 2028,
+      "parse_ms_median": 1377,
+      "process_wall_seconds_median": 1.389040476991795,
+      "peak_rss_kib": 11636
+    },
+    {
+      "kind": "jsx",
+      "bytes": 4082,
+      "parse_ms_median": 2929,
+      "process_wall_seconds_median": 2.94334272807464,
+      "peak_rss_kib": 15528
+    },
+    {
+      "kind": "backticks",
+      "bytes": 1017,
+      "parse_ms_median": 895,
+      "process_wall_seconds_median": 0.9193624570034444,
+      "peak_rss_kib": 10576
+    },
+    {
+      "kind": "backticks",
+      "bytes": 2043,
+      "parse_ms_median": 1589,
+      "process_wall_seconds_median": 1.603702310938388,
+      "peak_rss_kib": 13480
+    },
+    {
+      "kind": "backticks",
+      "bytes": 4095,
+      "parse_ms_median": 3502,
+      "process_wall_seconds_median": 3.51960277906619,
+      "peak_rss_kib": 19996
+    }
+  ]
+}
