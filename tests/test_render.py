@@ -35,6 +35,10 @@ class RendererTests(unittest.TestCase):
  def test_content_cache(self):
   with tempfile.TemporaryDirectory(prefix='mdx-cache-') as folder:
    path=pathlib.Path(folder);env=os.environ.copy();env.setdefault('MDX_NODE_MODULES','/usr/local/lib/node_modules')
+   runtime_source=ROOT/'renderer/node_modules'
+   if not runtime_source.exists():runtime_source=pathlib.Path('/tmp/mdx-runtime-cp02/node_modules')
+   if runtime_source.exists():
+    shutil.copytree(runtime_source,path/'runtime/node_modules');env['MDX_NODE_MODULES']=str(path/'runtime/node_modules')
    helper=path/'renderer';shutil.copytree(ROOT/'renderer',helper,ignore=shutil.ignore_patterns('node_modules','.cache'))
    options={'policy':'trusted','cache':'content','components':'components.mjs','dependencies':['asset.txt'],'remarkPlugins':[{'path':'plugin.mjs'}]}
    document={'id':'cache','source':'import Child from "./child.mdx"\n\n<Aside><Child /></Aside>','path':'page.mdx','dependencies':[{'path':'child.mdx'}]}
@@ -51,6 +55,8 @@ class RendererTests(unittest.TestCase):
     (path/name).write_text(files[name]+'\n',encoding="utf-8",newline="");self.assertFalse(invoke()['cacheHit'],name);self.assertTrue(invoke()['cacheHit'],name)
    (helper/'cache.mjs').write_text((helper/'cache.mjs').read_text(encoding="utf-8")+'\n',encoding="utf-8",newline="");self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
    lock=helper/'package-lock.json';lock.write_text(lock.read_text(encoding="utf-8")+'\n',encoding="utf-8",newline="");self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
+   if (path/'runtime/node_modules/unified/lib/index.js').exists():
+    transitive=path/'runtime/node_modules/unified/lib/index.js';transitive.write_text(transitive.read_text(encoding='utf-8')+'\n',encoding='utf-8',newline='');self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
    options['remarkPlugins'][0]['options']={'changed':True};self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
    env['MDX_CACHE_TEST_CONTEXT']='changed';self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
    document['source']+='\n';self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
@@ -60,8 +66,8 @@ class RendererTests(unittest.TestCase):
    for file in (path/'.nift/mdx-cache').glob('*.json'):file.unlink()
    (path/'request.json').write_text(json.dumps({'version':1,'documents':[document],'options':options}),encoding="utf-8",newline="")
    workers=[subprocess.Popen(['node',str(helper/'cli.mjs'),'--request','request.json','--response',f'concurrent-{i}.json'],cwd=path,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True) for i in range(2)]
-   for worker in workers:
-    output,error=worker.communicate(timeout=30);self.assertEqual(worker.returncode,0,error)
+   for index,worker in enumerate(workers):
+    output,error=worker.communicate(timeout=30);self.assertEqual(worker.returncode,0,error+(path/f"concurrent-{index}.json").read_text(encoding="utf-8"))
    self.assertEqual(json.loads((path/'concurrent-0.json').read_text(encoding="utf-8"))['results'][0]['html'],json.loads((path/'concurrent-1.json').read_text(encoding="utf-8"))['results'][0]['html']);self.assertTrue(invoke()['cacheHit'])
    options['policy']='untrusted';run,response=invoke(True);self.assertNotEqual(run.returncode,0);options['policy']='trusted'
    (path/'asset.txt').unlink();run,response=invoke(True);self.assertNotEqual(run.returncode,0)
@@ -75,6 +81,27 @@ class RendererTests(unittest.TestCase):
    (path/'paths.f').write_text(script,encoding='utf-8',newline='');run=subprocess.run([nift,'paths.f','--no-process'],cwd=path,capture_output=True,text=True);self.assertEqual(run.returncode,0,run.stderr)
    records=[json.loads(x) for x in run.stdout.splitlines()];self.assertTrue(records[0]['ok']);self.assertTrue(records[1]['ok']);self.assertEqual(records[0]['path'],'nested/root.mdx');self.assertEqual(records[1]['dependencies'][0]['path'],'nested/child.mdx')
    for record in records[2:]:self.assertEqual(record['diagnostics'][0]['code'],'path_escape')
+ def test_documented_example(self):
+  nift=os.environ.get('NIFT','/home/nick/Repositories/nift/nift/nift')
+  with tempfile.TemporaryDirectory(prefix='mdx-doc-example-') as folder:
+   path=pathlib.Path(folder)/'site';shutil.copytree(ROOT/'examples/basic',path);origin=path.parent/'origin';origin.mkdir();env=os.environ.copy();env.setdefault('MDX_NODE_MODULES','/usr/local/lib/node_modules')
+   for name in ['manifest.json','LICENSE']:shutil.copy2(ROOT/name,origin/name)
+   shutil.copytree(ROOT/'src',origin/'src');shutil.copytree(ROOT/'renderer',origin/'renderer',ignore=shutil.ignore_patterns('node_modules','.cache'))
+   subprocess.run(['git','init','-q',str(origin)],check=True);subprocess.run(['git','add','.'],cwd=origin,check=True);subprocess.run(['git','-c','user.name=example','-c','user.email=example@example.invalid','commit','-qm','example package'],cwd=origin,check=True)
+   def call(*args):
+    run=subprocess.run([nift,*args],cwd=path,env=env,capture_output=True,text=True);self.assertEqual(run.returncode,0,run.stdout+run.stderr);return run
+   call('add',origin.as_uri(),'--ref=HEAD');call('build','--all');html=(path/'public/index.html').read_text(encoding='utf-8')
+   for expected in ['<aside>','A static component','expression result is 3','Imported document','<table>']:self.assertIn(expected,html)
+   self.assertNotIn('<script',html);self.assertNotIn('react-dom',html);mtime=(path/'public/index.html').stat().st_mtime_ns;self.assertIn('up to date',call('build').stdout);self.assertEqual(mtime,(path/'public/index.html').stat().st_mtime_ns)
+   metadata=(path/'.nift/public/index.info.json').read_text(encoding='utf-8')
+   for dependency in ['page.mdx','shared.mdx','components.mjs','.nift/mdx-render.json']:self.assertEqual(metadata.count('"'+dependency+'"'),1,dependency)
+ def test_async_component_factory_refused(self):
+  run,response=self.invoke(options={'policy':'trusted','components':'components.mjs'},files={'components.mjs':'export async function components(){return {Aside:()=>"async"}}'})
+  self.assertNotEqual(run.returncode,0);self.assertIn('Async component factories',response['diagnostics'][0]['message'])
+ def test_mapped_default_named_namespace_asset_exports(self):
+  source='import Logo, {label} from "@assets/logo.svg"\nimport * as Assets from "@assets/logo.svg"\n\n<img src={Logo.src} width={Logo.width} />\n\n{label} {Assets.default.src}'
+  run,response=self.invoke([{'id':'asset','source':source,'path':None,'dependencies':[]}],options={'policy':'trusted','imports':{'@assets/logo.svg':'asset.mjs'},'dependencies':['logo.svg']},files={'asset.mjs':'export const label="Asset";export default {src:"/logo.svg",width:12}','logo.svg':'<svg/>'})
+  self.assertEqual(run.returncode,0,response);html=response['results'][0]['html'];self.assertIn('src="/logo.svg"',html);self.assertIn('width="12"',html);self.assertIn('Asset',html);self.assertTrue({'asset.mjs','logo.svg'}.issubset(response['results'][0]['dependencies']))
  def test_installed_nift_facade(self):
   nift=os.environ.get('NIFT','/home/nick/Repositories/nift/nift/nift')
   with tempfile.TemporaryDirectory(prefix='mdx-installed-') as folder:

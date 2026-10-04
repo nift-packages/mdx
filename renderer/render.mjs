@@ -24,14 +24,15 @@ function importBinding(statement){
  return declarations.length?{type:'VariableDeclaration',kind:'const',declarations}:null;
 }
 export async function renderBatch(request){
+ const projectRoot=await realpath(process.cwd());
  const shared=new Inputs();let components={};const mappedImports={};
  for(const path of request.options.dependencies??[])await shared.track(path);
  const packageRoot=dirname(fileURLToPath(import.meta.url));
- for(const name of ['cli.mjs','worker.mjs','render.mjs','inputs.mjs','source.mjs','dependencies.mjs','protocol.mjs','cache.mjs','package-lock.json']){
-  const path=resolve(packageRoot,name),rel=relative(resolve(process.cwd()),path);if(rel.startsWith('..')||isAbsolute(rel))continue;await shared.track(path);
+ for(const name of ['cli.mjs','worker.mjs','render.mjs','inputs.mjs','source.mjs','dependencies.mjs','protocol.mjs','cache.mjs','atomic.mjs','package-lock.json']){
+  const path=resolve(packageRoot,name),rel=relative(projectRoot,path);if(rel.startsWith('..')||isAbsolute(rel))continue;await shared.track(path);
  }
- async function configuredModule(path){const module=await import(pathToFileURL(await shared.module(path)).href);return module.components?module.components({element:React.createElement}):module.default??module;}
- for(const [specifier,path] of Object.entries(request.options.imports??{}))mappedImports[specifier]=await configuredModule(path);
+ async function configuredModule(path,namespace=false){const module=await import(pathToFileURL(await shared.module(path)).href);if(module.components){const mapping=module.components({element:React.createElement});if(mapping&&typeof mapping.then==='function')throw new Error('Async component factories are unsupported: '+path);return mapping;}return namespace?module:module.default??module;}
+ for(const [specifier,path] of Object.entries(request.options.imports??{}))mappedImports[specifier]=await configuredModule(path,true);
  if(request.options.components){
   components=await configuredModule(request.options.components);
   if(!components || typeof components!=='object' || typeof components.then==='function')throw new Error('Component mapping must synchronously return an object');
@@ -44,7 +45,6 @@ export async function renderBatch(request){
  const remarkPlugins=await plugins(request.options.remarkPlugins),rehypePlugins=await plugins(request.options.rehypePlugins);
  if(request.options.cache!==undefined&&request.options.cache!==false&&request.options.cache!=='content')throw new Error('cache must be false or content');
  const runtimeHash=request.options.cache==='content'?await cache.runtimeDigest():null;
- const projectRoot=await realpath(process.cwd());
  const results=[];
  for(const document of request.documents){
   let stage='compile',active=document,lineOffset=0;const start=performance.now();const inputs=new Inputs();for(const path of shared.list())await inputs.track(path);

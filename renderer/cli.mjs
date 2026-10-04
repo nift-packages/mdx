@@ -1,10 +1,11 @@
+import {replace} from './atomic.mjs';
 import {Worker} from 'node:worker_threads';
-import {readFile,writeFile,rename,unlink,mkdir,realpath,stat} from 'node:fs/promises';
+import {readFile,writeFile,unlink,mkdir,realpath,stat} from 'node:fs/promises';
 import {resolve,dirname,relative,isAbsolute,join,basename} from 'node:path';
 import {VERSION,LIMITS,validate,diagnostic} from './protocol.mjs';
 import {randomUUID} from 'node:crypto';
 async function confined(path){const root=await realpath(process.cwd());const full=resolve(root,path);const parent=await realpath(dirname(full));const p=relative(root,parent);if(p.startsWith('..') || isAbsolute(p))throw new Error('Protocol path symlink escapes project');return join(parent,basename(full));}
-async function atomic(path,value){const data=JSON.stringify(value);if(Buffer.byteLength(data)>LIMITS.responseBytes)throw new Error('Response transport limit exceeded');const tmp=path+'.'+randomUUID()+'.tmp';try{await writeFile(tmp,data,{flag:'wx'});await rename(tmp,path);}finally{await unlink(tmp).catch(()=>{});}}
+async function atomic(path,value){const data=JSON.stringify(value);if(Buffer.byteLength(data)>LIMITS.responseBytes)throw new Error('Response transport limit exceeded');const tmp=path+'.'+randomUUID()+'.tmp';try{await writeFile(tmp,data,{flag:'wx'});await replace(tmp,path);}finally{await unlink(tmp).catch(()=>{});}}
 let responsePath;
 try{
  const argv=process.argv.slice(2);if(argv.length!==4 || argv[0]!=='--request' || argv[2]!=='--response')throw new Error('Usage: node cli.mjs --request request.json --response response.json');

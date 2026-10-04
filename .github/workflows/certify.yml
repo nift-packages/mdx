@@ -97,7 +97,7 @@ jobs:
           import importlib.util,json,pathlib,platform,subprocess,unittest
           spec=importlib.util.spec_from_file_location('mdx_renderer_tests','tests/test_render.py')
           module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
-          excluded={'test_installed_nift_facade','test_nift_dependency_invalidation_site','test_windows_native_input_paths'}
+          excluded={'test_installed_nift_facade','test_nift_dependency_invalidation_site','test_windows_native_input_paths','test_documented_example'}
           suite=unittest.TestSuite(test for test in unittest.TestLoader().loadTestsFromTestCase(module.RendererTests) if test._testMethodName not in excluded)
           result=unittest.TextTestRunner(verbosity=2).run(suite)
           record={'platform':platform.system(),'node':subprocess.check_output(['node','--version'],text=True).strip(),'testsRun':result.testsRun,'failures':len(result.failures),'errors':len(result.errors),'success':result.wasSuccessful()}

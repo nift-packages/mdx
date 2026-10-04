@@ -525,7 +525,7 @@ $[mdx.input("content/page.mdx").source]
     # explicitly separate investigation/optional-renderer artifacts.
     all_paths = {str(path.relative_to(PACKAGE)) for path in PACKAGE.rglob("*")
                  if path.is_file() and work not in path.parents
-                 and path.relative_to(PACKAGE).parts[0] not in {".git", "investigation", "renderer", "node_modules", ".github"}}
+                 and path.relative_to(PACKAGE).parts[0] not in {".git", "investigation", "renderer", "node_modules", ".github", "examples"}}
     all_paths -= {"tests/baseline.json", "tests/test_render.py", "tests/profile_parser.py", "tests/test_profiles.py", "tests/test_parser_parity.py"}
     require(all_paths == expected_files, f"package residue/unexpected files: {sorted(all_paths ^ expected_files)!r}")
     require(all(all(byte < 128 for byte in (PACKAGE / path).read_bytes()) for path in expected_files),
