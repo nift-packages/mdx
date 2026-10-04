@@ -72,16 +72,19 @@ jobs:
           import os,subprocess,sys
           subprocess.run([sys.executable,'tests/test_mdx.py',os.environ['NIFT']],check=True)
       - name: Exact baseline parity
+        if: ${{ !cancelled() }}
         shell: python
         run: |
           import subprocess,sys
           subprocess.run([sys.executable,'tests/test_parser_parity.py'],check=True)
       - name: Profile boundaries
+        if: ${{ !cancelled() }}
         shell: python
         run: |
           import subprocess,sys
           subprocess.run([sys.executable,'tests/test_profiles.py'],check=True)
       - name: Rendering, transport, policy, cache and installed-site regression
+        if: ${{ !cancelled() }}
         shell: python
         run: |
           import subprocess,sys

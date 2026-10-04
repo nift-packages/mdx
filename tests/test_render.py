@@ -79,7 +79,7 @@ class RendererTests(unittest.TestCase):
   nift=os.environ.get('NIFT','/home/nick/Repositories/nift/nift/nift')
   with tempfile.TemporaryDirectory(prefix='mdx-installed-') as folder:
    path=pathlib.Path(folder);env=os.environ.copy();env.setdefault('MDX_NODE_MODULES','/usr/local/lib/node_modules')
-   subprocess.run([nift,'add',str(ROOT)],cwd=path,env=env,capture_output=True,text=True,check=True)
+   subprocess.run([nift,'add',*( [ROOT.as_uri(),'--ref=HEAD'] if os.name=='nt' else [str(ROOT)] )],cwd=path,env=env,capture_output=True,text=True,check=True)
    (path/'.nift/mdx-render.json').write_text(json.dumps({'policy':'trusted'}),encoding="utf-8",newline="")
    (path/'page.mdx').write_text('# Prepared\n\nHello.',encoding="utf-8",newline="")
    (path/'render.f').write_text('@import("mdx")\nmdx.prepare([mdx.input("page.mdx")])\nprint(mdx.html(mdx.input("page.mdx")))\nprint(mdx.html(mdx.parse("# Inline")))\n',encoding="utf-8",newline="")

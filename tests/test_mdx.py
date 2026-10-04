@@ -45,6 +45,10 @@ def write(path, text):
 
 def install(cwd, package=PACKAGE, revision=None):
     (cwd / ".nift").mkdir(parents=True, exist_ok=True)
+    if os.name == "nt" and isinstance(package, Path):
+        package = package.as_uri()
+        if revision is None:
+            revision = "HEAD"
     arguments = ["add", str(package)]
     if revision is not None:
         arguments.append(f"--ref={revision}")
