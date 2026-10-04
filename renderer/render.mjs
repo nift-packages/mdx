@@ -2,6 +2,7 @@ import {load} from './dependencies.mjs';
 import {diagnostic} from './protocol.mjs';
 import {Inputs} from './inputs.mjs';
 import {pathToFileURL} from 'node:url';
+import {resolve,dirname,extname} from 'node:path';
 import {body,originalLocation} from './source.mjs';
 import {performance} from 'node:perf_hooks';
 const {compile,run}=await load('@mdx-js/mdx');
@@ -10,11 +11,19 @@ const React=(await load('react')).default;
 const {renderToStaticMarkup}=await load('react-dom/server');
 const remarkGfm=(await load('remark-gfm')).default;
 const rehypeSlug=(await load('rehype-slug')).default;
-function importPolicy(){return tree=>{for(const node of tree.children)if(node.type==='mdxjsEsm')for(const statement of node.data.estree.body)if(statement.type==='ImportDeclaration' || statement.source)throw new Error('Module resolution is not yet supported; imports must not execute implicitly');};}
+function walk(node,callback){if(!node||typeof node!=='object')return;callback(node);for(const [key,value] of Object.entries(node))if(key!=='loc'&&key!=='position'){if(Array.isArray(value))for(const child of value)walk(child,callback);else if(value&&typeof value==='object')walk(value,callback);}}
+function importBinding(statement){
+ const declarations=statement.specifiers.map(spec=>{
+  const slot={type:'MemberExpression',computed:true,object:{type:'MemberExpression',computed:false,object:{type:'MemberExpression',computed:true,object:{type:'Identifier',name:'arguments'},property:{type:'Literal',value:0}},property:{type:'Identifier',name:'imports'}},property:{type:'Literal',value:statement.source.value}};
+  const init=spec.type==='ImportNamespaceSpecifier'?slot:{type:'MemberExpression',computed:true,object:slot,property:{type:'Literal',value:spec.type==='ImportDefaultSpecifier'?'default':spec.imported.name??spec.imported.value}};
+  return {type:'VariableDeclarator',id:spec.local,init};
+ });
+ return declarations.length?{type:'VariableDeclaration',kind:'const',declarations}:null;
+}
 export async function renderBatch(request){
- const inputs=new Inputs();let components={};
+ const shared=new Inputs();let components={};
  if(request.options.components){
-  const module=await import(pathToFileURL(await inputs.track(request.options.components)).href);
+  const module=await import(pathToFileURL(await shared.track(request.options.components)).href);
   components=module.components?module.components({element:React.createElement}):module.default;
   if(!components || typeof components!=='object' || typeof components.then==='function')throw new Error('Component mapping must synchronously return an object');
   components=Object.fromEntries(Object.entries(components).map(([name,adapter])=>{
@@ -24,14 +33,47 @@ export async function renderBatch(request){
  }
  const results=[];
  for(const document of request.documents){
-  let stage='compile',lineOffset=0;const start=performance.now();
+  let stage='compile',active=document,lineOffset=0;const start=performance.now();const inputs=new Inputs();for(const path of shared.list())await inputs.track(path);
+  const allowed=new Set(document.dependencies.map(dependency=>resolve(dependency.path)));
+  const visiting=new Set(),modules=new Map();let compileMs=0,evaluateMs=0;
   try{
-   const prepared=body(document);lineOffset=prepared.lineOffset;
-   const compiled=await compile({value:prepared.value,path:document.path??document.id},{outputFormat:'function-body',remarkPlugins:[remarkGfm,importPolicy],rehypePlugins:[[rehypeSlug,{prefix:'mdx-'}]]});
-   const compiledAt=performance.now();stage='evaluate';const module=await run(String(compiled),runtime);const evaluatedAt=performance.now();stage='render';
+   async function moduleFor(current){
+    active=current;const key=resolve(current.path??document.id);
+    if(visiting.has(key))throw new Error('Cyclic MDX document import: '+current.path);
+    if(modules.has(key))return modules.get(key);
+    visiting.add(key);const imports={};let childWorkMs=0;const prepared=body(current);lineOffset=prepared.lineOffset;
+    function resolveImports(){return async tree=>{
+     walk(tree,statement=>{if(statement.type==='ImportExpression')throw new Error('Dynamic imports are unsupported in MDX');});
+     for(const node of tree.children){
+      if(node.data?.estree)walk(node.data.estree,statement=>{if(statement.type==='ImportExpression')throw new Error('Dynamic imports are unsupported in MDX');});
+      if(node.type!=='mdxjsEsm')continue;
+      const rewritten=[];
+      for(const statement of node.data.estree.body){
+       if(statement.source&&statement.type!=='ImportDeclaration')throw new Error('Document re-exports are unsupported');
+       if(statement.type!=='ImportDeclaration'){rewritten.push(statement);continue;}
+       const spec=statement.source.value;
+       if(!current.path||!spec.startsWith('.')||!['.md','.mdx'].includes(extname(spec)))throw new Error('Only registered relative MD/MDX imports are supported: '+spec);
+       const path=resolve(dirname(key),spec);
+       if(!allowed.has(path))throw new Error('Import was not registered by mdx.input: '+spec);
+       const childStarted=performance.now();
+       const full=await inputs.track(path);const child={source:await inputs.read(full),path:full};
+       const imported=await moduleFor(child);childWorkMs+=performance.now()-childStarted;active=current;lineOffset=prepared.lineOffset;
+       // Child document components inherit the same explicit mapping.
+       imports[spec]={...imported,default:props=>React.createElement(imported.default,{...props,components})};
+       const replacement=importBinding(statement);if(replacement)rewritten.push(replacement);
+      }
+      node.data.estree.body=rewritten;
+     }
+    };}
+    const t=performance.now();stage='compile';
+    const compiled=await compile({value:prepared.value,path:current.path??document.id},{format:current.path?.endsWith('.md')?'md':'mdx',outputFormat:'function-body',remarkPlugins:[remarkGfm,resolveImports],rehypePlugins:[[rehypeSlug,{prefix:'mdx-'}]]});
+    compileMs+=performance.now()-t-childWorkMs;stage='evaluate';const evaluated=performance.now();const module=await run(String(compiled),{...runtime,imports});evaluateMs+=performance.now()-evaluated;
+    visiting.delete(key);modules.set(key,module);return module;
+   }
+   const module=await moduleFor(document);active=document;lineOffset=body(document).lineOffset;stage='render';const renderStart=performance.now();
    const html=renderToStaticMarkup(React.createElement(module.default,{components}));
-   results.push({id:document.id,ok:true,html,dependencies:inputs.list(),timing:{compileMs:compiledAt-start,evaluateMs:evaluatedAt-compiledAt,renderMs:performance.now()-evaluatedAt,totalMs:performance.now()-start}});
-  }catch(error){const location=originalLocation(document,lineOffset,error);results.push({id:document.id,ok:false,diagnostics:[diagnostic(stage,'mdx_'+stage+'_failed',error.message,document.path,location.line,location.column)]});}
+   results.push({id:document.id,ok:true,html,dependencies:inputs.list(),timing:{compileMs,evaluateMs,renderMs:performance.now()-renderStart,totalMs:performance.now()-start}});
+  }catch(error){const location=originalLocation(active,lineOffset,error);results.push({id:document.id,ok:false,diagnostics:[diagnostic(stage,'mdx_'+stage+'_failed',error.message,active.path,location.line,location.column)]});}
  }
  return results;
 }

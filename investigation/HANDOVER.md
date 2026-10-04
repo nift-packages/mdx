@@ -41,3 +41,6 @@ compiler locations map to original lines/byte columns; fifteen tests pass.
 
 CP08 complete: project component factory with semantic element constructor,
 synchronous props/children contracts, root dependency reporting; seventeen tests.
+
+CP09 complete: registered relative MD/MDX imports, inherited child components,
+named/namespace support and graph failures; twenty renderer/facade tests pass.

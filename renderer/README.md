@@ -77,3 +77,15 @@ inside a project adapter is possible only with its own provisioned module scope;
 it is not required by this mapping interface. Async adapters are rejected rather
 than quietly emitting Suspense fallback output. Mapping files are declared render
 inputs; their transitive closure is addressed by the dependency checkpoint.
+
+## Local document imports
+
+Relative MD/MDX imports must appear in mdx.input's registered dependency graph.
+The helper refuses undeclared local imports, missing files, cycles, re-exports,
+dynamic imports and arbitrary JS/package imports until explicitly supported.
+Default/named/namespace MDX imports are compiled recursively in the same worker;
+imported document defaults inherit the configured component mapping. `.md`
+imports use Markdown semantics (JSX/expressions are text), with frontmatter
+removed. Existing mdx.input registers `.md` without recursively parsing it;
+rendering does not silently reinterpret that parser contract. All rendered local
+files are reported back for per-target Nift dependency registration.

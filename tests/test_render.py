@@ -60,6 +60,19 @@ class RendererTests(unittest.TestCase):
  def test_component_exception_and_async_refusal(self):
   for adapter,message in [('()=>{throw new Error("adapter failed")}','adapter failed'),('async()=>"bad"','Async component')]:
    run,response=self.invoke([{'id':'components','source':'<Aside />','path':None,'dependencies':[]}],options={'policy':'trusted','components':'components.mjs'},files={'components.mjs':'export default {Aside:'+adapter+'}'});self.assertNotEqual(run.returncode,0);self.assertIn(message,response['results'][0]['diagnostics'][0]['message'])
+ def test_transitive_documents_and_inherited_components(self):
+  files={'root.mdx':'import Shared from "./shared.mdx"\n\n# Root\n\n<Shared />','shared.mdx':'import Nested from "./nested.mdx"\n\n<Aside>Shared</Aside>\n\n<Nested />','nested.mdx':'import Plain from "./plain.md"\n\n<Plain />','plain.md':'**Plain** Markdown.','components.mjs':'export function components({element}) {return {Aside:({children})=>element("aside",{},children)}}'}
+  dependencies=[{'path':name} for name in ['shared.mdx','nested.mdx','plain.md']]
+  run,response=self.invoke([{'id':'root','source':files['root.mdx'],'path':'root.mdx','dependencies':dependencies}],options={'policy':'trusted','components':'components.mjs'},files=files);self.assertEqual(run.returncode,0,response)
+  html=response['results'][0]['html'];self.assertIn('<aside>Shared</aside>',html);self.assertIn('<strong>Plain</strong>',html)
+  self.assertTrue(set(['shared.mdx','nested.mdx','plain.md','components.mjs']).issubset(response['results'][0]['dependencies']))
+ def test_unregistered_missing_cycle_and_dynamic_imports(self):
+  cases=[('import Shared from "./shared.mdx"\n\n<Shared />',[],{'shared.mdx':'Hi'},'not registered'),('import Shared from "./missing.mdx"\n\n<Shared />',[{'path':'missing.mdx'}],{},'ENOENT'),('import Shared from "./shared.mdx"\n\n<Shared />',[{'path':'shared.mdx'},{'path':'root.mdx'}],{'shared.mdx':'import Root from "./root.mdx"\n\n<Root />','root.mdx':'import Shared from "./shared.mdx"\n\n<Shared />'},'Cyclic'),('{import("./side.mjs")}',[],{},'Dynamic imports')]
+  for source,dependencies,files,message in cases:
+   run,response=self.invoke([{'id':'root','source':source,'path':'root.mdx','dependencies':dependencies}],files=files);self.assertNotEqual(run.returncode,0);self.assertIn(message,response['results'][0]['diagnostics'][0]['message'])
+ def test_named_namespace_document_imports(self):
+  for statement,tag in [('import {Label as Shared} from "./shared.mdx"','Shared'),('import * as Shared from "./shared.mdx"','Shared.Label')]:
+   run,response=self.invoke([{'id':'root','source':statement+'\n\n<'+tag+' />','path':'root.mdx','dependencies':[{'path':'shared.mdx'}]}],files={'shared.mdx':'export const Label = () => <strong>Named</strong>\n\n# Unused'});self.assertEqual(run.returncode,0,response);self.assertIn('<strong>Named</strong>',response['results'][0]['html'])
  def test_source_bound(self):
   run,response=self.invoke([{'id':'large','source':'x'*262145,'path':None,'dependencies':[]}]);self.assertNotEqual(run.returncode,0);self.assertIn('limit',response['diagnostics'][0]['message'])
  def test_duplicate(self):
