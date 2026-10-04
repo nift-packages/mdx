@@ -1,6 +1,6 @@
 # MDX HTML implementation gameplan
 
-Status: investigation/prototype complete; production implementation awaits approval. Preferred public API: `mdx.html(mdx.input("content/page.mdx"))`. Work in small checkpoints; every checkpoint ends with relevant tests, saved acceptance evidence, a small commit, and updated HANDOVER/status notes. Do not mark a checkpoint complete on implementation alone.
+Status: investigation/prototype complete; production implementation authorized; checkpoints in progress. Preferred public API: `mdx.html(mdx.input("content/page.mdx"))`. Work in small checkpoints; every checkpoint ends with relevant tests, saved acceptance evidence, a small commit, and updated HANDOVER/status notes. Do not mark a checkpoint complete on implementation alone.
 
 ## Required architecture before Capgo integration
 
@@ -17,9 +17,10 @@ rendering is a replaceable build-time implementation detail. Measured trusted-bu
 limits/parser performance, adapters, explicit execution policy, diagnostics,
 adapter dependency invalidation and cross-platform certification remain release
 gates. Do not modify Nift core. This stays the next dedicated package task;
-Capgo rename/planning work does not authorize package implementation.
+The user authorized package implementation in the subsequent handoff; neither
+Capgo website is authorized in this task.
 
-- [ ] **1. Freeze the baseline.** Archive/tag the current result/API corpus and successful Nift4.6.0 regression evidence. Correct the test inventory to exclude Git metadata and admit intentional investigation/helper files; retain all parser assertions. Acceptance: clean-checkout suite passes and exact parse/input compatibility snapshots are preserved.
+- [x] **1. Freeze the baseline.** Archive/tag the current result/API corpus and successful Nift4.6.0 regression evidence. Correct the test inventory to exclude Git metadata and admit intentional investigation/helper files; retain all parser assertions. Acceptance: clean-checkout suite passes and exact parse/input compatibility snapshots are preserved.
 - [ ] **2. Specify optional renderer installation.** Define supported Nift/Node versions, helper location/package resources, pinned lockfile, licenses/notices and explicit offline install steps. No installation during rendering. Acceptance: fresh install, offline second install/use, missing runtime and parse-only/no-process use all tested.
 - [ ] **3. Fix the renderer protocol.** JSON request IDs/version, bounded source/output, file/stdin transport, structured errors, exit status, stderr, timeout and temp lifecycle. No shell interpolation. Acceptance: spaces/Unicode/quotes/newlines, malformed JSON, missing helper, timeout and process failure fixtures.
 - [ ] **4. Promote basic compilation/static rendering.** Pin compile+run and React static markup; no client React assets. Acceptance: headings, paragraphs, links, nested lists, images, fences and inline code with escaping snapshots; output script/runtime scan.

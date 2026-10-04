@@ -11,3 +11,9 @@ Saved evidence: benchmark-results.json, build-results.json, demo-document.json/d
 Planning clarification: capgo is the human+agent reference and capgo-agent the
 normalized agent-first sibling. React remains a replaceable build-time renderer
 detail; the public abstraction is MDX document → HTML. No implementation began.
+
+## Production implementation progress
+
+Authorized by the user’s subsequent handoff. CP01 complete: baseline tag and
+unchanged parser contracts, corrected inventory check, full Linux Nift4.6 suite
+passed. Checkpoint evidence is under investigation/checkpoints/. No Capgo work.
