@@ -150,3 +150,12 @@ The provisional 256 KiB/file and 8 MiB graph profile was not adopted: prose is
 now fast, but dense JSX still has substantial interpreter cost. `input` reads
 the source before it can check its encoded size; these guards do not claim
 pre-read allocation protection or an untrusted execution sandbox.
+
+## Diagnostics
+
+Failures report a stage/code and original source path, line and UTF-8 byte column
+where available. Compilation maps frontmatter offsets. Runtime expressions use
+compiled source maps, including imported documents; sparse mappings may identify
+an authored line rather than an exact JavaScript span. Component failures also
+report `component` and `adapterPath`. Process errors and unmapped generated or
+adapter frames have null locations. No synthetic source positions are promised.

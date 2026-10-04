@@ -11,6 +11,20 @@ class RendererTests(unittest.TestCase):
    env=os.environ.copy();env.setdefault('MDX_NODE_MODULES','/usr/local/lib/node_modules')
    run=subprocess.run(['node',str(ROOT/'renderer/cli.mjs'),'--request','request.json','--response','response.json'],cwd=path,env=env,capture_output=True,text=True,timeout=20)
    return run,json.loads((path/'response.json').read_text())
+ def test_source_aware_diagnostics(self):
+  source='---\ntitle: Example\n---\n\nimport Missing from "unmapped"\n\n<Missing />'
+  run,response=self.invoke([{'id':'imports','source':source,'path':'article.mdx','dependencies':[]}])
+  error=response['results'][0]['diagnostics'][0];self.assertEqual(error['path'],'article.mdx');self.assertEqual(error['line'],5);self.assertEqual(error['column'],1)
+  run,response=self.invoke([{'id':'unknown','source':'<Unknown />','path':'article.mdx','dependencies':[]}])
+  error=response['results'][0]['diagnostics'][0];self.assertEqual(error['component'],'Unknown')
+  run,response=self.invoke([{'id':'adapter','source':'<Aside />','path':'article.mdx','dependencies':[]}],options={'policy':'trusted','components':'components.mjs'},files={'components.mjs':'export default {Aside:()=>{throw new Error("broken adapter")}}'})
+  error=response['results'][0]['diagnostics'][0];self.assertEqual(error['stage'],'render');self.assertEqual(error['path'],'article.mdx');self.assertEqual(error['component'],'Aside');self.assertEqual(error['adapterPath'],'components.mjs');self.assertIsNone(error['line'])
+ def test_runtime_source_maps(self):
+  source='---\ntitle: Example\n---\n\n# Runtime\n\n{(() => { throw new Error("expression failed") })()}'
+  run,response=self.invoke([{'id':'runtime','source':source,'path':'article.mdx','dependencies':[]}]);error=response['results'][0]['diagnostics'][0]
+  self.assertEqual(error['stage'],'render');self.assertEqual(error['path'],'article.mdx');self.assertEqual(error['line'],7);self.assertIsInstance(error['column'],int)
+  run,response=self.invoke([{'id':'child','source':'import Child from "./child.mdx"\n\n<Child />','path':'root.mdx','dependencies':[{'path':'child.mdx'}]}],files={'child.mdx':source});error=response['results'][0]['diagnostics'][0]
+  self.assertEqual(error['path'],str(error['path']));self.assertTrue(error['path'].endswith('child.mdx'));self.assertEqual(error['line'],7)
  def test_installed_nift_facade(self):
   nift=os.environ.get('NIFT','/home/nick/Repositories/nift/nift/nift')
   with tempfile.TemporaryDirectory(prefix='mdx-installed-') as folder:

@@ -62,3 +62,7 @@ bounded behavior unchanged. Full regression and26 renderer tests pass. Actual
 pinned Capgo scan accepts 518/519 canonical docs, cumulative parser
 204.836s. Retained syntax-object exclusions and parser
 cost remain CP22 release gates. No Capgo website implementation started.
+
+CP14 complete: compiler/import original positions, mapped root/imported runtime
+expressions and component/adapter attribution;28 renderer tests pass. Unmapped
+process/adapter/generated locations remain null. No client source-map runtime.
