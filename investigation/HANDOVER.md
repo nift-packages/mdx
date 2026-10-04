@@ -21,3 +21,6 @@ passed. Checkpoint evidence is under investigation/checkpoints/. No Capgo work.
 CP02 complete: optional local/offline and explicit global dependency loading,
 exact direct pins, transitive lock, installation staging and license inventory.
 No mandatory npm cost for parse/input consumers.
+
+CP03 complete: bounded versioned file-based batch protocol with worker deadline,
+project-confined paths, atomic responses and structured errors; seven tests pass.
