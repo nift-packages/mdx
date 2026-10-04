@@ -126,3 +126,12 @@ provisional 256 KiB/8 MiB target because dense-syntax scanner cost remains a
 release concern. Capacity selection and trusted execution policy are separate.
 Actual Capgo coverage is measured, with dense-page exclusions recorded rather
 than silently weakening guards. See checkpoints/CP13.md and its corpus JSON.
+
+## Production gate result
+
+CP01–21 now have implementation/acceptance evidence, including an explicit
+Windows Nift input exclusion. CP22 remains closed. The default helper-only pinned
+Capgo audit renders377/519 canonical docs MDX plus10 MD;142 docs MDX and7 blog
+MDX fail. This is not Starlight/Astro or interactive/visual equivalence. Pure
+trusted preservation accepts518/519 in204.836s; raising capacity did not resolve
+interpreter throughput or the1024-object outlier. Both Capgo sites stay unstarted.

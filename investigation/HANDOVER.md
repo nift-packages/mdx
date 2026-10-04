@@ -106,3 +106,11 @@ of the unchanged core directory predicate. Bun/UNC are not certified.
 CP21 complete: isolated installed100/500/1000 full-build/memory evidence saved.
 One helper per build;100-source scalar49.892s vs batch2.937s with identical HTML.
 Parser remains the large-build bottleneck.
+
+CP22 assessed, not certified: pinned536 real fixtures (519 docs MDX,10 MD,7
+blog MDX), complete source hashes/import/component inventory and per-file failures
+saved. Default helper renders377/519 docs MDX and all10 MD;142 docs MDX and7
+blog MDX fail. Starlight/Astro/asset/interactive semantic/visual parity remains
+unimplemented and unverified. Parser518/519 acceptance and204.836s corpus cost
+remain release blockers; core stays untouched. Capgo and capgo-agent remain
+planning-only. Do not treat the helper-only audit as production corpus acceptance.

@@ -1,6 +1,6 @@
 # MDX HTML implementation gameplan
 
-Status: investigation/prototype complete; production implementation authorized; checkpoints in progress. Preferred public API: `mdx.html(mdx.input("content/page.mdx"))`. Work in small checkpoints; every checkpoint ends with relevant tests, saved acceptance evidence, a small commit, and updated HANDOVER/status notes. Do not mark a checkpoint complete on implementation alone.
+Status: CP01–21 implemented/assessed with documented platform exclusions; CP22 Capgo release gate assessed and blocked. Preferred public API: `mdx.html(mdx.input("content/page.mdx"))`. Work in small checkpoints; every checkpoint ends with relevant tests, saved acceptance evidence, a small commit, and updated HANDOVER/status notes. Do not mark a checkpoint complete on implementation alone.
 
 ## Required architecture before Capgo integration
 
@@ -42,5 +42,12 @@ Capgo website is authorized in this task.
 - [x] **20. Publish documentation and examples.** Parsing vs rendering, API/options, install/offline requirements, no browser runtime, mappings, execution policy, dependency declarations, profiles, errors and batch tradeoffs. Acceptance: copy/paste installed-package example tested by automation; no stale dependency-free rendering claims.
 - [x] **21. Certify a representative installed Nift site.** Direct composition, frontmatter, components, document/adapter/config/plugin/asset edits, unrelated target and no-change builds. Acceptance: @dep metadata exactly once; outputs/memory/full-build measurements; compare scalar and batch paths including parsing.
 - [ ] **22. Gate Capgo implementation on real fixtures.** At pinned upstream commit, cover Starlight import rewriting, Steps/Cards/Tabs/Code/FileTree, PackageManagers, media/Mermaid/questionnaires, BlogMidArticleCta, asset/alias handling and largest pages. Acceptance: reviewed semantic/visual parity, all required MDX accepted or explicit exclusions, interactive vanilla-JS features, corpus-scale budget and provenance. Only then start capgo website work.
+
+CP22 current result: gate closed. The pinned real-corpus helper audit accepts
+377/519 canonical MDX plus10 Markdown;142 canonical MDX and7 blog MDX fail.
+The preservation parser separately accepts518/519 and costs204.836s across the
+corpus. No project-specific adapter/interactive/visual parity is claimed. See
+[CP22 evidence](checkpoints/CP22.md). Retained parser safeguards, core interpreter
+throughput and project parity work remain open; neither Capgo website begins.
 
 No production changes above are approved by this document alone. Each decision that changes parser defaults, executable-content policy or public API must be recorded before its implementation checkpoint.
