@@ -33,6 +33,12 @@ class RendererTests(unittest.TestCase):
  def test_mixed_batch_errors(self):
   run,response=self.invoke([{'id':name,'source':source,'path':None,'dependencies':[]} for name,source in [('good','# Good'),('unknown','<Unknown />'),('malformed','<Aside')]])
   self.assertNotEqual(run.returncode,0);self.assertEqual([r['ok'] for r in response['results']],[True,False,False]);self.assertEqual(response['results'][1]['diagnostics'][0]['stage'],'render')
+ def test_trusted_expression_and_no_implicit_execution(self):
+  document={'id':'expression','source':'{1 + 2}','path':None,'dependencies':[]}
+  run,response=self.invoke([document]);self.assertEqual(run.returncode,0);self.assertIn('3',response['results'][0]['html'])
+  run,response=self.invoke([document],options={'timeoutMs':1000});self.assertNotEqual(run.returncode,0);self.assertIn('explicit policy',response['diagnostics'][0]['message'])
+ def test_trusted_infinite_expression_deadline(self):
+  run,response=self.invoke([{'id':'loop','source':'{(() => { while(true) {} })()}','path':None,'dependencies':[]}],options={'policy':'trusted','timeoutMs':700});self.assertNotEqual(run.returncode,0);self.assertEqual(response['diagnostics'][0]['code'],'timeout')
  def test_source_bound(self):
   run,response=self.invoke([{'id':'large','source':'x'*262145,'path':None,'dependencies':[]}]);self.assertNotEqual(run.returncode,0);self.assertIn('limit',response['diagnostics'][0]['message'])
  def test_duplicate(self):

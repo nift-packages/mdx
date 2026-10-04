@@ -32,3 +32,6 @@ CP05 complete: installed prepare/html additive facade; file-backed HTML consumes
 prepared per-document artifacts, never falls back to process-per-page. Intentional
 inline one-off rendering supported. Full parser regression and ten renderer tests
 pass. Node capability probe adds one cheap process per batch before temp writes.
+
+CP06 complete: explicit trusted policy documented/tested; twelve tests. No
+untrusted/sandbox claim; synchronous authored loop is stopped by worker deadline.

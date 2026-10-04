@@ -36,3 +36,20 @@ React is build-time machinery behind the MDX document → HTML abstraction. No
 React/JSX assets need to ship to the browser. Neither a local nor global install
 is a sandbox for authored MDX: the eventual rendering policy must explicitly
 select trusted execution.
+
+## Execution policy
+
+Rendering requires `.nift/mdx-render.json` containing `{"policy":"trusted"}`.
+Without explicit opt-in, `html/prepare` and the helper refuse execution. Parsing
+and dependency discovery never execute expressions. Trusted rendering can execute
+MDX expressions, exports and later configured adapters with the helper's ordinary
+OS privileges, including filesystem, network and subprocess access. This is for
+reviewed authored project sources, not remote/user-submitted content. The worker
+deadline bounds execution time but is not an OS sandbox; terminating it does not
+roll back I/O or necessarily terminate subprocesses authored content created.
+There is no advertised safe/untrusted rendering mode. A future restricted mode
+requires an AST allowlist, not HTML sanitizing or merely removing expressions.
+
+Ordinary static output requires no React/JSX/hydration in the browser. Local
+framework islands remain a separate calling-application decision. Current
+unsupported imports fail explicitly rather than inheriting Node's loader.
