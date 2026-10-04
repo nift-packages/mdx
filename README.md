@@ -1,33 +1,96 @@
 # mdx
 
-`mdx` is a dependency-free, bounded preservation parser for a deliberately
-narrow MDX-like syntax. It preserves source spelling and byte positions,
-discovers supported local Markdown dependencies, and can register those files
-with Nift's incremental build graph.
+`mdx` preserves MDX source and UTF-8 byte positions, discovers local document
+imports, and registers them with Nift. Pure `parse`/`input` remain dependency-free
+and work with `--no-process`. Optional trusted rendering compiles MDX to ordinary
+static HTML through a build-time helper; no browser React/JSX runtime is required.
+
+Implementation is experimental while release gates remain open. Linux/macOS
+with Node 22/24 pass CI. Windows Nift file input is currently excluded, and the
+Capgo corpus/performance/adapter certification gate has not passed. Neither
+Capgo website is started. See [checkpoint evidence](investigation/GAMEPLAN.md).
+
+The sole export is `mdx`, with these public methods:
+
+| Method | Result / purpose |
+| --- | --- |
+| `parse(source)` | Pure bounded preservation document |
+| `input(path)` | Preservation document plus local graph and Nift dependencies |
+| `with_profile("bounded" or "trusted")` | Independent configured facade |
+| `prepare(documents)` | One helper invocation for a document batch |
+| `html(document)` | HTML string; file input requires the current prepared batch |
 
 ```f
 @import("mdx")
-
 document := mdx.parse("# hello\n\n<Card>{name}</Card>\n")
 file_document := mdx.input("content/page.mdx")
 ```
 
-The sole export is `mdx`. Its exact public API is `mdx.parse(source)` and
-`mdx.input(path)`; every implementation helper is private. The package has no
-runtime package dependency, bundled resource, process, shell, evaluation, or
-JavaScript execution facility. `input` intentionally uses only `exists`,
-`open`, and `@dep`.
+## Optional rendering quick start
 
-## Scope
+Install the package through Nift's normal Git installation and provision the
+optional, locked Node dependencies once:
+
+```sh
+nift add mdx
+npm ci --ignore-scripts --prefix .nift/packages/mdx/renderer
+```
+
+Set `.nift/mdx-render.json` to `{"policy":"trusted"}` only for reviewed authored
+project sources. Rendering executes expressions, exports, adapters and plugins
+with ordinary build-host privileges. The deadline is not an OS sandbox; untrusted
+rendering is unsupported. Rendering never installs packages or accesses a package
+registry. See [runtime installation/offline instructions](renderer/README.md).
+
+Add a `prepare.f` project pre-build hook:
+
+```f
+@import("mdx")
+prepared := mdx.prepare([
+    mdx.input("content/one.mdx"),
+    mdx.input("content/two.mdx")
+])
+```
+
+In `.nift/config.json`, set `"pre build":"prepare.f"` inside the `config` object.
+A template under `templates/` can then use the convenient composition:
+
+```html
+@import("../.nift/packages/mdx/src/mdx.f")
+$[mdx.html(mdx.input("content/one.mdx"))]
+```
+
+File-backed `html` refuses missing/stale root/config preparation and never starts
+a process per target. Every build must run the batch after input changes; prepared
+records are not an independently validated cache for arbitrary external changes.
+Inline `mdx.html(mdx.parse(...))` is an explicit one-off render and starts a helper.
+Project local-path installations create symlinks which build templates may reject;
+use Git installation for normal sites. The [copyable installed example](examples/basic)
+is tested by automation, including unchanged builds and dependency metadata.
+
+React static rendering is replaceable build-time machinery behind the public
+MDX document-to-HTML abstraction. Project component factories receive a semantic
+`element` constructor. General mappings/imports/plugins, static component rules,
+all dependency classes, structured diagnostics, trusted profiles and the optional
+content cache are documented in [renderer/README.md](renderer/README.md).
+
+Normal builds batch all documents. Measured installed synthetic sites take
+6.94/36.22/80.12 seconds cold at 100/500/1,000 pages and 3.65/18.77/44.82 seconds
+unchanged. Parsing dominates; these are full-pipeline timings, not Capgo claims.
+The actual pinned Capgo parser scan accepts 518/519 canonical docs and takes
+204.84 seconds cumulatively. These unresolved gates prevent Capgo implementation.
+
+## Preservation-parser scope
 
 The research references are MDX 3.1.1 and CommonMark 0.31.2:
 
 - <https://mdxjs.com/packages/mdx/>
 - <https://spec.commonmark.org/0.31.2/>
 
-This package is not an MDX compiler, JavaScript parser, JSX transformer, YAML
-parser, or CommonMark parser. It does not produce headings, paragraphs, lists,
-HTML, a JavaScript program, or executable code. It recognizes only enough
+The preservation scanner is not an MDX compiler, JavaScript parser, JSX
+transformer, YAML parser, or CommonMark parser. It never executes code or renders
+HTML; the optional helper performs compilation/rendering separately. It recognizes
+only enough
 structure to preserve and locate these node types:
 
 - `markdown`
@@ -164,6 +227,11 @@ relative path when package-name lookup is unavailable in that template scope.
 
 ## Limits
 
+These original bounded defaults remain unchanged. `trusted := mdx.with_profile("trusted")`
+selects 65,536 bytes/file, 8,192 physical lines, 65,536 bytes/line and 2,097,152
+aggregate graph bytes; other safeguards remain below. Selecting capacity does not
+opt into execution. See [profile decisions](investigation/checkpoints/CP13.md).
+
 Limits are deterministic and measured before unbounded parser growth:
 
 - 4,096 UTF-8 bytes per file
@@ -198,6 +266,9 @@ after the read.
 
 ```sh
 python3 tests/test_mdx.py /path/to/nift
+NIFT=/path/to/nift python3 tests/test_parser_parity.py
+NIFT=/path/to/nift python3 tests/test_profiles.py
+NIFT=/path/to/nift python3 tests/test_render.py
 ```
 
 The suite certifies direct and installed imports, exact exports and hidden

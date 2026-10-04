@@ -1,0 +1,7 @@
+/.nift/packages/
+/.nift/package-cache/
+/.nift/mdx-render/
+/.nift/mdx-html/
+/.nift/mdx-cache/
+/.nift/public/
+/public/

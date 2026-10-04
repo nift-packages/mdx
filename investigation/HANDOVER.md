@@ -83,3 +83,9 @@ startup; the39s parser share of a44.8s warm1,000-page build would remain.
 CP18 complete: fresh e2dab30 Git clone passes full original parser,165 exact
 parity cases,30 renderer tests and profile boundaries. Linux evidence saved.
 Core checkout remains clean; Capgo sites remain untouched.
+
+CP20 complete: parsing/rendering/install/policy/profile/batching documentation and
+copyable Git-installed basic example. Final local renderer suite34 tests passes
+45.573s; original parser regression passes53.853s. Windows integration and Capgo
+certification exclusions are explicit. Example automated build and no-change
+rebuild validate ordinary HTML and exact dependency registration.
