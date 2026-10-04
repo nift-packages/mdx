@@ -79,3 +79,7 @@ hits100 entries but remains3.981s; parser cost remains the release bottleneck.
 
 CP17 complete: daemon explicitly deferred. One batch helper already amortizes
 startup; the39s parser share of a44.8s warm1,000-page build would remain.
+
+CP18 complete: fresh e2dab30 Git clone passes full original parser,165 exact
+parity cases,30 renderer tests and profile boundaries. Linux evidence saved.
+Core checkout remains clean; Capgo sites remain untouched.
