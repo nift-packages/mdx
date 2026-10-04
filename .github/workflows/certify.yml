@@ -67,6 +67,12 @@ jobs:
           with open(os.environ['GITHUB_ENV'],'a',encoding='utf-8') as f:
               f.write('NIFT='+str(root.parent/'core'/('nift.exe' if os.name=='nt' else 'nift'))+'\n')
               f.write('MDX_NODE_MODULES='+str(root/'renderer/node_modules')+'\n')
+      - name: Investigate filesystem spellings and recoverability
+        if: ${{ !cancelled() }}
+        shell: python
+        run: |
+          import subprocess,sys
+          subprocess.run([sys.executable,'investigation/followup/filesystem_probe.py'],check=True)
       - name: Original parser regression
         shell: python
         run: |
@@ -111,3 +117,4 @@ jobs:
           path: |
             mdx/investigation/checkpoints/CP13-profile-results.json
             mdx/investigation/checkpoints/CP19-helper-result.json
+            mdx/investigation/followup/filesystem-*.json
