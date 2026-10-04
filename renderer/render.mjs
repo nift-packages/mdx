@@ -1,7 +1,7 @@
 import {load} from './dependencies.mjs';
 import {diagnostic} from './protocol.mjs';
 import {Inputs} from './inputs.mjs';
-import {pathToFileURL} from 'node:url';
+import {pathToFileURL,fileURLToPath} from 'node:url';
 import {resolve,dirname,extname} from 'node:path';
 import {body,originalLocation} from './source.mjs';
 import {performance} from 'node:perf_hooks';
@@ -21,16 +21,24 @@ function importBinding(statement){
  return declarations.length?{type:'VariableDeclaration',kind:'const',declarations}:null;
 }
 export async function renderBatch(request){
- const shared=new Inputs();let components={};
+ const shared=new Inputs();let components={};const mappedImports={};
+ for(const path of request.options.dependencies??[])await shared.track(path);
+ const packageRoot=dirname(fileURLToPath(import.meta.url));
+ for(const name of ['cli.mjs','worker.mjs','render.mjs','inputs.mjs','source.mjs','dependencies.mjs','protocol.mjs','package-lock.json']){
+  const path=resolve(packageRoot,name);if(!path.startsWith(resolve(process.cwd())+'/'))continue;await shared.track(path);
+ }
+ async function configuredModule(path){const module=await import(pathToFileURL(await shared.module(path)).href);return module.components?module.components({element:React.createElement}):module.default??module;}
+ for(const [specifier,path] of Object.entries(request.options.imports??{}))mappedImports[specifier]=await configuredModule(path);
  if(request.options.components){
-  const module=await import(pathToFileURL(await shared.track(request.options.components)).href);
-  components=module.components?module.components({element:React.createElement}):module.default;
+  components=await configuredModule(request.options.components);
   if(!components || typeof components!=='object' || typeof components.then==='function')throw new Error('Component mapping must synchronously return an object');
   components=Object.fromEntries(Object.entries(components).map(([name,adapter])=>{
    if(typeof adapter!=='function')throw new Error('Component adapter must be a function: '+name);
    return [name,props=>{const value=adapter(props);if(value&&typeof value.then==='function')throw new Error('Async component adapters are unsupported: '+name);return value;}];
   }));
  }
+ async function plugins(entries){const list=[];for(const entry of entries??[]){const plugin=await configuredModule(entry.path);if(typeof plugin!=='function')throw new Error('Plugin must export a function: '+entry.path);list.push([plugin,entry.options]);}return list;}
+ const remarkPlugins=await plugins(request.options.remarkPlugins),rehypePlugins=await plugins(request.options.rehypePlugins);
  const results=[];
  for(const document of request.documents){
   let stage='compile',active=document,lineOffset=0;const start=performance.now();const inputs=new Inputs();for(const path of shared.list())await inputs.track(path);
@@ -39,6 +47,7 @@ export async function renderBatch(request){
   try{
    async function moduleFor(current){
     active=current;const key=resolve(current.path??document.id);
+    if(visiting.size>32||modules.size>=256)throw new Error('Rendering document graph limit exceeded');
     if(visiting.has(key))throw new Error('Cyclic MDX document import: '+current.path);
     if(modules.has(key))return modules.get(key);
     visiting.add(key);const imports={};let childWorkMs=0;const prepared=body(current);lineOffset=prepared.lineOffset;
@@ -52,6 +61,7 @@ export async function renderBatch(request){
        if(statement.source&&statement.type!=='ImportDeclaration')throw new Error('Document re-exports are unsupported');
        if(statement.type!=='ImportDeclaration'){rewritten.push(statement);continue;}
        const spec=statement.source.value;
+       if(Object.hasOwn(mappedImports,spec)){imports[spec]=mappedImports[spec];const replacement=importBinding(statement);if(replacement)rewritten.push(replacement);continue;}
        if(!current.path||!spec.startsWith('.')||!['.md','.mdx'].includes(extname(spec)))throw new Error('Only registered relative MD/MDX imports are supported: '+spec);
        const path=resolve(dirname(key),spec);
        if(!allowed.has(path))throw new Error('Import was not registered by mdx.input: '+spec);
@@ -66,7 +76,7 @@ export async function renderBatch(request){
      }
     };}
     const t=performance.now();stage='compile';
-    const compiled=await compile({value:prepared.value,path:current.path??document.id},{format:current.path?.endsWith('.md')?'md':'mdx',outputFormat:'function-body',remarkPlugins:[remarkGfm,resolveImports],rehypePlugins:[[rehypeSlug,{prefix:'mdx-'}]]});
+    const compiled=await compile({value:prepared.value,path:current.path??document.id},{format:current.path?.endsWith('.md')?'md':'mdx',outputFormat:'function-body',remarkPlugins:[remarkGfm,...remarkPlugins,resolveImports],rehypePlugins:[[rehypeSlug,{prefix:'mdx-'}],...rehypePlugins]});
     compileMs+=performance.now()-t-childWorkMs;stage='evaluate';const evaluated=performance.now();const module=await run(String(compiled),{...runtime,imports});evaluateMs+=performance.now()-evaluated;
     visiting.delete(key);modules.set(key,module);return module;
    }

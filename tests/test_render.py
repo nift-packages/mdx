@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import json,os,pathlib,subprocess,tempfile,unittest
+import json,os,pathlib,subprocess,tempfile,unittest,shutil
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 class RendererTests(unittest.TestCase):
  def invoke(self,documents=None,options=None,raw=None,files=None):
@@ -73,6 +73,43 @@ class RendererTests(unittest.TestCase):
  def test_named_namespace_document_imports(self):
   for statement,tag in [('import {Label as Shared} from "./shared.mdx"','Shared'),('import * as Shared from "./shared.mdx"','Shared.Label')]:
    run,response=self.invoke([{'id':'root','source':statement+'\n\n<'+tag+' />','path':'root.mdx','dependencies':[{'path':'shared.mdx'}]}],files={'shared.mdx':'export const Label = () => <strong>Named</strong>\n\n# Unused'});self.assertEqual(run.returncode,0,response);self.assertIn('<strong>Named</strong>',response['results'][0]['html'])
+ def test_adapter_closure_plugins_assets_and_import_mapping(self):
+  files={'components.mjs':'import {tag} from "./shared.mjs"; export function components({element}) {return {Aside:({children})=>element(tag,{},children)}}','shared.mjs':'export const tag="aside"','asset.svg':'<svg/>','config.json':'{}'}
+  run,response=self.invoke([{'id':'mapping','source':'import {Aside} from "custom-components"\n\n<Aside>Mapped</Aside>','path':None,'dependencies':[]}],options={'policy':'trusted','imports':{'custom-components':'components.mjs'},'dependencies':['asset.svg','config.json']},files=files);self.assertEqual(run.returncode,0,response);self.assertIn('<aside>Mapped</aside>',response['results'][0]['html']);self.assertTrue(set(files).issubset(response['results'][0]['dependencies']))
+ def test_dynamic_adapter_import_refused(self):
+  run,response=self.invoke(options={'policy':'trusted','components':'components.mjs'},files={'components.mjs':'export default {Aside:()=>import("./hidden.mjs")}'});self.assertNotEqual(run.returncode,0);self.assertIn('Dynamic import',response['diagnostics'][0]['message'])
+ def test_plugin_dependency_and_behavior(self):
+  plugin='export default function prefix(options) {return tree=>{tree.children.unshift({type:"paragraph",children:[{type:"text",value:options.text}]})}}'
+  run,response=self.invoke(options={'policy':'trusted','remarkPlugins':[{'path':'plugin.mjs','options':{'text':'Plugin output'}}]},files={'plugin.mjs':plugin});self.assertEqual(run.returncode,0,response);self.assertIn('Plugin output',response['results'][0]['html']);self.assertIn('plugin.mjs',response['results'][0]['dependencies'])
+ def test_nift_dependency_invalidation_site(self):
+  nift=os.environ.get('NIFT','/home/nick/Repositories/nift/nift/nift')
+  with tempfile.TemporaryDirectory(prefix='mdx-site-') as folder:
+   path=pathlib.Path(folder);env=os.environ.copy();env.setdefault('MDX_NODE_MODULES','/usr/local/lib/node_modules')
+   def write(name,content):
+    file=path/name;file.parent.mkdir(parents=True,exist_ok=True);file.write_text(content)
+   def call(*args):
+    run=subprocess.run([nift,*args],cwd=path,env=env,capture_output=True,text=True);self.assertEqual(run.returncode,0,run.stdout+run.stderr);return run
+   origin=path/'package-origin';origin.mkdir()
+   for name in ['manifest.json','LICENSE']:shutil.copy2(ROOT/name,origin/name)
+   shutil.copytree(ROOT/'src',origin/'src');shutil.copytree(ROOT/'renderer',origin/'renderer',ignore=shutil.ignore_patterns('node_modules','.cache'))
+   subprocess.run(['git','init','-q',str(origin)],check=True)
+   subprocess.run(['git','add','.'],cwd=origin,check=True)
+   subprocess.run(['git','-c','user.name=mdx-test','-c','user.email=mdx@example.invalid','commit','-qm','fixture'],cwd=origin,check=True)
+   call('add','file://'+str(origin),'--ref=HEAD')
+   write('.nift/mdx-render.json',json.dumps({'policy':'trusted','components':'components.mjs','dependencies':['asset.txt'],'remarkPlugins':[{'path':'plugin.mjs','options':{'text':'Plugin'}}]}))
+   write('components.mjs','import {tag} from "./shared.mjs";export function components({element}) {return {Aside:({children})=>element(tag,{},children)}}')
+   write('shared.mjs','export const tag="aside"');write('asset.txt','first');write('plugin.mjs','export default function(options){return tree=>{tree.children.unshift({type:"paragraph",children:[{type:"text",value:options.text}]})}}')
+   write('page.mdx','import Shared from "./shared.mdx"\n\n<Shared />');write('shared.mdx','<Aside>Nested first</Aside>')
+   write('prepare.f','@import("mdx")\nmdx.prepare([mdx.input("page.mdx")])\n')
+   write('.nift/config.json',json.dumps({'config':{'content-dir':'content/','content-ext':'.html','output-dir':'public/','output-ext':'.html','default-template':'templates/main.html','build-threads':1,'incremental-mode':'hash','pre build':'prepare.f'}}))
+   write('.nift/tracked.json',json.dumps({'tracked':[{'name':'/','title':'Main','template':'templates/main.html'},{'name':'other','title':'Other','template':'templates/other.html'}]}))
+   write('templates/main.html','@import("../.nift/packages/mdx/src/mdx.f")\n$[mdx.html(mdx.input("page.mdx"))]\n@content\n');write('templates/other.html','@content\n');write('content/index.html','home');write('content/other.html','other')
+   call('build','--all');unrelated=(path/'public/other.html').stat().st_mtime_ns
+   noop=call('build');self.assertIn('up to date',noop.stdout)
+   for name,text,expected in [('shared.mdx','<Aside>Nested changed</Aside>','Nested changed'),('shared.mjs','export const tag="section"','<section>'),('asset.txt','second','<section>'),('plugin.mjs','export default function(){return tree=>{tree.children.unshift({type:"paragraph",children:[{type:"text",value:"Updated plugin"}]})}}','Updated plugin'),('.nift/mdx-render.json',json.dumps({'policy':'trusted','components':'components.mjs','dependencies':['asset.txt'],'remarkPlugins':[{'path':'plugin.mjs','options':{'text':'Different'}}]}),'<section>')]:
+    write(name,text);rebuilt=call('build');self.assertIn('1 file rebuilt',rebuilt.stdout);self.assertIn(expected,(path/'public/index.html').read_text());self.assertEqual((path/'public/other.html').stat().st_mtime_ns,unrelated)
+   metadata=(path/'.nift/public/index.info.json').read_text()
+   for dependency in ['page.mdx','shared.mdx','components.mjs','shared.mjs','asset.txt','plugin.mjs','.nift/mdx-render.json']:self.assertEqual(metadata.count('"'+dependency+'"'),1,dependency)
  def test_source_bound(self):
   run,response=self.invoke([{'id':'large','source':'x'*262145,'path':None,'dependencies':[]}]);self.assertNotEqual(run.returncode,0);self.assertIn('limit',response['diagnostics'][0]['message'])
  def test_duplicate(self):

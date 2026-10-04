@@ -89,3 +89,27 @@ imports use Markdown semantics (JSX/expressions are text), with frontmatter
 removed. Existing mdx.input registers `.md` without recursively parsing it;
 rendering does not silently reinterpret that parser contract. All rendered local
 files are reported back for per-target Nift dependency registration.
+
+## Declared render dependencies
+
+Static local ES-module imports/re-exports in adapters/plugins are parsed with
+Acorn8.18.0 already present in the locked MDX tree. Dynamic import/require and
+implicit bare-package adapter imports are rejected; node: builtins are allowed
+under trusted policy. Keep modules local and explicit. Adapters performing
+filesystem reads must list assets/config/data paths in `dependencies`; undeclared
+I/O cannot be inferred from arbitrary trusted JavaScript and is outside the
+reproducible-build contract. Network/environment inputs need explicit frozen
+snapshots or uncached nondeterministic workflows. A worker is not a sandbox.
+
+`imports` maps MDX import specifiers to project adapter modules; e.g.
+`{"@astrojs/starlight/components":"components/starlight.mjs"}`. This is a
+configured adapter boundary, not native Astro execution. `remarkPlugins` and
+`rehypePlugins` accept `{path, options}` entries for explicitly local plugins.
+Renderer output reports adapter closure, plugins, declared assets/config and
+installed helper/lock files for Nift per-target registration. Config itself is
+registered by the facade. Prepared artifacts are per-document and byte-stable;
+no unchanged batch timing data is written into them.
+
+For build-hosted use prefer the normal Git package installation. Local path
+installation creates a symlink; Nift correctly refuses an out-of-project symlink
+when templates import it. The tests use a Git-installed real package tree.

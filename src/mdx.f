@@ -1003,7 +1003,7 @@ struct(mdx) {
     }
 
     fn(html(document)) {
-        this.render_options()
+        options := this.render_options()
         if(!document.ok) { throw error("Cannot render a rejected MDX document", "user.mdx_parser") }
         if(document.path == null) {
             response := this.prepare([document])
@@ -1015,7 +1015,7 @@ struct(mdx) {
         if(!exists(path)) { throw error("Run mdx.prepare in a project pre-build script before mdx.html", "user.mdx_not_prepared") }
         this.register(path)
         result := this.render_read(path)
-        if(result.source != document.source || result.options.stringify() != this.render_options().stringify()) { throw error("Prepared MDX source is stale; run mdx.prepare", "user.mdx_stale") }
+        if(result.source != document.source || result.options.stringify() != options.stringify()) { throw error("Prepared MDX source is stale; run mdx.prepare", "user.mdx_stale") }
         for(dependency : result.dependencies) { this.register(dependency) }
         return result.html
     }

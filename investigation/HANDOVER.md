@@ -44,3 +44,8 @@ synchronous props/children contracts, root dependency reporting; seventeen tests
 
 CP09 complete: registered relative MD/MDX imports, inherited child components,
 named/namespace support and graph failures; twenty renderer/facade tests pass.
+
+CP10 complete: static adapter/plugin closure, declared assets/config, helper/lock
+dependencies and explicit MDX import mappings.24 tests plus actual site checks
+prove incremental invalidation and unrelated/no-change behavior. Local package
+links outside project cannot be used by build templates; use Git-installed copy.
