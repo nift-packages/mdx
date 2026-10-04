@@ -1,5 +1,5 @@
 import {Worker} from 'node:worker_threads';
-import {readFile,writeFile,rename,unlink,realpath,stat} from 'node:fs/promises';
+import {readFile,writeFile,rename,unlink,mkdir,realpath,stat} from 'node:fs/promises';
 import {resolve,dirname,relative,isAbsolute} from 'node:path';
 import {VERSION,LIMITS,validate,diagnostic} from './protocol.mjs';
 import {randomUUID} from 'node:crypto';
@@ -18,5 +18,18 @@ try{
   worker.once('message',finish);worker.once('error',error=>finish({version:VERSION,ok:false,diagnostics:[diagnostic('process','worker_error',error.message)]}));
   worker.once('exit',code=>{if(!complete)finish({version:VERSION,ok:false,diagnostics:[diagnostic('process','worker_exit','Renderer exited before producing a response: '+code)]});});
  });
- response.ok=response.ok && response.results.every(result=>result.ok);await atomic(responsePath,response);if(!response.ok)process.exitCode=1;
+ response.ok=response.ok && response.results.every(result=>result.ok);if(response.ok){
+   for(let index=0;index<request.documents.length;index++){
+    const document=request.documents[index],result=response.results[index];
+    if(document.path!==null){
+     const output=resolve('.nift/mdx-html',document.path+'.json');
+     const base=resolve('.nift/mdx-html');const rel=relative(base,output);if(rel.startsWith('..')||isAbsolute(rel))throw new Error('Prepared output path escapes project');
+     await mkdir(dirname(output),{recursive:true});await confined(output);
+     const record={source:document.source,options:request.options,html:result.html,dependencies:result.dependencies};
+     const serialized=JSON.stringify(record);let previous;try{previous=await readFile(output,'utf8');}catch{}
+     if(serialized!==previous)await atomic(output,record);
+    }
+   }
+  }
+  await atomic(responsePath,response);if(!response.ok)process.exitCode=1;
 }catch(error){const response={version:VERSION,ok:false,diagnostics:[diagnostic('transport','invalid_request',error.message)]};if(responsePath)await atomic(responsePath,response);else console.error(error.message);process.exitCode=1;}

@@ -27,3 +27,8 @@ project-confined paths, atomic responses and structured errors; seven tests pass
 
 CP04 complete: pinned compiler and build-time static renderer; Markdown/escaping
 and mixed-batch failures verified, nine tests. Imports remain explicitly denied.
+
+CP05 complete: installed prepare/html additive facade; file-backed HTML consumes
+prepared per-document artifacts, never falls back to process-per-page. Intentional
+inline one-off rendering supported. Full parser regression and ten renderer tests
+pass. Node capability probe adds one cheap process per batch before temp writes.

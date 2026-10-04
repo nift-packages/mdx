@@ -943,6 +943,83 @@ struct(mdx) {
         return this.graph_state(state.root, state.dependencies, state.dependency_paths, state.diagnostics, state.diagnostic_keys, visited, next_visiting, state.files, state.aggregate)
     }
 
+    private fn(render_read(path)) {
+        handle := file(path)
+        handle.open("r")
+        value := handle.read_val()
+        handle.close()
+        return value
+    }
+
+    private fn(render_write(path, value)) {
+        handle := file(path)
+        handle.open("w")
+        handle.write_val(value)
+        handle.save()
+        handle.close()
+    }
+
+    private fn(render_options()) {
+        path := ".nift/mdx-render.json"
+        if(!exists(path)) { throw error("MDX rendering requires .nift/mdx-render.json with explicit trusted policy", "user.mdx_policy") }
+        this.register(path)
+        options := this.render_read(path)
+        if(!options.keys().contains("policy") || options.policy != "trusted") { throw error("MDX rendering requires explicit trusted policy", "user.mdx_policy") }
+        return options
+    }
+
+    fn(prepare(documents)) {
+        options := this.render_options()
+        if(type(documents) != "array" || documents.length() == 0) { throw error("prepare requires a non-empty document array", "user.mdx_request") }
+        items := []
+        index := 0
+        for(document : documents) {
+            if(!document.ok) { throw error("Cannot render a rejected MDX document", "user.mdx_parser") }
+            id := "inline-" + index.to_string()
+            if(document.path != null) { id = document.path }
+            items.push({"id":id,"source":document.source,"path":document.path,"dependencies":document.dependencies})
+            index += 1
+        }
+        // Check process authority before creating request files; a denied run
+        // is a fatal Nift capability error and cannot be caught for cleanup.
+        backend := run("node", "--version")
+        if(backend.exit_code != 0) { throw error("Node runtime is unavailable", "user.mdx_process") }
+        make_dir(".nift/mdx-render")
+        token := ""
+        random := secure_random_bytes(16)
+        index = 0
+        while(index < 16) { token += random[index].to_string() + "-"; index += 1 }
+        request_path := ".nift/mdx-render/" + token + "request.json"
+        response_path := ".nift/mdx-render/" + token + "response.json"
+        this.render_write(request_path, {"version":1,"documents":items,"options":options})
+        helper := module_path() + "/../renderer/cli.mjs"
+        response := run("node", helper, "--request", request_path, "--response", response_path)
+        remove(request_path)
+        if(!exists(response_path)) { throw error("MDX helper produced no response: " + response.stderr, "user.mdx_process") }
+        result := this.render_read(response_path)
+        remove(response_path)
+        if(response.exit_code != 0 || !result.ok) { throw error(result.stringify(), "user.mdx_render") }
+        return result
+    }
+
+    fn(html(document)) {
+        this.render_options()
+        if(!document.ok) { throw error("Cannot render a rejected MDX document", "user.mdx_parser") }
+        if(document.path == null) {
+            response := this.prepare([document])
+            return response.results[0].html
+        }
+        normalized := this.project_path(document.path)
+        if(normalized == null || normalized == "") { throw error("MDX document path escapes project", "user.mdx_path") }
+        path := ".nift/mdx-html/" + normalized + ".json"
+        if(!exists(path)) { throw error("Run mdx.prepare in a project pre-build script before mdx.html", "user.mdx_not_prepared") }
+        this.register(path)
+        result := this.render_read(path)
+        if(result.source != document.source || result.options.stringify() != this.render_options().stringify()) { throw error("Prepared MDX source is stale; run mdx.prepare", "user.mdx_stale") }
+        for(dependency : result.dependencies) { this.register(dependency) }
+        return result.html
+    }
+
     fn(parse(source)) { return this.parse_core(source, null, null) }
 
     fn(input(path)) {

@@ -84,7 +84,7 @@ package_source = SOURCE.read_text(encoding="ascii")
 public = re.findall(r"^    fn\(([A-Za-z_][A-Za-z0-9_]*)\(([^)]*)\)\)", package_source, re.MULTILINE)
 private = re.findall(r"^    private fn\(([A-Za-z_][A-Za-z0-9_]*)\(", package_source, re.MULTILINE)
 exports = re.findall(r"^export\(([^)]+)\)$", package_source, re.MULTILINE)
-require(public == [("parse", "source"), ("input", "path")], f"exact public API differs: {public!r}")
+require(public == [("prepare", "documents"), ("html", "document"), ("parse", "source"), ("input", "path")], f"exact public API differs: {public!r}")
 require(exports == ["mdx"], f"sole export differs: {exports!r}")
 require(private and len(private) == len(set(private)), "private helper list invalid")
 for forbidden in ("process(", "shell(", "eval(", "exec(", "ffi_", "@input("):
@@ -529,7 +529,7 @@ $[mdx.input("content/page.mdx").source]
     timings["full"] = time.perf_counter() - suite_start
     require(timings["full"] < 300, f"suite exceeded 300 seconds: {timings['full']:.3f}s")
 
-    print(f"PASS public=2 private={len(private)} exports=1 files={len(expected_files)}")
+    print(f"PASS public=4 private={len(private)} exports=1 files={len(expected_files)}")
     print(f"PASS corpus={len(corpus)} malformed={len(malformed)} boundaries={boundary_checks}")
     print("PASS filesystem DFS, cycles, limits, parse/input consistency, and --no-process")
     print("PASS real @dep root/transitive metadata and isolated incremental rebuild")
