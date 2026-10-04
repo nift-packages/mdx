@@ -27,4 +27,4 @@ export async function preparePaths(paths,options){
  }
  return {version:1,ok:true,prepared:pending.length,cached:paths.length-pending.length,results};
 }
-if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){try{const request=JSON.parse(await readFile(process.argv[2],'utf8'));console.log(JSON.stringify(await preparePaths(request.paths,request.options)));}catch(error){console.error(error.message);process.exitCode=1;}}
+if(process.argv[1]&&await realpath(process.argv[1])===fileURLToPath(import.meta.url)){try{const request=JSON.parse(await readFile(process.argv[2],'utf8'));console.log(JSON.stringify(await preparePaths(request.paths,request.options)));}catch(error){console.error(error.message);process.exitCode=1;}}
