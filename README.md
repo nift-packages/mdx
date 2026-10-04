@@ -280,3 +280,11 @@ parse/input consistency, recursive limits, confinement behavior, and a real
 tracked two-target website. The website test changes only a transitive `.mdx`
 file and verifies that metadata contains the root and transitive dependencies
 once and only the consuming target rebuilds.
+
+## Compiler-semantic site preparation
+
+For trusted site-scale rendering, use `renderer/prepare.mjs request.json` in a mandatory pre-build hook, where the request contains `paths` (project-relative MD/MDX files) and the same explicit trusted `options` as `.nift/mdx-render.json`. It discovers relative document imports with the compiler AST, prepares stable per-root HTML records and validates content/adapter/configuration/runtime and lexical/canonical dependency fingerprints before cache reuse. It refuses escapes, cycles, dynamic imports and document reexports. Roots are batched, with the existing protocol/deadline/resource bounds. Register configuration and importer-owned assets as explicit dependencies.
+
+Templates consume `mdx.html(mdx.prepared("content/page.mdx"))`. This separate rendering envelope does not change `parse()` or `input()` preservation structure or semantics. Consuming targets register source, prepared artifact and the complete manifest dependencies. Run the preparation hook for full, incremental and explicit-target builds; bypassing it is not a supported workflow. Native file-type predicates require the Nift filesystem API commit pinned by certification CI; older Nift binaries do not satisfy this package requirement.
+
+Compilation and cache checks still use the optional pinned Node runtime. Ordinary parse/input remain no-process. Browser React remains unnecessary. See `tests/test_prepare.mjs` for transitive, adapter, unrelated, no-change, policy, cycle and symlink-retarget checks. Site integration and corpus measurements are recorded by the Capgo experiments rather than inferred from prototype timings.

@@ -963,7 +963,7 @@ struct(mdx) {
         if(state.visited.contains(path)) { return state }
         if(state.files >= 64) { return this.add_graph_diagnostic(state, this.graph_diagnostic("dependency_file_limit", "recursive file count exceeds 64", path)) }
         if(!exists(path)) { return this.add_graph_diagnostic(state, this.graph_diagnostic("missing_file", "input file does not exist", path)) }
-        if(exists(path + "/.")) { return this.add_graph_diagnostic(state, this.graph_diagnostic("input_is_directory", "input path is a directory", path)) }
+        if(is_dir(path)) { return this.add_graph_diagnostic(state, this.graph_diagnostic("input_is_directory", "input path is a directory", path)) }
         this.register(path)
         source_text := open(path)
         source_bytes := source_text.encode("utf-8")
@@ -991,7 +991,7 @@ struct(mdx) {
             dependency_paths.push(resolved)
             state = this.graph_state(state.root, dependencies, dependency_paths, state.diagnostics, state.diagnostic_keys, state.visited, state.visiting, state.files, state.aggregate, state.limits)
             if(!exists(resolved)) { state = this.add_graph_diagnostic(state, this.graph_diagnostic("missing_dependency", "imported dependency does not exist", resolved)); continue }
-            if(exists(resolved + "/.")) { state = this.add_graph_diagnostic(state, this.graph_diagnostic("dependency_is_directory", "imported dependency is a directory", resolved)); continue }
+            if(is_dir(resolved)) { state = this.add_graph_diagnostic(state, this.graph_diagnostic("dependency_is_directory", "imported dependency is a directory", resolved)); continue }
             if(record.extension == ".mdx") { state = this.walk(resolved, depth + 1, root, state) }
             else { this.register(resolved) }
         }
@@ -1062,6 +1062,7 @@ struct(mdx) {
     }
 
     fn(html(document)) {
+        if(document.keys().contains("kind") && document.kind == "mdx-prepared") { return document.html }
         options := this.render_options()
         if(!document.ok) { throw error("Cannot render a rejected MDX document", "user.mdx_parser") }
         if(document.path == null) {
@@ -1079,6 +1080,20 @@ struct(mdx) {
         return result.html
     }
 
+    fn(prepared(path)) {
+        options := this.render_options()
+        normalized := this.project_path(path)
+        if(normalized == null || normalized == "") { throw error("Prepared path escapes project", "user.mdx_path") }
+        record_path := ".nift/mdx-prepared/" + normalized + ".json"
+        if(!exists(record_path)) { throw error("Run renderer/prepare.mjs in the pre-build hook", "user.mdx_not_prepared") }
+        record := this.render_read(record_path)
+        this.register(normalized)
+        this.register(record_path)
+        for(dependency : record.dependencies) { this.register(dependency) }
+        if(record.source != open(normalized) || record.options.stringify() != options.stringify()) { throw error("Prepared rendering is stale", "user.mdx_stale") }
+        return {"kind":"mdx-prepared","html":record.html,"path":normalized}
+    }
+
     fn(parse(source)) { return this.parse_core(source, null, null, this.limits()) }
 
     fn(input(path)) {
@@ -1088,7 +1103,7 @@ struct(mdx) {
         normalized := this.project_path(path)
         if(normalized == null || normalized == "") { return this.empty_failure(null, null, this.default_frontmatter(), this.graph_diagnostic("path_escape", "path escapes the project root", null)) }
         if(!exists(normalized)) { return this.empty_failure(null, normalized, this.default_frontmatter(), this.graph_diagnostic("missing_file", "input file does not exist", normalized)) }
-        if(exists(normalized + "/.")) { return this.empty_failure(null, normalized, this.default_frontmatter(), this.graph_diagnostic("input_is_directory", "input path is a directory", normalized)) }
+        if(is_dir(normalized)) { return this.empty_failure(null, normalized, this.default_frontmatter(), this.graph_diagnostic("input_is_directory", "input path is a directory", normalized)) }
         state := this.graph_state(null, [], [], [], [], [], [], 0, 0, this.limits())
         state = this.walk(normalized, 0, normalized, state)
         if(state.root == null) { return this.empty_failure(null, normalized, this.default_frontmatter(), state.diagnostics[0]) }

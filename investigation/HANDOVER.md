@@ -118,3 +118,5 @@ planning-only. Do not treat the helper-only audit as production corpus acceptanc
 ## 4 October 2026 follow-up investigation
 
 [Windows/performance/rendering report](followup/REPORT.md) and [Capgo adapter plan](followup/CAPGO-ADAPTER-PLAN.md) supersede any interpretation that the CP22 gate failure permanently rejects Capgo. All 526 authored MDX files compile in isolation; a distinct compiler-based render-preparation path is proposed, not implemented. Windows no-process input remains excluded after six-platform path/API probes. No core, capacity-policy, production parser or Capgo site changes. CP22 remains open for semantic/visual and incremental certification.
+
+CP23 implementation authorized by the Capgo build outline: explicit compiler-semantic preparation plus native is_dir integration. See checkpoints/CP23.md. Local regression passes; six-platform CI and real-site corpus budgets are the next certification evidence. Both Capgo implementations are now authorized, rather than planning-only.

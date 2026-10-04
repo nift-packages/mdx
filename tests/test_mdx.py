@@ -88,7 +88,7 @@ package_source = SOURCE.read_text(encoding="ascii")
 public = re.findall(r"^    fn\(([A-Za-z_][A-Za-z0-9_]*)\(([^)]*)\)\)", package_source, re.MULTILINE)
 private = re.findall(r"^    private fn\(([A-Za-z_][A-Za-z0-9_]*)\(", package_source, re.MULTILINE)
 exports = re.findall(r"^export\(([^)]+)\)$", package_source, re.MULTILINE)
-require(public == [("with_profile", "name"), ("prepare", "documents"), ("html", "document"), ("parse", "source"), ("input", "path")], f"exact public API differs: {public!r}")
+require(public == [("with_profile", "name"), ("prepare", "documents"), ("html", "document"), ("prepared", "path"), ("parse", "source"), ("input", "path")], f"exact public API differs: {public!r}")
 require(exports == ["mdx"], f"sole export differs: {exports!r}")
 require(private and len(private) == len(set(private)), "private helper list invalid")
 for forbidden in ("process(", "shell(", "eval(", "exec(", "ffi_", "@input("):
@@ -526,14 +526,14 @@ $[mdx.input("content/page.mdx").source]
     all_paths = {str(path.relative_to(PACKAGE)) for path in PACKAGE.rglob("*")
                  if path.is_file() and work not in path.parents
                  and path.relative_to(PACKAGE).parts[0] not in {".git", "investigation", "renderer", "node_modules", ".github", "examples"}}
-    all_paths -= {"tests/baseline.json", "tests/test_render.py", "tests/profile_parser.py", "tests/test_profiles.py", "tests/test_parser_parity.py"}
+    all_paths -= {"tests/baseline.json", "tests/test_render.py", "tests/profile_parser.py", "tests/test_profiles.py", "tests/test_parser_parity.py", "tests/test_prepare.mjs"}
     require(all_paths == expected_files, f"package residue/unexpected files: {sorted(all_paths ^ expected_files)!r}")
     require(all(all(byte < 128 for byte in (PACKAGE / path).read_bytes()) for path in expected_files),
             "package source files must be ASCII")
     timings["full"] = time.perf_counter() - suite_start
     require(timings["full"] < 300, f"suite exceeded 300 seconds: {timings['full']:.3f}s")
 
-    print(f"PASS public=5 private={len(private)} exports=1 files={len(expected_files)}")
+    print(f"PASS public=6 private={len(private)} exports=1 files={len(expected_files)}")
     print(f"PASS corpus={len(corpus)} malformed={len(malformed)} boundaries={boundary_checks}")
     print("PASS filesystem DFS, cycles, limits, parse/input consistency, and --no-process")
     print("PASS real @dep root/transitive metadata and isolated incremental rebuild")

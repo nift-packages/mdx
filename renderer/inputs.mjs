@@ -1,16 +1,17 @@
 import {realpath,readFile,stat} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
 import {load} from './dependencies.mjs';
 import {resolve,relative,isAbsolute,dirname} from 'node:path';
 export class Inputs{
- constructor(){this.files=new Set();}
+ constructor(){this.files=new Set();this.references=new Map();this.observations=new Map();}
  async track(path){
   if(typeof path!=='string'||!path)throw new Error('Rendering dependencies must be non-empty local paths');
   const root=await realpath(process.cwd()),full=await realpath(resolve(root,path)),rel=relative(root,full);
   if(rel.startsWith('..')||isAbsolute(rel))throw new Error('Rendering dependency escapes project: '+path);
   if(!(await stat(full)).isFile())throw new Error('Rendering dependency is not a file: '+path);
-  this.files.add(rel.replaceAll('\\','/'));return full;
+  this.references.set(relative(root,resolve(root,path)).replaceAll('\\','/'),rel.replaceAll('\\','/'));this.files.add(rel.replaceAll('\\','/'));return full;
  }
- async read(path){const full=await this.track(path);if((await stat(full)).size>256*1024)throw new Error('Rendering source exceeds 256KiB');return readFile(full,'utf8');}
+ async read(path){const full=await this.track(path);if((await stat(full)).size>256*1024)throw new Error('Rendering source exceeds 256KiB');const data=await readFile(full);this.observations.set(full,createHash('sha256').update(data).digest('hex'));return data.toString('utf8');}
  async module(path,visited=new Set()){
   const full=await this.track(path);if(visited.has(full))return full;visited.add(full);
   if(visited.size>256)throw new Error('Adapter module graph exceeds 256 files');
@@ -25,5 +26,6 @@ export class Inputs{
   }
   return full;
  }
+ refs(){return [...this.references].map(([requested,canonical])=>({requested,canonical})).sort((a,b)=>a.requested.localeCompare(b.requested));}
  list(){return [...this.files].sort();}
 }

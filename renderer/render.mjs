@@ -28,7 +28,7 @@ export async function renderBatch(request){
  const shared=new Inputs();let components={};const mappedImports={};
  for(const path of request.options.dependencies??[])await shared.track(path);
  const packageRoot=dirname(fileURLToPath(import.meta.url));
- for(const name of ['cli.mjs','worker.mjs','render.mjs','inputs.mjs','source.mjs','dependencies.mjs','protocol.mjs','cache.mjs','atomic.mjs','package-lock.json']){
+ for(const name of ['cli.mjs','worker.mjs','render.mjs','inputs.mjs','source.mjs','dependencies.mjs','protocol.mjs','cache.mjs','atomic.mjs','prepare.mjs','package-lock.json']){
   const path=resolve(packageRoot,name),rel=relative(projectRoot,path);if(rel.startsWith('..')||isAbsolute(rel))continue;await shared.track(path);
  }
  async function configuredModule(path,namespace=false){const module=await import(pathToFileURL(await shared.module(path)).href);if(module.components){const mapping=module.components({element:React.createElement});if(mapping&&typeof mapping.then==='function')throw new Error('Async component factories are unsupported: '+path);return mapping;}return namespace?module:module.default??module;}
@@ -47,7 +47,8 @@ export async function renderBatch(request){
  const runtimeHash=request.options.cache==='content'?await cache.runtimeDigest():null;
  const results=[];
  for(const document of request.documents){
-  let stage='compile',active=document,lineOffset=0;const start=performance.now();const inputs=new Inputs();for(const path of shared.list())await inputs.track(path);
+  let stage='compile',active=document,lineOffset=0;const start=performance.now();const inputs=new Inputs();for(const row of shared.refs())await inputs.track(row.requested);
+  if(request.options.discovery==='compiler'&&document.path)await inputs.track(document.path);
   const allowed=new Set();
   const visiting=new Set(),modules=new Map();let compileMs=0,evaluateMs=0;const sourceMaps=[];
   try{
@@ -76,7 +77,7 @@ export async function renderBatch(request){
        if(Object.hasOwn(mappedImports,spec)){imports[spec]=mappedImports[spec];const replacement=importBinding(statement);if(replacement)rewritten.push(replacement);continue;}
        if(!current.path||!spec.startsWith('.')||!['.md','.mdx'].includes(extname(spec)))importError('Only registered relative MD/MDX imports are supported: '+spec);
        const path=resolve(dirname(key),spec);
-       if(!allowed.has(path))importError('Import was not registered by mdx.input: '+spec);
+       if(request.options.discovery!=='compiler'&&!allowed.has(path))importError('Import was not registered by mdx.input: '+spec);
        const childStarted=performance.now();
        const full=await inputs.track(path);const child={source:await inputs.read(full),path:full};
        const imported=await moduleFor(child);childWorkMs+=performance.now()-childStarted;active=current;lineOffset=prepared.lineOffset;
@@ -94,7 +95,7 @@ export async function renderBatch(request){
    }
    const module=await moduleFor(document);active=document;lineOffset=body(document).lineOffset;stage='render';const renderStart=performance.now();
    const html=renderToStaticMarkup(React.createElement(module.default,{components}));
-   const result={id:document.id,ok:true,html,dependencies:inputs.list(),timing:{compileMs,evaluateMs,renderMs:performance.now()-renderStart,totalMs:performance.now()-start},cacheHit:false};if(key)await cache.put(key,result);results.push(result);
+   const result={id:document.id,ok:true,html,dependencies:inputs.list(),references:inputs.refs(),observations:[...shared.observations,...inputs.observations].map(([path,sha256])=>({path,sha256})),timing:{compileMs,evaluateMs,renderMs:performance.now()-renderStart,totalMs:performance.now()-start},cacheHit:false};if(key)await cache.put(key,result);results.push(result);
   }catch(error){
    let location=originalLocation(active,lineOffset,error);
    if(location.line===null && error.stack){
