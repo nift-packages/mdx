@@ -47,7 +47,7 @@ export async function renderBatch(request){
  const runtimeHash=request.options.cache==='content'?await cache.runtimeDigest():null;
  const results=[];
  for(const document of request.documents){
-  let stage='compile',active=document,lineOffset=0;const start=performance.now();const inputs=new Inputs();for(const row of shared.refs())await inputs.track(row.requested);
+  let stage='compile',active=document,lineOffset=0;const start=performance.now();const inputs=new Inputs();inputs.inherit(shared);
   if(request.options.discovery==='compiler'&&document.path)await inputs.track(document.path);
   const allowed=new Set();
   const visiting=new Set(),modules=new Map();let compileMs=0,evaluateMs=0;const sourceMaps=[];

@@ -4,6 +4,7 @@ import {load} from './dependencies.mjs';
 import {resolve,relative,isAbsolute,dirname} from 'node:path';
 export class Inputs{
  constructor(){this.files=new Set();this.references=new Map();this.observations=new Map();}
+ inherit(other){for(const file of other.files)this.files.add(file);for(const [requested,canonical] of other.references)this.references.set(requested,canonical);}
  async track(path){
   if(typeof path!=='string'||!path)throw new Error('Rendering dependencies must be non-empty local paths');
   const root=await realpath(process.cwd()),full=await realpath(resolve(root,path)),rel=relative(root,full);

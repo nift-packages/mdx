@@ -14,7 +14,7 @@ with tempfile.TemporaryDirectory(prefix='mdx type spaces ') as folder:
   inputs += ['\\\\?\\'+str(p/name) for name in ['normal.mdx','directory','space file.mdx','space directory','café.mdx','café directory']]
  suffixes=['','/.','\\.','/','\\','/./','\\.\\']
  candidates=[path+suffix for path in inputs for suffix in suffixes]
- script='for(candidate : '+json.dumps(candidates,ensure_ascii=False)+'){ handle := file(candidate); print({"path":candidate,"normalized":handle.path(),"exists":exists(candidate)}.stringify()) }\n'
+ script='for(candidate : '+json.dumps(candidates,ensure_ascii=False)+'){ handle := file(candidate); try { print({"path":candidate,"normalized":handle.path(),"exists":exists(candidate),"isFile":is_file(candidate),"isDir":is_dir(candidate)}.stringify()) } catch(error) { print({"path":candidate,"normalized":handle.path(),"caught":true,"message":error.to_string()}.stringify()) } }\n'
  (p/'probe.f').write_text(script,encoding='utf-8');run=subprocess.run([NIFT,'probe.f','--no-process'],cwd=p,capture_output=True,text=True,encoding='utf-8');assert run.returncode==0,run.stderr
  records=[json.loads(line) for line in run.stdout.splitlines()]
  assert [r['path'] for r in records]==candidates,'Probe string transport changed candidate paths'
