@@ -4,9 +4,9 @@ Investigation date: 2026-10-04. Baseline: `nift-packages/mdx` commit `55843fa`, 
 
 ## Decision
 
-`mdx.html(mdx.input("content/page.mdx"))` is feasible without changing Nift core. Recommend an additive facade method, optional pinned Node renderer machinery, `@mdx-js/mdx` compilation, and React **only at build time** using `renderToStaticMarkup`. Output is ordinary HTML. Keep `parse/input` usable without processes or npm installation. Add a batch path before attempting full-site certification; a synchronous scalar method cannot transparently batch separate page builds without orchestration or persistence.
+`mdx.html(mdx.input("content/page.mdx"))` is feasible without changing Nift core. Recommend an additive facade method, optional pinned Node renderer machinery, `@mdx-js/mdx` compilation, and React **only at build time** using `renderToStaticMarkup`. Output is ordinary HTML. Keep `parse/input` usable without processes or npm installation. The normal production path must be batched before full-site certification; a synchronous scalar method cannot transparently batch separate page builds without orchestration or persistence.
 
-Suitable for `capgo-similar` as a rendering architecture, **not yet a certified drop-in Capgo implementation**. Parser performance/limits, Starlight/Astro adapters, asset imports, configuration invalidation, and executable-content policy must be resolved first. Static MDX output does not make the whole Capgo project static-only: downloadable applications can use users' own APIs. Capgo styling may use blue/light themes; Labs catalogue/report UI retains dark/no-blue rules. Use JavaScript for pagination.
+Suitable for `capgo` as a rendering architecture, **not yet a certified drop-in Capgo implementation**. Parser performance/limits, Starlight/Astro adapters, asset imports, configuration invalidation, and executable-content policy must be resolved first. Static MDX output does not make the whole Capgo project static-only: downloadable applications can use users' own APIs. Capgo styling may use blue/light themes; Labs catalogue/report UI retains dark/no-blue rules. Use JavaScript for pagination.
 
 ## Current contract and guarantees
 
@@ -35,7 +35,7 @@ Prototype exact direct pins: `@mdx-js/mdx@3.1.1`, `react@19.3.0`, `react-dom@19.
 | Choice | Assessment |
 | --- | --- |
 | External argv-based helper | Feasible with existing `run`; portable initial scalar implementation, expensive cold starts. Avoid shell interpolation. |
-| One process for an explicit batch | Strong measured benefit; recommend internal helper batch protocol and project build-stage orchestration. Add `html_many` only if needed after API design. |
+| One process for an explicit batch | Required normal production architecture; use an internal helper batch protocol and project build-stage orchestration. Add `html_many` only if needed after API design. |
 | Persistent helper | Potentially useful for repeated scalar calls, but lifetime/socket/concurrency/restart/auth/process-policy complexity. Not required to establish feasibility; not benchmarked. |
 | FFI/embedded JS | Nift has C ABI FFI, not an existing embedded MDX/Node bridge. Native runtime distribution would add substantial complexity. No core changes recommended. |
 | Public companion package | Keep renderer internals optional/separate while retaining the `mdx.html` facade. Avoid forcing users to abandon the preferred composition. |
