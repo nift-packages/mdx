@@ -35,3 +35,6 @@ pass. Node capability probe adds one cheap process per batch before temp writes.
 
 CP06 complete: explicit trusted policy documented/tested; twelve tests. No
 untrusted/sandbox claim; synchronous authored loop is stopped by worker deadline.
+
+CP07 complete: frontmatter preserved, body compiled via verified UTF-8 boundary,
+compiler locations map to original lines/byte columns; fifteen tests pass.

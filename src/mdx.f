@@ -977,7 +977,7 @@ struct(mdx) {
             if(!document.ok) { throw error("Cannot render a rejected MDX document", "user.mdx_parser") }
             id := "inline-" + index.to_string()
             if(document.path != null) { id = document.path }
-            items.push({"id":id,"source":document.source,"path":document.path,"dependencies":document.dependencies})
+            items.push({"id":id,"source":document.source,"path":document.path,"dependencies":document.dependencies,"frontmatter":document.frontmatter})
             index += 1
         }
         // Check process authority before creating request files; a denied run

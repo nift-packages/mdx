@@ -1,5 +1,6 @@
 import {load} from './dependencies.mjs';
 import {diagnostic} from './protocol.mjs';
+import {body,originalLocation} from './source.mjs';
 import {performance} from 'node:perf_hooks';
 const {compile,run}=await load('@mdx-js/mdx');
 const runtime=await load('react/jsx-runtime');
@@ -11,13 +12,14 @@ function importPolicy(){return tree=>{for(const node of tree.children)if(node.ty
 export async function renderBatch(request){
  const results=[];
  for(const document of request.documents){
-  let stage='compile';const start=performance.now();
+  let stage='compile',lineOffset=0;const start=performance.now();
   try{
-   const compiled=await compile({value:document.source,path:document.path??document.id},{outputFormat:'function-body',remarkPlugins:[remarkGfm,importPolicy],rehypePlugins:[[rehypeSlug,{prefix:'mdx-'}]]});
+   const prepared=body(document);lineOffset=prepared.lineOffset;
+   const compiled=await compile({value:prepared.value,path:document.path??document.id},{outputFormat:'function-body',remarkPlugins:[remarkGfm,importPolicy],rehypePlugins:[[rehypeSlug,{prefix:'mdx-'}]]});
    const compiledAt=performance.now();stage='evaluate';const module=await run(String(compiled),runtime);const evaluatedAt=performance.now();stage='render';
    const html=renderToStaticMarkup(React.createElement(module.default));
    results.push({id:document.id,ok:true,html,dependencies:[],timing:{compileMs:compiledAt-start,evaluateMs:evaluatedAt-compiledAt,renderMs:performance.now()-evaluatedAt,totalMs:performance.now()-start}});
-  }catch(error){results.push({id:document.id,ok:false,diagnostics:[diagnostic(stage,'mdx_'+stage+'_failed',error.message,document.path,error.line??null,error.column??null)]});}
+  }catch(error){const location=originalLocation(document,lineOffset,error);results.push({id:document.id,ok:false,diagnostics:[diagnostic(stage,'mdx_'+stage+'_failed',error.message,document.path,location.line,location.column)]});}
  }
  return results;
 }

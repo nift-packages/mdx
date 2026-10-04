@@ -39,6 +39,17 @@ class RendererTests(unittest.TestCase):
   run,response=self.invoke([document],options={'timeoutMs':1000});self.assertNotEqual(run.returncode,0);self.assertIn('explicit policy',response['diagnostics'][0]['message'])
  def test_trusted_infinite_expression_deadline(self):
   run,response=self.invoke([{'id':'loop','source':'{(() => { while(true) {} })()}','path':None,'dependencies':[]}],options={'policy':'trusted','timeoutMs':700});self.assertNotEqual(run.returncode,0);self.assertEqual(response['diagnostics'][0]['code'],'timeout')
+ def test_frontmatter_and_original_locations(self):
+  for newline in ['\n','\r\n','\r']:
+   prefix=newline.join(['---','title: café','---','']);source=prefix+'# Body'
+   front={'present':True,'source':prefix,'end':{'offset':len(prefix.encode())}}
+   run,response=self.invoke([{'id':'front','source':source,'path':'article.mdx','dependencies':[],'frontmatter':front}]);self.assertEqual(run.returncode,0);html=response['results'][0]['html'];self.assertIn('Body',html);self.assertNotIn('title:',html)
+  run,response=self.invoke([{'id':'error','source':'---\ntitle: Example\n---\n<Aside','path':'article.mdx','dependencies':[]}]);self.assertNotEqual(run.returncode,0);self.assertEqual(response['results'][0]['diagnostics'][0]['line'],4)
+ def test_empty_and_unclosed_frontmatter(self):
+  run,response=self.invoke([{'id':'empty','source':'---\n---\n','path':None,'dependencies':[]}]);self.assertEqual(run.returncode,0);self.assertEqual(response['results'][0]['html'],'')
+  run,response=self.invoke([{'id':'unclosed','source':'---\ntitle: x','path':None,'dependencies':[]}]);self.assertNotEqual(run.returncode,0);self.assertIn('Unclosed frontmatter',response['results'][0]['diagnostics'][0]['message'])
+ def test_invalid_frontmatter_boundary(self):
+  run,response=self.invoke([{'id':'front','source':'# Body','path':None,'dependencies':[],'frontmatter':{'present':True,'source':'wrong','end':{'offset':2}}}]);self.assertNotEqual(run.returncode,0);self.assertIn('frontmatter boundary',response['results'][0]['diagnostics'][0]['message'])
  def test_source_bound(self):
   run,response=self.invoke([{'id':'large','source':'x'*262145,'path':None,'dependencies':[]}]);self.assertNotEqual(run.returncode,0);self.assertIn('limit',response['diagnostics'][0]['message'])
  def test_duplicate(self):
