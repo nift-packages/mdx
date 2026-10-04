@@ -4,6 +4,7 @@ import json,os,pathlib,shutil,subprocess,sys,tempfile,time
 ROOT=pathlib.Path(__file__).resolve().parents[2]
 NIFT=os.environ.get('NIFT','/home/nick/Repositories/nift/nift/nift')
 NODE=shutil.which('node')
+stage=os.environ.get('MDX_BENCH_STAGE','CP15')
 counts=[int(n) for n in sys.argv[1:]] or [100,500,1000]
 records=[]
 with tempfile.TemporaryDirectory(prefix='mdx batch café ') as folder:
@@ -20,7 +21,7 @@ with tempfile.TemporaryDirectory(prefix='mdx batch café ') as folder:
   call(['add','file://'+str(origin),'--ref=HEAD'])
   binpath=project/'bin';binpath.mkdir();log=project/'launches.jsonl'
   wrapper=binpath/'node';wrapper.write_text('#!'+sys.executable+'\nimport os,sys,json\nwith open('+repr(str(log))+',"a") as f: f.write(json.dumps(sys.argv[1:])+"\\n")\nos.execv('+repr(NODE)+',['+repr(NODE)+',*sys.argv[1:]])\n');wrapper.chmod(0o755);env['PATH']=str(binpath)+os.pathsep+env['PATH']
-  write('.nift/mdx-render.json',json.dumps({'policy':'trusted','timeoutMs':600000,'components':'components.mjs'}))
+  write('.nift/mdx-render.json',json.dumps({'policy':'trusted','timeoutMs':600000,'components':'components.mjs',**({'cache':'content'} if os.environ.get('MDX_BENCH_CACHE') else {})}))
   write('components.mjs','export function components({element}){return {Aside:({children})=>element("aside",{},children)}}')
   write('shared.mdx','## Shared\n\nReusable text.')
   paths=[];tracked=[]
@@ -37,14 +38,14 @@ with tempfile.TemporaryDirectory(prefix='mdx batch café ') as folder:
   write('.nift/tracked.json',json.dumps({'tracked':tracked}))
   write('prepare.f','@import("mdx")\nwatch := timer(); watch.start(); documents := []\nfor(path : '+json.dumps(paths)+'){ documents.push(mdx.input(path)) }\nwatch.stop(); parser_ms := watch.elapsed(); watch.start(); response := mdx.prepare(documents); watch.stop()\nmetrics := file(".nift/metrics.json"); metrics.open("w"); metrics.write_val({"parserMs":parser_ms,"prepareMs":watch.elapsed(),"results":response.results}); metrics.save(); metrics.close()\n')
   builds=[]
-  for mode in ['cold','warm']:
+  for mode in (['cold','warm','cached-warm'] if os.environ.get('MDX_BENCH_CACHE') else ['cold','warm']):
    log.write_text('');started=time.perf_counter();result=call(['build','--all'] if mode=='cold' else ['build']);wall=time.perf_counter()-started
    metrics=json.loads((project/'.nift/metrics.json').read_text());launches=[json.loads(x) for x in log.read_text().splitlines()]
    assert sum('--request' in x for x in launches)==1,launches
    outputs=list((project/'public').glob('*.html'));assert len(outputs)==count
    assert all('<html>' in x.read_text() and '<h1' in x.read_text() and 'react-dom' not in x.read_text() for x in outputs)
-   if mode=='warm':assert 'up to date' in result.stdout,result.stdout
+   if mode!='cold':assert 'up to date' in result.stdout,result.stdout
    timings={k:sum(r['timing'][k] for r in metrics['results']) for k in ['compileMs','evaluateMs','renderMs','totalMs']}
-   builds.append({'mode':mode,'fullBuildSeconds':wall,'parserMs':metrics['parserMs'],'prepareMs':metrics['prepareMs'],'helperTotalsMs':timings,'nodeLaunches':len(launches),'helperInvocations':1,'outputs':len(outputs)})
+   builds.append({'mode':mode,'fullBuildSeconds':wall,'parserMs':metrics['parserMs'],'prepareMs':metrics['prepareMs'],'helperTotalsMs':timings,'nodeLaunches':len(launches),'helperInvocations':1,'outputs':len(outputs),'cacheHits':sum(r.get('cacheHit',False) for r in metrics['results'])})
   records.append({'pages':count,'builds':builds});print(json.dumps(records[-1]),flush=True)
-  (ROOT/'investigation/checkpoints/CP15-site-results.json').write_text(json.dumps(records,indent=2)+'\n')
+  (ROOT/f'investigation/checkpoints/{stage}-site-results.json').write_text(json.dumps(records,indent=2)+'\n')

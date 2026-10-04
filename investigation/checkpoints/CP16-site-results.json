@@ -1,0 +1,55 @@
+[
+  {
+    "pages": 100,
+    "builds": [
+      {
+        "mode": "cold",
+        "fullBuildSeconds": 7.504250966012478,
+        "parserMs": 2523,
+        "prepareMs": 1505,
+        "helperTotalsMs": {
+          "compileMs": 299.7640529999994,
+          "evaluateMs": 35.92456100000038,
+          "renderMs": 85.65212499999882,
+          "totalMs": 690.6564939999998
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 100,
+        "cacheHits": 0
+      },
+      {
+        "mode": "warm",
+        "fullBuildSeconds": 4.222671553958207,
+        "parserMs": 2673,
+        "prepareMs": 1514,
+        "helperTotalsMs": {
+          "compileMs": 309.42241799999954,
+          "evaluateMs": 29.433600000000524,
+          "renderMs": 83.90784799999938,
+          "totalMs": 664.3243959999993
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 100,
+        "cacheHits": 0
+      },
+      {
+        "mode": "cached-warm",
+        "fullBuildSeconds": 3.980897530913353,
+        "parserMs": 2882,
+        "prepareMs": 1058,
+        "helperTotalsMs": {
+          "compileMs": 0,
+          "evaluateMs": 0,
+          "renderMs": 0,
+          "totalMs": 257.90233799999953
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 100,
+        "cacheHits": 100
+      }
+    ]
+  }
+]

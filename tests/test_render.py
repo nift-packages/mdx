@@ -32,6 +32,39 @@ class RendererTests(unittest.TestCase):
   for i,source in enumerate(sources):
    scalar,single=self.invoke([documents[i]]);self.assertEqual(scalar.returncode,0);self.assertEqual(response['results'][i]['html'],single['results'][0]['html'])
   documents[500]['source']='<Unknown />';run,mixed=self.invoke(documents);self.assertNotEqual(run.returncode,0);self.assertEqual([r['id'] for r in mixed['results'] if not r['ok']],['500']);self.assertEqual(mixed['results'][501]['html'],response['results'][501]['html'])
+ def test_content_cache(self):
+  with tempfile.TemporaryDirectory(prefix='mdx-cache-') as folder:
+   path=pathlib.Path(folder);env=os.environ.copy();env.setdefault('MDX_NODE_MODULES','/usr/local/lib/node_modules')
+   helper=path/'renderer';shutil.copytree(ROOT/'renderer',helper,ignore=shutil.ignore_patterns('node_modules','.cache'))
+   options={'policy':'trusted','cache':'content','components':'components.mjs','dependencies':['asset.txt'],'remarkPlugins':[{'path':'plugin.mjs'}]}
+   document={'id':'cache','source':'import Child from "./child.mdx"\n\n<Aside><Child /></Aside>','path':'page.mdx','dependencies':[{'path':'child.mdx'}]}
+   files={'child.mdx':'# Child','components.mjs':'import {tag} from "./shared.mjs";export function components({element}){return {Aside:({children})=>element(tag,{},children)}}','shared.mjs':'export const tag="aside"','asset.txt':'first','plugin.mjs':'export default function(){return tree=>{}}'}
+   for name,content in files.items():(path/name).write_text(content)
+   def invoke(raw=False):
+    (path/'request.json').write_text(json.dumps({'version':1,'documents':[document],'options':options}))
+    run=subprocess.run(['node',str(helper/'cli.mjs'),'--request','request.json','--response','response.json'],cwd=path,env=env,capture_output=True,text=True,timeout=30)
+    response=json.loads((path/'response.json').read_text())
+    if raw:return run,response
+    self.assertEqual(run.returncode,0,response);return response['results'][0]
+   cold=invoke();warm=invoke();self.assertFalse(cold['cacheHit']);self.assertTrue(warm['cacheHit']);self.assertEqual(cold['html'],warm['html']);self.assertEqual(cold['dependencies'],warm['dependencies'])
+   for name in files:
+    (path/name).write_text(files[name]+'\n');self.assertFalse(invoke()['cacheHit'],name);self.assertTrue(invoke()['cacheHit'],name)
+   (helper/'cache.mjs').write_text((helper/'cache.mjs').read_text()+'\n');self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
+   lock=helper/'package-lock.json';lock.write_text(lock.read_text()+'\n');self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
+   options['remarkPlugins'][0]['options']={'changed':True};self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
+   env['MDX_CACHE_TEST_CONTEXT']='changed';self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
+   document['source']+='\n';self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
+   for file in (path/'.nift/mdx-cache').glob('*.json'):file.write_text('corrupt')
+   self.assertFalse(invoke()['cacheHit']);self.assertTrue(invoke()['cacheHit'])
+   options['cache']=False;disabled=invoke();self.assertFalse(disabled['cacheHit']);self.assertEqual(disabled['html'],cold['html']);options['cache']='content'
+   for file in (path/'.nift/mdx-cache').glob('*.json'):file.unlink()
+   (path/'request.json').write_text(json.dumps({'version':1,'documents':[document],'options':options}))
+   workers=[subprocess.Popen(['node',str(helper/'cli.mjs'),'--request','request.json','--response',f'concurrent-{i}.json'],cwd=path,env=env,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True) for i in range(2)]
+   for worker in workers:
+    output,error=worker.communicate(timeout=30);self.assertEqual(worker.returncode,0,error)
+   self.assertEqual(json.loads((path/'concurrent-0.json').read_text())['results'][0]['html'],json.loads((path/'concurrent-1.json').read_text())['results'][0]['html']);self.assertTrue(invoke()['cacheHit'])
+   options['policy']='untrusted';run,response=invoke(True);self.assertNotEqual(run.returncode,0);options['policy']='trusted'
+   (path/'asset.txt').unlink();run,response=invoke(True);self.assertNotEqual(run.returncode,0)
  def test_installed_nift_facade(self):
   nift=os.environ.get('NIFT','/home/nick/Repositories/nift/nift/nift')
   with tempfile.TemporaryDirectory(prefix='mdx-installed-') as folder:

@@ -71,3 +71,8 @@ CP15 complete:1,000-document independent failures/scalar parity pass; actual
 installed100/500/1,000-target builds use one renderer helper each. Full cold
 6.944/36.222/80.117s and warm3.648/18.769/44.821s. Pre-hook parsing dominates;
 Capgo latency remains an unresolved release gate. Raw stage evidence committed.
+
+CP16 complete: optional content cache off by default; full content/runtime/env
+keys, atomic writes/checksums, hit dependency registration, invalidation and
+concurrent-write tests.30 renderer tests pass.100-page third unchanged build
+hits100 entries but remains3.981s; parser cost remains the release bottleneck.

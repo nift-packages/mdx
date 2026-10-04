@@ -4,6 +4,7 @@ import {Inputs} from './inputs.mjs';
 import {pathToFileURL,fileURLToPath} from 'node:url';
 import {resolve,dirname,extname} from 'node:path';
 import {body,originalLocation} from './source.mjs';
+import * as cache from './cache.mjs';
 import {performance} from 'node:perf_hooks';
 const {compile,run}=await load('@mdx-js/mdx');
 const runtime=await load('react/jsx-runtime');
@@ -25,7 +26,7 @@ export async function renderBatch(request){
  const shared=new Inputs();let components={};const mappedImports={};
  for(const path of request.options.dependencies??[])await shared.track(path);
  const packageRoot=dirname(fileURLToPath(import.meta.url));
- for(const name of ['cli.mjs','worker.mjs','render.mjs','inputs.mjs','source.mjs','dependencies.mjs','protocol.mjs','package-lock.json']){
+ for(const name of ['cli.mjs','worker.mjs','render.mjs','inputs.mjs','source.mjs','dependencies.mjs','protocol.mjs','cache.mjs','package-lock.json']){
   const path=resolve(packageRoot,name);if(!path.startsWith(resolve(process.cwd())+'/'))continue;await shared.track(path);
  }
  async function configuredModule(path){const module=await import(pathToFileURL(await shared.module(path)).href);return module.components?module.components({element:React.createElement}):module.default??module;}
@@ -40,12 +41,18 @@ export async function renderBatch(request){
  }
  async function plugins(entries){const list=[];for(const entry of entries??[]){const plugin=await configuredModule(entry.path);if(typeof plugin!=='function')throw new Error('Plugin must export a function: '+entry.path);list.push([plugin,entry.options]);}return list;}
  const remarkPlugins=await plugins(request.options.remarkPlugins),rehypePlugins=await plugins(request.options.rehypePlugins);
+ if(request.options.cache!==undefined&&request.options.cache!==false&&request.options.cache!=='content')throw new Error('cache must be false or content');
+ const runtimeHash=request.options.cache==='content'?await cache.runtimeDigest():null;
  const results=[];
  for(const document of request.documents){
   let stage='compile',active=document,lineOffset=0;const start=performance.now();const inputs=new Inputs();for(const path of shared.list())await inputs.track(path);
   const allowed=new Set(document.dependencies.map(dependency=>resolve(dependency.path)));
   const visiting=new Set(),modules=new Map();let compileMs=0,evaluateMs=0;const sourceMaps=[];
   try{
+   const fingerprintInputs=new Inputs();if(runtimeHash)for(const path of [...shared.list(),...document.dependencies.map(x=>x.path)])await fingerprintInputs.track(path);
+   const key=runtimeHash?await cache.cacheKey(document,request.options,fingerprintInputs.list(),runtimeHash):null;
+   const hit=key?await cache.get(key):null;
+   if(hit){for(const path of hit.dependencies)await inputs.track(path);results.push({id:document.id,ok:true,html:hit.html,dependencies:inputs.list(),timing:{compileMs:0,evaluateMs:0,renderMs:0,totalMs:performance.now()-start},cacheHit:true});continue;}
    async function moduleFor(current){
     active=current;const key=resolve(current.path??document.id);
     if(visiting.size>32||modules.size>=256)throw new Error('Rendering document graph limit exceeded');
@@ -84,7 +91,7 @@ export async function renderBatch(request){
    }
    const module=await moduleFor(document);active=document;lineOffset=body(document).lineOffset;stage='render';const renderStart=performance.now();
    const html=renderToStaticMarkup(React.createElement(module.default,{components}));
-   results.push({id:document.id,ok:true,html,dependencies:inputs.list(),timing:{compileMs,evaluateMs,renderMs:performance.now()-renderStart,totalMs:performance.now()-start}});
+   const result={id:document.id,ok:true,html,dependencies:inputs.list(),timing:{compileMs,evaluateMs,renderMs:performance.now()-renderStart,totalMs:performance.now()-start},cacheHit:false};if(key)await cache.put(key,result);results.push(result);
   }catch(error){
    let location=originalLocation(active,lineOffset,error);
    if(location.line===null && error.stack){

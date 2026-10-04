@@ -159,3 +159,26 @@ compiled source maps, including imported documents; sparse mappings may identify
 an authored line rather than an exact JavaScript span. Component failures also
 report `component` and `adapterPath`. Process errors and unmapped generated or
 adapter frames have null locations. No synthetic source positions are promised.
+
+## Optional content cache
+
+`"cache": "content"` opts into `.nift/mdx-cache`; the default is disabled
+(`false`). Enable it only for deterministic MDX/adapters/plugins whose filesystem
+inputs are declared. Time, randomness, network responses and external process
+state are unsupported cache inputs; keep caching disabled for those builds.
+
+The key covers the complete document/registered graph, configuration/policy,
+component/plugin/asset/helper/lock content, actual installed runtime code, Node
+version/platform/architecture and the full environment snapshot. Environment
+values enter a hash and are not saved in cache records. Nift hook mode therefore
+changes the key between `build --all` and `build`; two unchanged `build` runs can
+hit the same entry. On hits all dependencies are re-registered. Atomic writes,
+entry checksums and corrupt-entry misses handle concurrent builds and corruption.
+Missing dependencies fail; hits never bypass trusted policy.
+
+Caching avoids compile/evaluate/static render, not Nift's preservation parsing.
+At the100-page benchmark, the third unchanged run hits100/100 entries but whole
+build time remains about4 seconds. Full runtime fingerprinting can cost more
+than compilation for small documents; this is not a default performance claim.
+Every build still needs the pre-build batch; prepared HTML is not an independently
+validated substitute for running `prepare` after changing project inputs.

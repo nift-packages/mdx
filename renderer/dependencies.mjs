@@ -2,6 +2,8 @@ import {createRequire} from 'node:module';
 import {readFile} from 'node:fs/promises';
 import {dirname, join, resolve} from 'node:path';
 import {pathToFileURL} from 'node:url';
+const roots=new Set();
+export function runtimeRoots(){return [...roots].sort();}
 export const pins = {'@mdx-js/mdx':'3.1.1',react:'19.3.0','react-dom':'19.3.0','remark-gfm':'4.0.1','rehype-slug':'6.0.0',acorn:'8.18.0','source-map':'0.7.6'};
 const local=createRequire(import.meta.url);
 const explicit=process.env.MDX_NODE_MODULES ? createRequire(join(resolve(process.env.MDX_NODE_MODULES),'__mdx__.cjs')) : null;
@@ -16,7 +18,7 @@ export async function load(specifier) {
  let dir=dirname(filename), pkg;
  while(true){try {const data=JSON.parse(await readFile(join(dir,'package.json'),'utf8'));if(data.name===name){pkg=data;break;}}catch{}const parent=dirname(dir);if(parent===dir)break;dir=parent;}
  if(!pkg || pkg.version!==pins[name]) throw new Error(`Dependency version mismatch: ${name}; expected ${pins[name]}, found ${pkg?.version}`);
- return import(pathToFileURL(filename).href);
+ roots.add(dir);return import(pathToFileURL(filename).href);
 }
 export async function probe() {for(const name of Object.keys(pins))await load(name);return pins;}
 if(process.argv[2]==='--check'){try{console.log(JSON.stringify({ok:true,versions:await probe()}));}catch(e){console.error(e.message);process.exitCode=1;}}
