@@ -182,3 +182,12 @@ build time remains about4 seconds. Full runtime fingerprinting can cost more
 than compilation for small documents; this is not a default performance claim.
 Every build still needs the pre-build batch; prepared HTML is not an independently
 validated substitute for running `prepare` after changing project inputs.
+
+## Asset module mappings
+
+An import mapping resolves to an ES module namespace. Default, named and
+namespace imports retain their JavaScript meaning; for example an asset adapter
+can export `default {src: "/images/logo.svg", width: 120}` and a named label.
+Declare the referenced SVG in `options.dependencies` unless it is part of the
+adapter's tracked static JavaScript closure. The helper does not copy assets.
+Component factories must be synchronous; async factories are rejected.

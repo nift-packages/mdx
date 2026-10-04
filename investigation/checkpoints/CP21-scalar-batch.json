@@ -1,0 +1,19 @@
+{
+  "outputsIdentical": true,
+  "records": [
+    {
+      "mode": "scalar",
+      "documents": 100,
+      "parseAndRenderSeconds": 49.891900188988075,
+      "maximumResidentKiB": 110048,
+      "helperInvocations": 100
+    },
+    {
+      "mode": "batch",
+      "documents": 100,
+      "parseAndRenderSeconds": 2.9369596659671515,
+      "maximumResidentKiB": 131748,
+      "helperInvocations": 1
+    }
+  ]
+}

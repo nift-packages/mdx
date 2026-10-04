@@ -1,5 +1,13 @@
 # Investigation handover
 
+Current state: optional trusted production renderer, batch orchestration, profiles,
+dependency closure, cache and source-aware diagnostics are implemented. CP01–21
+pass their recorded acceptance checks, with CP19 explicitly excluding Windows
+Nift file input. CP22 real-corpus gate assessment remains blocked. Capgo remains blocked; no Nift core
+or Capgo website changes. The public API is parse/input/with_profile/prepare/html.
+
+## Historical feasibility handoff (before production authorization)
+
 Completed: full package inspection; official compiler/renderer research; pinned Node helper; actual Nift input→html composition; transitive MDX; rendered two-target incremental site; baseline parser regression archive;100-process versus100/1000-batch measurements; corpus byte analysis; report and22-checkpoint implementation gameplan.
 
 Recommendation: additive mdx.html facade with optional pinned build-time Node/MDX/React renderer, explicit trusted execution, preserved parse/input contracts, new dependencies registered with Nift, required normal production batched rendering before full-site certification. No browser React runtime. Parser profiling/limits are a release gate.
@@ -89,3 +97,12 @@ copyable Git-installed basic example. Final local renderer suite34 tests passes
 45.573s; original parser regression passes53.853s. Windows integration and Capgo
 certification exclusions are explicit. Example automated build and no-change
 rebuild validate ordinary HTML and exact dependency registration.
+
+CP19 assessed with exclusions: CI37188684163 passes all Linux/macOS Node22/24
+suites and all30 independent Windows helper tests on both majors. Windows pure
+parse parity passes, but file input/integrated builds remain unsupported because
+of the unchanged core directory predicate. Bun/UNC are not certified.
+
+CP21 complete: isolated installed100/500/1000 full-build/memory evidence saved.
+One helper per build;100-source scalar49.892s vs batch2.937s with identical HTML.
+Parser remains the large-build bottleneck.

@@ -1,0 +1,119 @@
+[
+  {
+    "pages": 100,
+    "builds": [
+      {
+        "mode": "cold",
+        "fullBuildSeconds": 6.875635089003481,
+        "maximumResidentKiB": 130972,
+        "parserMs": 2586,
+        "prepareMs": 905,
+        "helperTotalsMs": {
+          "compileMs": 258.72924699999976,
+          "evaluateMs": 24.818415999999957,
+          "renderMs": 69.75380799999965,
+          "totalMs": 462.8915739999996
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 100,
+        "cacheHits": 0
+      },
+      {
+        "mode": "warm",
+        "fullBuildSeconds": 3.6384116279659793,
+        "maximumResidentKiB": 133284,
+        "parserMs": 2687,
+        "prepareMs": 914,
+        "helperTotalsMs": {
+          "compileMs": 247.98490999999888,
+          "evaluateMs": 23.730456999999603,
+          "renderMs": 69.62026800000018,
+          "totalMs": 460.8569929999995
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 100,
+        "cacheHits": 0
+      }
+    ]
+  },
+  {
+    "pages": 500,
+    "builds": [
+      {
+        "mode": "cold",
+        "fullBuildSeconds": 35.71020445600152,
+        "maximumResidentKiB": 140136,
+        "parserMs": 15814,
+        "prepareMs": 2587,
+        "helperTotalsMs": {
+          "compileMs": 945.5897770000005,
+          "evaluateMs": 122.97198500000604,
+          "renderMs": 303.2872920000015,
+          "totalMs": 1884.3458820000033
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 500,
+        "cacheHits": 0
+      },
+      {
+        "mode": "warm",
+        "fullBuildSeconds": 19.15852903504856,
+        "maximumResidentKiB": 139704,
+        "parserMs": 16564,
+        "prepareMs": 2461,
+        "helperTotalsMs": {
+          "compileMs": 890.1494780000012,
+          "evaluateMs": 108.70451699999467,
+          "renderMs": 285.7890260000017,
+          "totalMs": 1778.1289550000008
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 500,
+        "cacheHits": 0
+      }
+    ]
+  },
+  {
+    "pages": 1000,
+    "builds": [
+      {
+        "mode": "cold",
+        "fullBuildSeconds": 80.35315145901404,
+        "maximumResidentKiB": 149164,
+        "parserMs": 40784,
+        "prepareMs": 4712,
+        "helperTotalsMs": {
+          "compileMs": 1806.3257509999983,
+          "evaluateMs": 243.7944429999967,
+          "renderMs": 585.7878229999985,
+          "totalMs": 3643.5921610000078
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 1000,
+        "cacheHits": 0
+      },
+      {
+        "mode": "warm",
+        "fullBuildSeconds": 45.43387459299993,
+        "maximumResidentKiB": 149272,
+        "parserMs": 40529,
+        "prepareMs": 4653,
+        "helperTotalsMs": {
+          "compileMs": 1805.4275690000006,
+          "evaluateMs": 243.18127299999287,
+          "renderMs": 596.1676889999936,
+          "totalMs": 3687.2591069999994
+        },
+        "nodeLaunches": 2,
+        "helperInvocations": 1,
+        "outputs": 1000,
+        "cacheHits": 0
+      }
+    ]
+  }
+]

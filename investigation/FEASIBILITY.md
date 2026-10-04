@@ -1,5 +1,14 @@
 # Dependency-aware MDX → HTML feasibility
 
+Current implementation: the optional renderer and batch facade are implemented
+and tested. See [GAMEPLAN](GAMEPLAN.md), [HANDOVER](HANDOVER.md) and checkpoints
+for production decisions and evidence. This report below preserves the original
+feasibility findings; its baseline descriptions are historical. Windows Nift
+file input, Capgo adapter/visual parity and corpus performance remain exclusions
+or open release gates. Nift core and both Capgo websites remain untouched.
+
+## Historical investigation
+
 Investigation date: 2026-10-04. Baseline: `nift-packages/mdx` commit `55843fa`, version 0.1.0. This is a report and isolated prototype, not the production rendering implementation. Nift core, the production parser, limits, manifest, and existing tests remain unchanged. Capgo implementation has not started.
 
 ## Decision

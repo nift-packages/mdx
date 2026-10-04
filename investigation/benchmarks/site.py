@@ -17,7 +17,10 @@ with tempfile.TemporaryDirectory(prefix='mdx batch café ') as folder:
   def write(name,content):
    p=project/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(content)
   def call(args,timeout=600):
-   result=subprocess.run([NIFT,*args],cwd=project,env=env,capture_output=True,text=True,timeout=timeout);assert result.returncode==0,result.stdout+result.stderr;return result
+   command=[NIFT,*args]
+   measured=args and args[0]=='build' and pathlib.Path('/usr/bin/time').exists()
+   if measured:command=['/usr/bin/time','-f','%M','-o',str(project/'rss.txt'),*command]
+   result=subprocess.run(command,cwd=project,env=env,capture_output=True,text=True,timeout=timeout);assert result.returncode==0,result.stdout+result.stderr;return result
   call(['add','file://'+str(origin),'--ref=HEAD'])
   binpath=project/'bin';binpath.mkdir();log=project/'launches.jsonl'
   wrapper=binpath/'node';wrapper.write_text('#!'+sys.executable+'\nimport os,sys,json\nwith open('+repr(str(log))+',"a") as f: f.write(json.dumps(sys.argv[1:])+"\\n")\nos.execv('+repr(NODE)+',['+repr(NODE)+',*sys.argv[1:]])\n');wrapper.chmod(0o755);env['PATH']=str(binpath)+os.pathsep+env['PATH']
@@ -46,6 +49,6 @@ with tempfile.TemporaryDirectory(prefix='mdx batch café ') as folder:
    assert all('<html>' in x.read_text() and '<h1' in x.read_text() and 'react-dom' not in x.read_text() for x in outputs)
    if mode!='cold':assert 'up to date' in result.stdout,result.stdout
    timings={k:sum(r['timing'][k] for r in metrics['results']) for k in ['compileMs','evaluateMs','renderMs','totalMs']}
-   builds.append({'mode':mode,'fullBuildSeconds':wall,'parserMs':metrics['parserMs'],'prepareMs':metrics['prepareMs'],'helperTotalsMs':timings,'nodeLaunches':len(launches),'helperInvocations':1,'outputs':len(outputs),'cacheHits':sum(r.get('cacheHit',False) for r in metrics['results'])})
+   builds.append({'mode':mode,'fullBuildSeconds':wall,'maximumResidentKiB':int((project/'rss.txt').read_text()) if (project/'rss.txt').exists() else None,'parserMs':metrics['parserMs'],'prepareMs':metrics['prepareMs'],'helperTotalsMs':timings,'nodeLaunches':len(launches),'helperInvocations':1,'outputs':len(outputs),'cacheHits':sum(r.get('cacheHit',False) for r in metrics['results'])})
   records.append({'pages':count,'builds':builds});print(json.dumps(records[-1]),flush=True)
   (ROOT/f'investigation/checkpoints/{stage}-site-results.json').write_text(json.dumps(records,indent=2)+'\n')
