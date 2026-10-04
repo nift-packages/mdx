@@ -76,3 +76,6 @@ CP16 complete: optional content cache off by default; full content/runtime/env
 keys, atomic writes/checksums, hit dependency registration, invalidation and
 concurrent-write tests.30 renderer tests pass.100-page third unchanged build
 hits100 entries but remains3.981s; parser cost remains the release bottleneck.
+
+CP17 complete: daemon explicitly deferred. One batch helper already amortizes
+startup; the39s parser share of a44.8s warm1,000-page build would remain.
