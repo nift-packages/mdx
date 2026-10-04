@@ -24,3 +24,6 @@ No mandatory npm cost for parse/input consumers.
 
 CP03 complete: bounded versioned file-based batch protocol with worker deadline,
 project-confined paths, atomic responses and structured errors; seven tests pass.
+
+CP04 complete: pinned compiler and build-time static renderer; Markdown/escaping
+and mixed-batch failures verified, nine tests. Imports remain explicitly denied.
